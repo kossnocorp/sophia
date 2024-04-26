@@ -1,0 +1,9 @@
+{
+  // Background colors
+  "$base": "#000000",
+  "$canvas": "#0a0a0a",
+  // Text
+  "$ink": "#fafafa",
+  "$control": "#745a82",
+  "$comment": "#5e5e69"
+}

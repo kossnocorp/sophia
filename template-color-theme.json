@@ -1,0 +1,45 @@
+{
+  "name": "Sophia Dark",
+  "type": "dark",
+
+  "colors": {
+    // Base
+    "editor.background": "$canvas",
+    "editor.foreground": "$ink"
+  },
+
+  "tokenColors": [
+    // comments
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "$comment"
+      }
+    },
+
+    // Nonessential
+    {
+      "scope": "keyword.control.import, keyword.control.from, punctuation.definition.block",
+      "settings": {
+        "foreground": "#787878",
+        "fontStyle": ""
+      }
+    },
+
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "#639c8d",
+      }
+    }
+
+    // export, return, await, if, else, etc.
+    {
+      "scope": "keyword.control",
+      "settings": {
+        "foreground": "$control",
+        "fontStyle": "bold"
+      }
+    }
+  ]
+}

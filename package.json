@@ -1,0 +1,21 @@
+{
+  "name": "sophia-dark",
+  "displayName": "Sophia Dark",
+  "description": "Minimal deep dark theme",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Sophia Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Sophia Dark-color-theme.json"
+      }
+    ]
+  }
+}

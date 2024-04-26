@@ -1,0 +1,189 @@
+{
+  "name": "Sophia Dark",
+  "type": "dark",
+
+  "colors": {
+    // UI
+
+    // Titlebar
+
+    "titleBar.activeBackground": "#000000",
+
+    // ???
+
+    // Activity bar
+
+    "activityBar.activeBackground": "#171717",
+    "activityBar.background": "#000000",
+    "activityBar.foreground": "#ffffff",
+
+    // File tree
+
+    "tree.indentGuidesStroke": "#ff0000",
+
+    // Menu
+
+    "menu.background": "#171717",
+
+    // Sidebar
+
+    "sideBar.border": "#282828",
+
+    "window.activeBorder": "#ff0000",
+
+    // Terminal
+
+    "terminal.background": "#000000",
+
+    // Tabs
+
+    // Active
+    "tab.activeBackground": "#171717",
+    "tab.activeForeground": "#ffffff",
+    // Active unfocused
+    "tab.unfocusedActiveBackground": "#171717",
+    "tab.unfocusedActiveForeground": "#ffffff",
+    // Inactive
+    "tab.inactiveBackground": "#000000",
+    "tab.inactiveForeground": "#ffffff",
+
+    "tab.border": "#ff0000",
+    "tab.activeBorderTop": "#00ff00",
+
+    // Editor
+
+    "editor.background": "#000000",
+    "editor.foreground": "#cccccc",
+
+    "editorLineNumber.foreground": "#4d4d4d",
+
+    // Current line
+    "editor.lineHighlightBackground": "#191818"
+    // "editorRuler.foreground": "#ff0000"
+  },
+
+  "tokenColors": [
+    // Highest priority:
+
+    // - What is called, i.e. function names.
+    // - Main operators like delete, new, etc.
+    //
+    // These must be the most prominent colors, above the base color. It should
+    // be on par
+    {
+      "scope": "meta.function-call, keyword.operator.expression.delete",
+      "settings": {
+        "foreground": "#ffd900"
+        // "foreground": "#ff1a1a",
+        // "fontStyle": "italic"
+      }
+    },
+
+    {
+      "scope": "meta.definition.function",
+      "settings": {
+        // "fontStyle": "italic"
+      }
+    },
+
+    // Control flow, i.e. conditions, async/await, return, etc.
+    {
+      "scope": "keyword.control, keyword.operator.ternary",
+      "settings": {
+        "foreground": "#f568ff"
+        // "foreground": "#b53fff",
+        // "fontStyle": "italic"
+      }
+    },
+
+    // Second priority:
+
+    // - What is assigned, i.e. the variable names, function name, import name, argument name etc.
+    {
+      "scope": "variable.parameter, variable.other.readwrite.alias, meta.definition.function, meta.definition.variable",
+      "settings": {
+        "foreground": "#55e3ff"
+        // "foreground": "#e3ad39",
+      }
+    },
+
+    {
+      "scope": "entity.name.function",
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+
+    // Primitives: strings, booleans, numbers, primitive types
+    {
+      "scope": "string, support.type.builtin, support.type.primitive, constant",
+      "settings": {
+        "foreground": "#9dac9b"
+        // "foreground": "#a4c3ba"
+      }
+    },
+
+    // Something that defines behavior of whatever comes next, i.e. ,
+    // TS extends, !, etc.
+    {
+      "scope": "storage.modifier.ts, keyword.operator.expression.keyof.ts, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.infer, keyword.operator.type.ts, keyword.operator.expression.extends",
+      "settings": {
+        "foreground": "#bebeb1"
+        // "foreground": "#38cdff",
+      }
+    },
+
+    // Comments
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "#6c6c6c"
+      }
+    },
+
+    // Third priority:
+
+    // - What is read, passed as arguments, etc.
+    {
+      "scope": "variable.other.readwrite, variable.other.property, entity.name.type, support.variable.property",
+      "settings": {
+        "foreground": "#c5c5c5"
+        // "foreground": "#3ea1e3",
+      }
+    },
+
+    // Support code:
+    //
+    // - Runtime types: function, const, class, etc.
+    // - Namespaces: accessed object properties, TS namespaces
+    // - Modifiers: async
+    // - Secondary operators: rest, spread, typeof, instanceof, assignment
+    // - Import from
+    {
+      "scope": "storage.type, variable.object.property, entity.name.type.module, variable.other.object, variable.other.constant.object, meta.object-literal.key, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from",
+      "settings": {
+        "foreground": "#8a8a8a"
+      }
+    },
+
+    // Fourth priority
+
+    // Punctuation
+    {
+      "scope": "punctuation, meta.brace",
+      "settings": {
+        "foreground": "#4d4d4d"
+      }
+    },
+
+    // Lowest priority
+
+    // Semicolons
+    {
+      "scope": "punctuation.terminator",
+      "settings": {
+        "foreground": "#282828"
+      }
+    }
+  ]
+}
