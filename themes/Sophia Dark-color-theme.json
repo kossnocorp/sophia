@@ -32,13 +32,17 @@
     "sideBar.background": "#000000",
     "sideBar.foreground": "#bebeb1",
 
-    // Statusbar
+    //#region Statusbar
 
     "statusBar.background": "#000000",
     "statusBar.border": "#0b0e14",
     "statusBar.foreground": "#4d4d4d",
 
-    // "statusBarItem.remoteBackground": "#e6b450",
+    // WSL label, remote connection, etc.
+    "statusBarItem.remoteBackground": "#000000",
+    "statusBarItem.remoteForeground": "#BBE1CA",
+
+    //#endregion
 
     // File tree
 
@@ -89,6 +93,9 @@
 
     "editorRuler.foreground": "#202020",
 
+    // Folds
+    "editor.foldBackground": "#0f0f0f7b",
+
     // Terminal
 
     "terminal.tab.activeBorder": "#8904e8bc"
@@ -105,26 +112,27 @@
     {
       "scope": "meta.function-call, keyword.operator.expression.delete",
       "settings": {
-        "foreground": "#dccc6e"
-        // "foreground": "#ff1a1a",
-        // "fontStyle": "italic"
+        // "foreground": "#8a8a8a" // Placeholder
+        "foreground": "#E1DDBB"
       }
     },
-
+    // [TODO]:
+    // Something that defines behavior of whatever comes next, i.e. ,
+    // TS extends, !, etc.
     {
-      "scope": "meta.definition.function",
+      "scope": "storage.modifier.ts, keyword.operator.expression.keyof.ts, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.infer, keyword.operator.type.ts, keyword.operator.expression.extends",
       "settings": {
-        // "fontStyle": "italic"
+        // "foreground": "#8a8a8a" // Placeholder
+        "foreground": "#E1DDBB"
       }
     },
 
     // Control flow, i.e. conditions, async/await, return, etc.
     {
-      "scope": "keyword.control, keyword.operator.ternary",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary",
       "settings": {
-        "foreground": "#c68dca"
-        // "foreground": "#b53fff",
-        // "fontStyle": "italic"
+        // "foreground": "#8a8a8a" // Placeholder
+        "foreground": "#E1BBD2"
       }
     },
 
@@ -134,14 +142,15 @@
     {
       "scope": "variable.parameter, variable.other.readwrite.alias, meta.definition.function, meta.definition.variable",
       "settings": {
-        "foreground": "#9cd7e3"
-        // "foreground": "#e3ad39",
+        // "foreground": "#8a8a8a" // Placeholder
+        "foreground": "#BBBFE1"
       }
     },
 
     {
       "scope": "entity.name.function",
       "settings": {
+        // "fontStyle": "" // Placeholder
         "fontStyle": "italic"
       }
     },
@@ -150,18 +159,8 @@
     {
       "scope": "string, support.type.builtin, support.type.primitive, constant",
       "settings": {
-        "foreground": "#9dac9b"
-        // "foreground": "#a4c3ba"
-      }
-    },
-
-    // Something that defines behavior of whatever comes next, i.e. ,
-    // TS extends, !, etc.
-    {
-      "scope": "storage.modifier.ts, keyword.operator.expression.keyof.ts, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.infer, keyword.operator.type.ts, keyword.operator.expression.extends",
-      "settings": {
-        "foreground": "#bebeb1"
-        // "foreground": "#38cdff",
+        // "foreground": "#8a8a8a" // Placeholder
+        "foreground": "#BBE1CA"
       }
     },
 
@@ -169,6 +168,7 @@
     {
       "scope": "comment",
       "settings": {
+        // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#6c6c6c"
       }
     },
@@ -179,8 +179,8 @@
     {
       "scope": "variable.other.readwrite, variable.other.property, entity.name.type, support.variable.property",
       "settings": {
+        // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#c5c5c5"
-        // "foreground": "#3ea1e3",
       }
     },
 
