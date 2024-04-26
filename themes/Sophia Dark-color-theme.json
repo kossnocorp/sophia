@@ -105,25 +105,17 @@
     // Highest priority:
 
     // - What is called, i.e. function names.
-    // - Main operators like delete, new, etc.
+    // - Operators like delete, new, keyof, instanceof etc.
+    // - Logical operators !==, &&, etc.
+    // - extends, infer, etc.
     //
     // These must be the most prominent colors, above the base color. It should
     // be on par
     {
-      "scope": "meta.function-call, keyword.operator.expression.delete",
+      "scope": "meta.function-call, keyword.operator.expression.delete, storage.modifier.ts, keyword.operator.expression.keyof.ts, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.infer, keyword.operator.type.ts, keyword.operator.expression.extends",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#E1DDBB"
-      }
-    },
-    // [TODO]:
-    // Something that defines behavior of whatever comes next, i.e. ,
-    // TS extends, !, etc.
-    {
-      "scope": "storage.modifier.ts, keyword.operator.expression.keyof.ts, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.infer, keyword.operator.type.ts, keyword.operator.expression.extends",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#E1DDBB"
+        "foreground": "#5EB3DB"
       }
     },
 
@@ -132,7 +124,7 @@
       "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#E1BBD2"
+        "foreground": "#DB5EB3"
       }
     },
 
@@ -143,24 +135,28 @@
       "scope": "variable.parameter, variable.other.readwrite.alias, meta.definition.function, meta.definition.variable",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#BBBFE1"
+        // "foreground": "#BBBFE1",
+        // [TODO] Decide if to use a more prominent gray for definitions instead of a color:
+        "foreground": "#f3f3f3"
       }
     },
 
     {
-      "scope": "entity.name.function",
+      "scope": "meta.function-call",
       "settings": {
-        // "fontStyle": "" // Placeholder
         "fontStyle": "italic"
       }
     },
-
     // Primitives: strings, booleans, numbers, primitive types
     {
       "scope": "string, support.type.builtin, support.type.primitive, constant",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#BBE1CA"
+        // [TODO] Deside if to use a color:
+        // "foreground": "#BBE1CA"
+        // [TODO] Or a style:
+        "fontStyle": "bold"
+        // I think this is a better option as it makes them less prominent while still highlighting them
       }
     },
 
@@ -180,7 +176,8 @@
       "scope": "variable.other.readwrite, variable.other.property, entity.name.type, support.variable.property",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#c5c5c5"
+        "foreground": "#c5c5c5",
+        "fontStyle": ""
       }
     },
 
@@ -216,6 +213,36 @@
       "settings": {
         "foreground": "#282828"
       }
+    },
+
+    //#region Types
+
+    {
+      "name": "",
+      // "scope": "meta.type.annotation, entity.name.type",
+      "scope": "entity.name.type",
+      "settings": {
+        "foreground": "#B3DB5E"
+        // "fontStyle": "underline"
+      }
+    },
+
+    {
+      "scope": "meta.type.parameters",
+      "settings": {
+        "foreground": "#FF0000"
+        // "fontStyle": "underline"
+      }
+    },
+
+    {
+      "scope": "meta.type.annotation",
+      "settings": {
+        "foreground": "#00FF00"
+        // "fontStyle": "underline"
+      }
     }
+
+    //#endregion
   ]
 }
