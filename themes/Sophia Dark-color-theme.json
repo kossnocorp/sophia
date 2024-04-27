@@ -81,7 +81,7 @@
     // Editor
 
     "editor.background": "#000000",
-    "editor.foreground": "#cccccc",
+    "editor.foreground": "#696969",
 
     "editorLineNumber.foreground": "#4d4d4d",
 
@@ -112,10 +112,10 @@
     // These must be the most prominent colors, above the base color. It should
     // be on par
     {
-      "scope": "meta.function-call, keyword.operator.expression.delete, storage.modifier.ts, keyword.operator.expression.keyof.ts, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.infer, keyword.operator.type.ts, keyword.operator.expression.extends",
+      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, storage.modifier.ts, keyword.operator.expression.keyof.ts, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.infer, keyword.operator.expression.extends",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#5EB3DB"
+        "foreground": "#c890f8"
       }
     },
 
@@ -124,122 +124,161 @@
       "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#DB5EB3"
+        "foreground": "#fb73d0"
       }
     },
 
-    // Second priority:
+    // // Second priority:
 
-    // - What is assigned, i.e. the variable names, function name, import name, argument name etc.
-    {
-      "scope": "variable.parameter, variable.other.readwrite.alias, meta.definition.function, meta.definition.variable",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        // "foreground": "#BBBFE1",
-        // [TODO] Decide if to use a more prominent gray for definitions instead of a color:
-        "foreground": "#f3f3f3"
-      }
-    },
+    // // - What is assigned, i.e. the variable names, function name, import name, argument name etc.
+    // {
+    //   "scope": "variable.parameter, variable.other.readwrite.alias, meta.definition.function, meta.definition.variable",
+    //   "settings": {
+    //     // "foreground": "#8a8a8a" // Placeholder
+    //     // "foreground": "#BBBFE1",
+    //     // [TODO] Decide if to use a more prominent gray for definitions instead of a color:
+    //     "foreground": "#f3f3f3"
+    //   }
+    // },
 
+    // Make function calls italic
     {
       "scope": "meta.function-call",
       "settings": {
         "fontStyle": "italic"
       }
     },
-    // Primitives: strings, booleans, numbers, primitive types
+
+    // // Primitives: strings, booleans, numbers, primitive types
+    // {
+    //   "scope": "string, support.type.builtin, support.type.primitive, constant",
+    //   "settings": {
+    //     // "foreground": "#8a8a8a" // Placeholder
+    //     // [TODO] Deside if to use a color:
+    //     // "foreground": "#BBE1CA"
+    //     // [TODO] Or a style:
+    //     "fontStyle": "bold"
+    //     // I think this is a better option as it makes them less prominent while still highlighting them
+    //   }
+    // },
+
+    // // Third priority:
+
+    // // - What is read, passed as arguments, etc.
+    // {
+    //   "scope": "variable.other.readwrite, variable.other.property, entity.name.type, support.variable.property",
+    //   "settings": {
+    //     // "foreground": "#8a8a8a" // Placeholder
+    //     "foreground": "#c5c5c5",
+    //     "fontStyle": ""
+    //   }
+    // },
+
+    // // Support code:
+    // //
+    // // - Runtime types: function, const, class, etc.
+    // // - Namespaces: accessed object properties, TS namespaces
+    // // - Modifiers: async
+    // // - Secondary operators: rest, spread, typeof, instanceof, assignment
+    // // - Import from
+    // {
+    //   "scope": "storage.type, variable.object.property, entity.name.type.module, variable.other.object, variable.other.constant.object, meta.object-literal.key, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from",
+    //   "settings": {
+    //     "foreground": "#8a8a8a"
+    //   }
+    // },
+
+    // // Fourth priority
+
+    // // Punctuation
+    // {
+    //   "scope": "punctuation, meta.brace",
+    //   "settings": {
+    //     "foreground": "#4d4d4d"
+    //   }
+    // },
+
+    // // Lowest priority
+
+    // // Semicolons
+    // {
+    //   "scope": "punctuation.terminator",
+    //   "settings": {
+    //     "foreground": "#282828"
+    //   }
+    // },
+
+    //#region Types
+
+    // Base types color
     {
-      "scope": "string, support.type.builtin, support.type.primitive, constant",
+      "scope": "meta.type.declaration, meta.type.annotation, meta.type.declaration keyword.operator.ternary, meta.interface",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        // [TODO] Deside if to use a color:
-        // "foreground": "#BBE1CA"
-        // [TODO] Or a style:
-        "fontStyle": "bold"
-        // I think this is a better option as it makes them less prominent while still highlighting them
+        "foreground": "#497d51"
+        // "fontStyle": "italic"
       }
     },
+
+    // {
+    //   "scope": "meta.type.parameters",
+    //   "settings": {
+    //     "foreground": "#FF0000"
+    //     // "fontStyle": "underline"
+    //   }
+    // },
+
+    // {
+    //   "scope": "meta.type.declaration",
+    //   "settings": {
+    //     "foreground": "#0000FF"
+    //     // "fontStyle": "underline"
+    //   }
+    // },
+
+    // {
+    //   "scope": "meta.type.annotation",
+    //   "settings": {
+    //     "foreground": "#00FF00"
+    //     // "fontStyle": "underline"
+    //   }
+    // },
+
+    // {
+    //   "scope": "meta.interface",
+    //   "settings": {
+    //     "foreground": "#FF00FF"
+    //     // "fontStyle": "underline"
+    //   }
+    // },
+
+    // {
+    //   "scope": "entity.name.type.interface, entity.name.type.alias",
+    //   "settings": {
+    //     "foreground": "#FFFF00"
+    //     // "fontStyle": "underline"
+    //   }
+    // },
+
+    {
+      // "scope": "meta.type.declaration keyword.operator.ternary",
+      "settings": {
+        // "foreground": "#8a8a8a" // Placeholder
+        // "foreground": "#8a8a8a"
+      }
+    },
+
+    //#endregion
+
+    //#region Comments
 
     // Comments
     {
       "scope": "comment",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#6c6c6c"
-      }
-    },
-
-    // Third priority:
-
-    // - What is read, passed as arguments, etc.
-    {
-      "scope": "variable.other.readwrite, variable.other.property, entity.name.type, support.variable.property",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#c5c5c5",
-        "fontStyle": ""
-      }
-    },
-
-    // Support code:
-    //
-    // - Runtime types: function, const, class, etc.
-    // - Namespaces: accessed object properties, TS namespaces
-    // - Modifiers: async
-    // - Secondary operators: rest, spread, typeof, instanceof, assignment
-    // - Import from
-    {
-      "scope": "storage.type, variable.object.property, entity.name.type.module, variable.other.object, variable.other.constant.object, meta.object-literal.key, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from",
-      "settings": {
-        "foreground": "#8a8a8a"
-      }
-    },
-
-    // Fourth priority
-
-    // Punctuation
-    {
-      "scope": "punctuation, meta.brace",
-      "settings": {
-        "foreground": "#4d4d4d"
-      }
-    },
-
-    // Lowest priority
-
-    // Semicolons
-    {
-      "scope": "punctuation.terminator",
-      "settings": {
-        "foreground": "#282828"
-      }
-    },
-
-    //#region Types
-
-    {
-      "name": "",
-      // "scope": "meta.type.annotation, entity.name.type",
-      "scope": "entity.name.type",
-      "settings": {
-        "foreground": "#B3DB5E"
-        // "fontStyle": "underline"
-      }
-    },
-
-    {
-      "scope": "meta.type.parameters",
-      "settings": {
-        "foreground": "#FF0000"
-        // "fontStyle": "underline"
-      }
-    },
-
-    {
-      "scope": "meta.type.annotation",
-      "settings": {
-        "foreground": "#00FF00"
-        // "fontStyle": "underline"
+        // "foreground": "#6c6c6c"
+        "foreground": "#928f74"
       }
     }
 
