@@ -7,7 +7,7 @@
 
     // Scrollbars
 
-    "scrollbarSlider.background": "#191818",
+    // "scrollbarSlider.background": "#191818",
 
     // Titlebar
 
@@ -234,7 +234,7 @@
     },
 
     {
-      "scope": "entity.name.type.interface, entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter",
+      "scope": "entity.name.type.interface, entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter, meta.interface variable.object.property, meta.interface entity.name.function",
       "settings": {
         "foreground": "#d6ffdc"
       }
@@ -251,7 +251,7 @@
 
     // Primitives
     {
-      "scope": "support.type.primitive, meta.type.annotation string, meta.type.annotation support.type.builtin, meta.interface support.type.builtin",
+      "scope": "support.type.primitive, meta.type.parameters string, meta.type.annotation string, meta.type.annotation support.type.builtin, meta.interface support.type.builtin, meta.type.declaration support.type.builtin",
       "settings": {
         "foreground": "#93a27e",
         "fontStyle": "bold"
@@ -259,7 +259,7 @@
     },
     // Object properties
     {
-      "scope": "meta.field.declaration, meta.interface variable.object.property, meta.object.type variable.object.property, meta.interface entity.name.function",
+      "scope": "meta.field.declaration, meta.object.type variable.object.property",
       "settings": {
         "foreground": "#93a27e"
       }
