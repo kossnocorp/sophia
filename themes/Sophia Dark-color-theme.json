@@ -86,12 +86,12 @@
     "editorLineNumber.foreground": "#4d4d4d",
 
     // Current line
-    "editor.lineHighlightBackground": "#191818",
+    "editor.lineHighlightBackground": "#0f0f0f",
     // "editorRuler.foreground": "#ff0000"
-    "editorIndentGuide.background1": "#202020",
-    "editorIndentGuide.activeBackground1": "#4d4d4d",
+    "editorIndentGuide.background1": "#101010",
+    "editorIndentGuide.activeBackground1": "#252525",
 
-    "editorRuler.foreground": "#202020",
+    "editorRuler.foreground": "#101010",
 
     // Folds
     "editor.foldBackground": "#0f0f0f7b",
@@ -102,9 +102,9 @@
   },
 
   "tokenColors": [
-    // Effects: function calls, operators,
+    // Effects: function calls, operators, JSX component tags.
     {
-      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new",
+      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#c890f8"
@@ -139,7 +139,7 @@
       }
     },
 
-    // Primitives: strings, booleans, numbers, primitive types
+    // Primitives: strings, booleans, numbers, HTML/JSX tags.
     {
       "scope": "string, support.type.builtin, constant",
       "settings": {
@@ -151,7 +151,7 @@
 
     // Object literals
     {
-      "scope": "meta.object-literal.key",
+      "scope": "meta.object-literal.key, entity.other.attribute-name",
       "settings": {
         "foreground": "#8c99b5"
       }
@@ -161,7 +161,7 @@
 
     // - What is read, passed as arguments, etc.
     {
-      "scope": "variable.other.readwrite, variable.other.property, support.variable.property",
+      "scope": "variable.other.readwrite, variable.other.property, support.variable.property, entity.name.tag",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#c5c5c5",
@@ -176,8 +176,9 @@
     // - Modifiers: async
     // - Secondary operators: rest, spread, typeof, instanceof, assignment
     // - Import from
+    // - JSX text
     {
-      "scope": "storage.type, variable.object.property, variable.other.object, variable.other.constant.object, meta.object-literal.key, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from",
+      "scope": "storage.type, variable.object.property, variable.other.object, variable.other.constant.object, meta.object-literal.key, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.jsx.children",
       "settings": {
         "foreground": "#8a8a8a",
         "fontStyle": ""
@@ -226,7 +227,7 @@
 
     // Type effects
     {
-      "scope": "keyword.operator.type, keyword.operator.expression.infer, meta.indexer.mappedtype.declaration keyword.operator.expression.in, keyword.operator.expression.keyof, meta.interface storage.modifier",
+      "scope": "keyword.operator.type, keyword.operator.expression.infer, meta.indexer.mappedtype.declaration keyword.operator.expression.in, keyword.operator.expression.keyof, meta.interface storage.modifier, meta.type.annotation storage.modifier",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#3aece1"
