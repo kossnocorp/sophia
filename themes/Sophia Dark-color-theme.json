@@ -104,6 +104,7 @@
   "tokenColors": [
     // Highest priority:
 
+    // Effects
     // - What is called, i.e. function names.
     // - Operators like delete, new, keyof, instanceof etc.
     // - Logical operators !==, &&, etc.
@@ -112,7 +113,7 @@
     // These must be the most prominent colors, above the base color. It should
     // be on par
     {
-      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, storage.modifier.ts, keyword.operator.expression.keyof.ts, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.infer, keyword.operator.expression.extends",
+      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#c890f8"
@@ -200,71 +201,48 @@
 
     // // Lowest priority
 
-    // // Semicolons
-    // {
-    //   "scope": "punctuation.terminator",
-    //   "settings": {
-    //     "foreground": "#282828"
-    //   }
-    // },
+    // Semicolons
+    {
+      "scope": "punctuation.terminator",
+      "settings": {
+        "foreground": "#282828"
+      }
+    },
 
     //#region Types
 
     // Base types color
     {
-      "scope": "meta.type.declaration, meta.type.annotation, meta.type.declaration keyword.operator.ternary, meta.interface",
+      "scope": "keyword.operator.type.annotation, meta.field.declaration, meta.type.declaration, meta.type.annotation, meta.interface",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#497d51"
+        "foreground": "#425f46"
         // "fontStyle": "italic"
       }
     },
 
-    // {
-    //   "scope": "meta.type.parameters",
-    //   "settings": {
-    //     "foreground": "#FF0000"
-    //     // "fontStyle": "underline"
-    //   }
-    // },
-
-    // {
-    //   "scope": "meta.type.declaration",
-    //   "settings": {
-    //     "foreground": "#0000FF"
-    //     // "fontStyle": "underline"
-    //   }
-    // },
-
-    // {
-    //   "scope": "meta.type.annotation",
-    //   "settings": {
-    //     "foreground": "#00FF00"
-    //     // "fontStyle": "underline"
-    //   }
-    // },
-
-    // {
-    //   "scope": "meta.interface",
-    //   "settings": {
-    //     "foreground": "#FF00FF"
-    //     // "fontStyle": "underline"
-    //   }
-    // },
-
-    // {
-    //   "scope": "entity.name.type.interface, entity.name.type.alias",
-    //   "settings": {
-    //     "foreground": "#FFFF00"
-    //     // "fontStyle": "underline"
-    //   }
-    // },
-
+    // Type control flow
     {
-      // "scope": "meta.type.declaration keyword.operator.ternary",
+      "scope": "meta.type.declaration keyword.control.export, meta.interface keyword.control.export, meta.type.declaration keyword.operator.ternary, meta.type.infer keyword.operator.expression.extends, meta.type.declaration storage.modifier",
+      "settings": {
+        "foreground": "#46f4a6"
+      }
+    },
+
+    // Type effects
+    {
+      "scope": "keyword.operator.type, keyword.operator.expression.infer, meta.indexer.mappedtype.declaration keyword.operator.expression.in, keyword.operator.expression.keyof",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        // "foreground": "#8a8a8a"
+        "foreground": "#3aece1"
+      }
+    },
+
+    // Type semicolons
+    {
+      "scope": "meta.namespace.declaration punctuation.terminator",
+      "settings": {
+        "foreground": "#182519"
       }
     },
 
