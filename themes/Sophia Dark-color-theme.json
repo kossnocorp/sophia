@@ -102,45 +102,34 @@
   },
 
   "tokenColors": [
-    // Highest priority:
-
-    // Effects
-    // - What is called, i.e. function names.
-    // - Operators like delete, new, keyof, instanceof etc.
-    // - Logical operators !==, &&, etc.
-    // - extends, infer, etc.
-    //
-    // These must be the most prominent colors, above the base color. It should
-    // be on par
+    // Effects: function calls, operators,
     {
-      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof",
+      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#c890f8"
       }
     },
 
-    // Control flow, i.e. conditions, async/await, return, etc.
+    // Control flow: conditions, async/await, return, etc.
     {
-      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#fb73d0"
       }
     },
 
-    // // Second priority:
-
-    // // - What is assigned, i.e. the variable names, function name, import name, argument name etc.
-    // {
-    //   "scope": "variable.parameter, variable.other.readwrite.alias, meta.definition.function, meta.definition.variable",
-    //   "settings": {
-    //     // "foreground": "#8a8a8a" // Placeholder
-    //     // "foreground": "#BBBFE1",
-    //     // [TODO] Decide if to use a more prominent gray for definitions instead of a color:
-    //     "foreground": "#f3f3f3"
-    //   }
-    // },
+    // Definitions: functions, variables, arguments, imports, etc.
+    {
+      "scope": "variable.parameter, variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, entity.name.type.class",
+      "settings": {
+        // "foreground": "#8a8a8a" // Placeholder
+        // "foreground": "#BBBFE1",
+        // [TODO] Decide if to use a more prominent gray for definitions instead of a color:
+        "foreground": "#f3f3f3"
+      }
+    },
 
     // Make function calls italic
     {
@@ -150,54 +139,60 @@
       }
     },
 
-    // // Primitives: strings, booleans, numbers, primitive types
-    // {
-    //   "scope": "string, support.type.builtin, support.type.primitive, constant",
-    //   "settings": {
-    //     // "foreground": "#8a8a8a" // Placeholder
-    //     // [TODO] Deside if to use a color:
-    //     // "foreground": "#BBE1CA"
-    //     // [TODO] Or a style:
-    //     "fontStyle": "bold"
-    //     // I think this is a better option as it makes them less prominent while still highlighting them
-    //   }
-    // },
+    // Primitives: strings, booleans, numbers, primitive types
+    {
+      "scope": "string, support.type.builtin, constant",
+      "settings": {
+        // "foreground": "#8a8a8a" // Placeholder
+        "foreground": "#8c99b5",
+        "fontStyle": "bold"
+      }
+    },
+
+    // Object literals
+    {
+      "scope": "meta.object-literal.key",
+      "settings": {
+        "foreground": "#8c99b5"
+      }
+    },
 
     // // Third priority:
 
-    // // - What is read, passed as arguments, etc.
-    // {
-    //   "scope": "variable.other.readwrite, variable.other.property, entity.name.type, support.variable.property",
-    //   "settings": {
-    //     // "foreground": "#8a8a8a" // Placeholder
-    //     "foreground": "#c5c5c5",
-    //     "fontStyle": ""
-    //   }
-    // },
+    // - What is read, passed as arguments, etc.
+    {
+      "scope": "variable.other.readwrite, variable.other.property, support.variable.property",
+      "settings": {
+        // "foreground": "#8a8a8a" // Placeholder
+        "foreground": "#c5c5c5",
+        "fontStyle": ""
+      }
+    },
 
-    // // Support code:
-    // //
-    // // - Runtime types: function, const, class, etc.
-    // // - Namespaces: accessed object properties, TS namespaces
-    // // - Modifiers: async
-    // // - Secondary operators: rest, spread, typeof, instanceof, assignment
-    // // - Import from
-    // {
-    //   "scope": "storage.type, variable.object.property, entity.name.type.module, variable.other.object, variable.other.constant.object, meta.object-literal.key, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from",
-    //   "settings": {
-    //     "foreground": "#8a8a8a"
-    //   }
-    // },
+    // Support code:
+    //
+    // - Runtime types: function, const, class, etc.
+    // - Namespaces: accessed object properties, TS namespaces
+    // - Modifiers: async
+    // - Secondary operators: rest, spread, typeof, instanceof, assignment
+    // - Import from
+    {
+      "scope": "storage.type, variable.object.property, variable.other.object, variable.other.constant.object, meta.object-literal.key, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from",
+      "settings": {
+        "foreground": "#8a8a8a",
+        "fontStyle": ""
+      }
+    },
 
-    // // Fourth priority
+    // Fourth priority
 
-    // // Punctuation
-    // {
-    //   "scope": "punctuation, meta.brace",
-    //   "settings": {
-    //     "foreground": "#4d4d4d"
-    //   }
-    // },
+    // Punctuation
+    {
+      "scope": "punctuation, meta.brace",
+      "settings": {
+        "foreground": "#4d4d4d"
+      }
+    },
 
     // // Lowest priority
 
@@ -213,17 +208,17 @@
 
     // Base types color
     {
-      "scope": "keyword.operator.type.annotation, meta.field.declaration, meta.type.declaration, meta.type.annotation, meta.interface",
+      "scope": "keyword.operator.type.annotation, meta.field.declaration, meta.type.declaration, meta.type.annotation, meta.interface, meta.type.annotation entity.name.type.module",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#425f46"
+        "foreground": "#6b876e"
         // "fontStyle": "italic"
       }
     },
 
     // Type control flow
     {
-      "scope": "meta.type.declaration keyword.control.export, meta.interface keyword.control.export, meta.type.declaration keyword.operator.ternary, meta.type.infer keyword.operator.expression.extends, meta.type.declaration storage.modifier",
+      "scope": "meta.namespace.declaration keyword.control.export, meta.type.declaration keyword.control.export, meta.interface keyword.control.export, meta.type.declaration keyword.operator.ternary, meta.type.infer keyword.operator.expression.extends, meta.type.declaration storage.modifier, meta.type.parameters storage.modifier, meta.interface keyword.operator.ternary, meta.method.declaration storage.modifier",
       "settings": {
         "foreground": "#46f4a6"
       }
@@ -231,10 +226,57 @@
 
     // Type effects
     {
-      "scope": "keyword.operator.type, keyword.operator.expression.infer, meta.indexer.mappedtype.declaration keyword.operator.expression.in, keyword.operator.expression.keyof",
+      "scope": "keyword.operator.type, keyword.operator.expression.infer, meta.indexer.mappedtype.declaration keyword.operator.expression.in, keyword.operator.expression.keyof, meta.interface storage.modifier",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#3aece1"
+      }
+    },
+
+    {
+      "scope": "entity.name.type.interface, entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter",
+      "settings": {
+        "foreground": "#d6ffdc"
+      }
+    },
+
+    // Accessing
+    {
+      "scope": "entity.name.type, meta.interface variable.other.readwrite, meta.interface entity.other.inherited-class",
+      "settings": {
+        "foreground": "#9ec5a4",
+        "fontStyle": ""
+      }
+    },
+
+    // Primitives
+    {
+      "scope": "support.type.primitive, meta.type.annotation string, meta.type.annotation support.type.builtin, meta.interface support.type.builtin",
+      "settings": {
+        "foreground": "#93a27e",
+        "fontStyle": "bold"
+      }
+    },
+    // Object properties
+    {
+      "scope": "meta.field.declaration, meta.interface variable.object.property, meta.object.type variable.object.property, meta.interface entity.name.function",
+      "settings": {
+        "foreground": "#93a27e"
+      }
+    },
+    // Function definitions italic
+    {
+      "scope": "meta.interface entity.name.function",
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+
+    // Type support code
+    {
+      "scope": "meta.type.declaration storage.type, storage.type.interface, storage.type.namespace, meta.field.declaration storage.modifier",
+      "settings": {
+        "foreground": "#71957a"
       }
     },
 
@@ -251,12 +293,40 @@
     //#region Comments
 
     // Comments
+
     {
-      "scope": "comment",
+      "scope": "comment, comment.block.documentation",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         // "foreground": "#6c6c6c"
-        "foreground": "#928f74"
+        "foreground": "#cca879"
+      }
+    },
+
+    {
+      "scope": "storage.type.class.jsdoc",
+      "settings": {
+        // "foreground": "#8a8a8a" // Placeholder
+        // "foreground": "#6c6c6c"
+        "foreground": "#fba83b"
+      }
+    },
+
+    {
+      "scope": " variable.other.jsdoc",
+      "settings": {
+        // "foreground": "#8a8a8a" // Placeholder
+        // "foreground": "#6c6c6c"
+        "foreground": "#f7dcb9"
+      }
+    },
+
+    {
+      "scope": "punctuation.definition.comment, punctuation.definition.block.tag.jsdoc",
+      "settings": {
+        // "foreground": "#8a8a8a" // Placeholder
+        // "foreground": "#6c6c6c"
+        "foreground": "#55514b"
       }
     }
 
