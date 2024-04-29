@@ -107,7 +107,7 @@
       "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#c890f8"
+        "foreground": "#ca94ff"
       }
     },
 
@@ -116,7 +116,7 @@
       "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#fb73d0"
+        "foreground": "#ff8cf5"
       }
     },
 
