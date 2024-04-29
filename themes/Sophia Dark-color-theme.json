@@ -178,7 +178,7 @@
     // - Import from
     // - JSX text
     {
-      "scope": "storage.type, variable.object.property, variable.other.object, variable.other.constant.object, meta.object-literal.key, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.jsx.children",
+      "scope": "storage.type, variable.object.property, variable.other.object, variable.other.constant.object, meta.object-literal.key, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.jsx.children, meta.import keyword.control.as",
       "settings": {
         "foreground": "#8a8a8a",
         "fontStyle": ""
