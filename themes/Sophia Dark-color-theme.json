@@ -120,7 +120,7 @@
 
     // Control flow: conditions, async/await, return, etc.
     {
-      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#ff8cf5"
@@ -206,7 +206,7 @@
 
     // Type control flow
     {
-      "scope": "meta.namespace.declaration keyword.control.export, meta.type.declaration keyword.control.export, meta.interface keyword.control.export, meta.type.declaration keyword.operator.ternary, meta.type.infer keyword.operator.expression.extends, meta.type.declaration storage.modifier, meta.type.parameters storage.modifier, meta.interface keyword.operator.ternary, meta.method.declaration storage.modifier",
+      "scope": "meta.namespace.declaration keyword.control.export, meta.type.declaration keyword.control.export, meta.interface keyword.control.export, meta.type.declaration keyword.operator.ternary, meta.type.infer keyword.operator.expression.extends, meta.type.declaration storage.modifier, meta.type.parameters storage.modifier, meta.interface keyword.operator.ternary, meta.method.declaration storage.modifier, keyword.control.satisfies",
       "settings": {
         "foreground": "#46f4a6"
       }
