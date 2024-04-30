@@ -102,6 +102,13 @@
   },
 
   "tokenColors": [
+    {
+      "scope": "meta.embedded.line",
+      "settings": {
+        "foreground": "#8A8A8A",
+        "fontStyle": ""
+      }
+    },
     // Effects: function calls, operators, JSX component tags.
     {
       "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component",
@@ -151,7 +158,7 @@
 
     // Object literals
     {
-      "scope": "meta.object-literal.key, entity.other.attribute-name",
+      "scope": "meta.objectliteral, entity.other.attribute-name",
       "settings": {
         "foreground": "#8c99b5"
       }
@@ -178,30 +185,10 @@
     // - Import from
     // - JSX text
     {
-      "scope": "storage.type, variable.object.property, variable.other.object, variable.other.constant.object, meta.object-literal.key, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.jsx.children, meta.import keyword.control.as",
+      "scope": "storage.type, variable.object.property, meta.var.expr, variable.other.constant.object, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.jsx.children, meta.import keyword.control.as",
       "settings": {
         "foreground": "#8a8a8a",
         "fontStyle": ""
-      }
-    },
-
-    // Fourth priority
-
-    // Punctuation
-    {
-      "scope": "punctuation, meta.brace",
-      "settings": {
-        "foreground": "#4d4d4d"
-      }
-    },
-
-    // // Lowest priority
-
-    // Semicolons
-    {
-      "scope": "punctuation.terminator",
-      "settings": {
-        "foreground": "#282828"
       }
     },
 
@@ -209,7 +196,7 @@
 
     // Base types color
     {
-      "scope": "keyword.operator.type.annotation, meta.field.declaration, meta.type.declaration, meta.type.annotation, meta.interface, meta.type.annotation entity.name.type.module",
+      "scope": "meta.interface, keyword.operator.type.annotation, meta.field.declaration, meta.type.declaration, meta.type.annotation, meta.interface, meta.type.annotation entity.name.type.module, meta.namespace.declaration punctuation.terminator, entity.name.type.module",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         "foreground": "#6b876e"
@@ -230,7 +217,8 @@
       "scope": "keyword.operator.type, keyword.operator.expression.infer, meta.indexer.mappedtype.declaration keyword.operator.expression.in, keyword.operator.expression.keyof, meta.interface storage.modifier, meta.type.annotation storage.modifier, keyword.control.as",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#3aece1"
+        "foreground": "#3aece1",
+        "fontStyle": ""
       }
     },
 
@@ -243,7 +231,7 @@
 
     // Accessing
     {
-      "scope": "entity.name.type, meta.interface variable.other.readwrite, meta.interface entity.other.inherited-class",
+      "scope": "entity.name.type, meta.interface variable.other.readwrite, meta.interface entity.other.inherited-class, meta.interface variable.other.property",
       "settings": {
         "foreground": "#9ec5a4",
         "fontStyle": ""
@@ -252,7 +240,7 @@
 
     // Primitives
     {
-      "scope": "support.type.primitive, meta.type.parameters string, meta.type.annotation string, meta.type.annotation support.type.builtin, meta.interface support.type.builtin, meta.type.declaration support.type.builtin",
+      "scope": "support.type.primitive, meta.type.parameters string, meta.type.annotation string, meta.type.annotation support.type.builtin, meta.interface support.type.builtin, meta.type.declaration support.type.builtin, meta.namespace.declaration string, meta.interface constant",
       "settings": {
         "foreground": "#93a27e",
         "fontStyle": "bold"
@@ -260,7 +248,7 @@
     },
     // Object properties
     {
-      "scope": "meta.field.declaration, meta.object.type variable.object.property",
+      "scope": "meta.field.declaration, meta.object.type variable.object.property, meta.interface meta.objectliteral",
       "settings": {
         "foreground": "#93a27e"
       }
@@ -278,14 +266,6 @@
       "scope": "meta.type.declaration storage.type, storage.type.interface, storage.type.namespace, meta.field.declaration storage.modifier",
       "settings": {
         "foreground": "#71957a"
-      }
-    },
-
-    // Type semicolons
-    {
-      "scope": "meta.namespace.declaration punctuation.terminator",
-      "settings": {
-        "foreground": "#182519"
       }
     },
 
@@ -314,7 +294,7 @@
     },
 
     {
-      "scope": " variable.other.jsdoc",
+      "scope": "variable.other.jsdoc",
       "settings": {
         // "foreground": "#8a8a8a" // Placeholder
         // "foreground": "#6c6c6c"
