@@ -390,6 +390,73 @@
 
     //#endregion
 
+    //#region JSON
+
+    {
+      "scope": "punctuation.support.type.property-name.begin.json, punctuation.support.type.property-name.end.json, punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json",
+      "settings": {
+        "foreground": "#696969"
+      }
+    },
+
+    // Property name
+    {
+      "scope": "support.type.property-name.json",
+      "settings": {
+        "foreground": "#F3F3F3"
+      }
+    },
+
+    // Nested property names
+    {
+      "scope": "meta.structure.dictionary.value.json support.type.property-name.json",
+      "settings": {
+        "foreground": "#c5c5c5"
+      }
+    },
+
+    // Reset bold for property names and strings
+    {
+      "scope": "support.type.property-name.json, string.quoted.double.json",
+      "settings": {
+        "fontStyle": ""
+      }
+    },
+
+    //#endregion
+
+    //#region Makefile
+
+    {
+      "scope": "source.makefile",
+      "settings": {
+        "foreground": "#c5c5c5"
+      }
+    },
+
+    {
+      "scope": "entity.name.function.target.makefile, keyword.control.@.makefile",
+      "settings": {
+        "foreground": "#ff8cf5"
+      }
+    },
+
+    {
+      "scope": "meta.scope.prerequisites.makefile",
+      "settings": {
+        "foreground": "#ca94ff"
+      }
+    },
+
+    {
+      "scope": "punctuation.separator.key-value.makefile",
+      "settings": {
+        "foreground": "#696969"
+      }
+    },
+
+    //#endregion
+
     {}
   ]
 }
