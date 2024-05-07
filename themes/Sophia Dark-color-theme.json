@@ -16,15 +16,15 @@
     // Activity bar
 
     "activityBar.border": "#303030",
-    "activityBar.activeBackground": "#171717",
+    "activityBar.activeBackground": "#000000",
 
     "activityBar.background": "#000000",
     "activityBar.foreground": "#bebeb1",
 
-    "activityBar.activeBorder": "#8904e8bc",
+    "activityBar.activeBorder": "#FFFF00",
 
-    "activityBarBadge.background": "#8904e8bc",
-    "activityBarBadge.foreground": "#ffffff",
+    "activityBarBadge.background": "#FFFF00",
+    "activityBarBadge.foreground": "#000000",
 
     // Sidebar
 
@@ -59,17 +59,17 @@
     // Tabs
 
     // Active
-    "tab.activeBackground": "#171717",
+    "tab.activeBackground": "#000000",
     "tab.activeForeground": "#ffffff",
     // Active unfocused
-    "tab.unfocusedActiveBackground": "#171717",
+    "tab.unfocusedActiveBackground": "#000000",
     "tab.unfocusedActiveForeground": "#bebeb1",
     // Inactive
     "tab.inactiveBackground": "#000000",
     "tab.inactiveForeground": "#bebeb1",
     // Border
     "tab.border": "#000000",
-    "tab.activeBorderTop": "#8904e8bc",
+    "tab.activeBorderTop": "#FFFF00",
 
     // Editor group
 
