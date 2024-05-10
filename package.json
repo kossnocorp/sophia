@@ -1,10 +1,14 @@
 {
-  "name": "sophia-dark",
-  "displayName": "Sophia Dark",
-  "description": "Minimal deep dark theme",
-  "version": "0.0.1",
+  "name": "sophia",
+  "displayName": "Sophia Theme",
+  "description": "Code semantics-focused theme",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.88.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kossnocorp/sophia.git"
   },
   "categories": [
     "Themes"
@@ -14,8 +18,11 @@
       {
         "label": "Sophia Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/Sophia Dark-color-theme.json"
+        "path": "./themes/sophia-dark-color-theme.json"
       }
     ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.26.1"
   }
 }

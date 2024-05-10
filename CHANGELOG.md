@@ -1,9 +1,13 @@
 # Change Log
 
-All notable changes to the "sophia-dark" extension will be documented in this file.
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning].
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+This change log follows the format documented in [Keep a CHANGELOG].
 
-## [Unreleased]
+[semantic versioning]: http://semver.org/
+[keep a changelog]: http://keepachangelog.com/
 
-- Initial release
+## v0.1.0 - 2024-05-10
+
+Initial public release

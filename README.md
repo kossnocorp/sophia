@@ -1,16 +1,19 @@
-# sophia-dark README
+<div align="center">
+  <img alt="Superstate logo" height="400" src="./preview.png" />
 
-## Working with Markdown
+  <h1>Sophia Theme</h1>
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+  <h3>Code semantics-focused theme for Visual Studio Code</h3>
+</div>
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+## Getting started
 
-## For more information
+🚧 Work in progress, [follow me for updates](https://twitter.com/kossnocorp).
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## Changelog
 
-**Enjoy!**
+See [the changelog](./CHANGELOG.md).
+
+## License
+
+[MIT © Sasha Koss](https://kossnocorp.mit-license.org/)
