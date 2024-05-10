@@ -21,6 +21,11 @@
         "label": "Sophia Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/sophia-dark-color-theme.json"
+      },
+      {
+        "label": "Sophia Light",
+        "uiTheme": "vs",
+        "path": "./themes/sophia-light-color-theme.json"
       }
     ]
   },
