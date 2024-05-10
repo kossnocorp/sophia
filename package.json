@@ -1,8 +1,10 @@
 {
-  "name": "sophia",
+  "name": "sophia-theme",
   "displayName": "Sophia Theme",
   "description": "Code semantics-focused theme",
-  "version": "0.1.0",
+  "publisher": "nocorp",
+  "icon": "./icon.png",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.88.0"
   },
