@@ -457,6 +457,53 @@
 
     //#endregion
 
+    //#region F#
+
+    // Control flow
+    {
+      "scope": "entity.name.section.fsharp keyword.fsharp",
+      "settings": {
+        "foreground": "#ff8cf5"
+      }
+    },
+
+    // Effects
+    // [NOTE] F# tokens are limited, so we set all symbols to the "effects" color
+    // and assign specific symbols to their own color.
+    {
+      "scope": "keyword.symbol.fsharp",
+      "settings": {
+        "foreground": "#ca94ff"
+      }
+    },
+
+    // Declarations
+    {
+      "scope": "variable.fsharp, entity.name.section.fsharp",
+      "settings": {
+        "foreground": "#f3f3f3"
+      }
+    },
+
+    // Access
+    // [NOTE] F# tokens are limited, so we set the default color to the "access" color
+    {
+      "scope": "source.fsharp.fsl",
+      "settings": {
+        "foreground": "#c5c5c5"
+      }
+    },
+
+    // Support
+    {
+      "scope": "binding.fsharp keyword.fsharp, binding.fsharp keyword.symbol.fsharp",
+      "settings": {
+        "foreground": "#8a8a8a"
+      }
+    },
+
+    //#endregion
+
     {}
   ]
 }
