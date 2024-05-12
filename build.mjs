@@ -25,9 +25,6 @@ if (watch) {
       if (event.type !== "create" && event.type !== "update") return;
       const path = relative(process.cwd(), event.path);
 
-      // // Restart self on change
-      // if (path === selfPath) return restart();
-
       if (!paths.some((pattern) => minimatch(path, pattern))) return;
       debouncedGenereate();
     });
@@ -99,19 +96,6 @@ async function readYAMLs(path) {
   );
   return contents.filter(Boolean).map(parse);
 }
-
-// function restart() {
-//   console.log("Restarting...");
-
-//   process.on("exit", function () {
-//     spawn(process.argv.shift(), process.argv, {
-//       cwd: process.cwd(),
-//       detached: true,
-//       stdio: "inherit",
-//     });
-//   });
-//   process.exit();
-// }
 
 function debounce(func, waitFor) {
   let timeout;
