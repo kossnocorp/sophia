@@ -51,7 +51,7 @@
       }
     },
     {
-      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, markup.heading",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, storage.modifier.async, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, markup.heading",
       "settings": {
         "foreground": "#FF8CF5"
       }
