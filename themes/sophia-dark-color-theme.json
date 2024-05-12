@@ -51,13 +51,13 @@
       }
     },
     {
-      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, storage.modifier.async, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, markup.heading",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, markup.heading",
       "settings": {
         "foreground": "#FF8CF5"
       }
     },
     {
-      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component, keyword.symbol.fsharp, meta.scope.prerequisites.makefile, string.other.link.title.markdown",
+      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component, keyword.symbol.fsharp, meta.function-call support.class, meta.function-call variable.language.super, meta.scope.prerequisites.makefile, string.other.link.title.markdown",
       "settings": {
         "foreground": "#CA94FF"
       }

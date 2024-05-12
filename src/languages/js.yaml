@@ -3,4 +3,15 @@
 layers:
   runtime:
     control:
+      # *async* function ...
       - storage.modifier.async
+      # class ... *extends* ...
+      - meta.class storage.modifier
+      # *try* { ... } *catch* { ... }
+      - keyword.control.trycatch
+
+    effect:
+      # new *Promise*(...)
+      - meta.function-call support.class
+      # *super*(...)
+      - meta.function-call variable.language.super
