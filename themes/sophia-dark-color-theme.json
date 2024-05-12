@@ -1,509 +1,144 @@
 {
   "name": "Sophia Dark",
   "type": "dark",
-
   "colors": {
-    // UI
-
-    // Scrollbars
-
-    // "scrollbarSlider.background": "#191818",
-
-    // Titlebar
-
     "titleBar.activeBackground": "#000000",
-
-    // Activity bar
-
     "activityBar.border": "#303030",
     "activityBar.activeBackground": "#000000",
-
     "activityBar.background": "#000000",
     "activityBar.foreground": "#bebeb1",
-
     "activityBar.activeBorder": "#FFFF00",
-
     "activityBarBadge.background": "#FFFF00",
     "activityBarBadge.foreground": "#000000",
-
-    // Sidebar
-
     "sideBar.border": "#303030",
     "sideBar.background": "#000000",
     "sideBar.foreground": "#bebeb1",
-
-    //#region Statusbar
-
     "statusBar.background": "#000000",
     "statusBar.border": "#303030",
     "statusBar.foreground": "#4d4d4d",
-
-    // WSL label, remote connection, etc.
     "statusBarItem.remoteBackground": "#000000",
     "statusBarItem.remoteForeground": "#BBE1CA",
-
-    //#endregion
-
-    // File tree
-
     "tree.indentGuidesStroke": "#202020",
-
-    // Menu
-
     "menu.background": "#171717",
-
-    // Terminal
-
     "terminal.background": "#000000",
-
-    // Tabs
-
-    // Active
     "tab.activeBackground": "#000000",
     "tab.activeForeground": "#ffffff",
-    // Active unfocused
     "tab.unfocusedActiveBackground": "#000000",
     "tab.unfocusedActiveForeground": "#bebeb1",
-    // Inactive
     "tab.inactiveBackground": "#000000",
     "tab.inactiveForeground": "#bebeb1",
-    // Border
     "tab.border": "#000000",
     "tab.activeBorderTop": "#FFFF00",
-
-    // Editor group
-
     "editorGroup.border": "#303030",
     "editorGroupHeader.border": "#000000",
     "editorGroupHeader.noTabsBackground": "#ff0000",
     "editorGroupHeader.tabsBackground": "#000000",
-
-    // Editor
-
     "editor.background": "#000000",
-    "editor.foreground": "#696969",
-
+    "editor.foreground": "#7e7e7e",
     "editorLineNumber.foreground": "#4d4d4d",
-
-    // Current line
     "editor.lineHighlightBackground": "#0f0f0f",
-    // "editorRuler.foreground": "#ff0000"
     "editorIndentGuide.background1": "#101010",
     "editorIndentGuide.activeBackground1": "#252525",
-
     "editorRuler.foreground": "#101010",
-
-    // Folds
     "editor.foldBackground": "#0f0f0f7b",
-
-    // Terminal
-
     "terminal.tab.activeBorder": "#8904e8bc"
   },
-
   "tokenColors": [
     {
-      "scope": "meta.embedded.line",
+      "scope": "meta.embedded.line, storage.type, variable.object.property, meta.var.expr, variable.other.constant.object, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.jsx.children, meta.import keyword.control.as, punctuation.support.type.property-name.begin.json, punctuation.support.type.property-name.end.json, punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json, punctuation.separator.key-value.makefile, meta.link.inline.markdown, meta.link.reference.def.markdown, constant.other.reference.link.markdown, punctuation.definition.raw.markdown, punctuation.definition.bold.markdown, punctuation.definition.italic.markdown",
       "settings": {
-        "foreground": "#8A8A8A",
-        "fontStyle": ""
+        "foreground": "#7e7e7e"
       }
     },
-    // Effects: function calls, operators, JSX component tags.
     {
-      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, markup.heading",
       "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#ca94ff"
+        "foreground": "#FF8CF5"
       }
     },
-
-    // Control flow: conditions, async/await, return, etc.
     {
-      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch",
+      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component, keyword.symbol.fsharp, meta.scope.prerequisites.makefile, string.other.link.title.markdown",
       "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#ff8cf5"
+        "foreground": "#CA94FF"
       }
     },
-
-    // Definitions: functions, variables, arguments, imports, etc.
     {
-      "scope": "variable.parameter, variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, entity.name.type.class",
+      "scope": "string, support.type.builtin, constant, meta.objectliteral, entity.other.attribute-name, markup.inline.raw.string.markdown",
       "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        // "foreground": "#BBBFE1",
-        // [TODO] Decide if to use a more prominent gray for definitions instead of a color:
-        "foreground": "#f3f3f3"
+        "foreground": "#8C99B5"
       }
     },
-
-    // Make function calls italic
     {
-      "scope": "meta.function-call",
-      "settings": {
-        "fontStyle": "italic"
-      }
-    },
-
-    // Primitives: strings, booleans, numbers, HTML/JSX tags.
-    {
-      "scope": "string, support.type.builtin, constant",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#8c99b5",
-        "fontStyle": "bold"
-      }
-    },
-
-    // Object literals
-    {
-      "scope": "meta.objectliteral, entity.other.attribute-name",
-      "settings": {
-        "foreground": "#8c99b5"
-      }
-    },
-
-    // // Third priority:
-
-    // - What is read, passed as arguments, etc.
-    {
-      "scope": "variable.other.readwrite, variable.other.property, support.variable.property, entity.name.tag",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#c5c5c5",
-        "fontStyle": ""
-      }
-    },
-
-    // Support code:
-    //
-    // - Runtime types: function, const, class, etc.
-    // - Namespaces: accessed object properties, TS namespaces
-    // - Modifiers: async
-    // - Secondary operators: rest, spread, typeof, instanceof, assignment
-    // - Import from
-    // - JSX text
-    {
-      "scope": "storage.type, variable.object.property, meta.var.expr, variable.other.constant.object, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.jsx.children, meta.import keyword.control.as",
-      "settings": {
-        "foreground": "#8a8a8a",
-        "fontStyle": ""
-      }
-    },
-
-    //#region Types
-
-    // Base types color
-    {
-      "scope": "meta.interface, keyword.operator.type.annotation, meta.field.declaration, meta.type.declaration, meta.type.annotation, meta.interface, meta.type.annotation entity.name.type.module, meta.namespace.declaration punctuation.terminator, entity.name.type.module",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#6b876e"
-        // "fontStyle": "italic"
-      }
-    },
-
-    // Type control flow
-    {
-      "scope": "meta.namespace.declaration keyword.control.export, meta.type.declaration keyword.control.export, meta.interface keyword.control.export, meta.type.declaration keyword.operator.ternary, meta.type.infer keyword.operator.expression.extends, meta.type.declaration storage.modifier, meta.type.parameters storage.modifier, meta.interface keyword.operator.ternary, meta.method.declaration storage.modifier, keyword.control.satisfies",
-      "settings": {
-        "foreground": "#46f4a6"
-      }
-    },
-
-    // Type effects
-    {
-      "scope": "keyword.operator.type, keyword.operator.expression.infer, meta.indexer.mappedtype.declaration keyword.operator.expression.in, keyword.operator.expression.keyof, meta.interface storage.modifier, meta.type.annotation storage.modifier, keyword.control.as",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        "foreground": "#3aece1",
-        "fontStyle": ""
-      }
-    },
-
-    {
-      "scope": "entity.name.type.interface, entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter, meta.interface variable.object.property, meta.interface entity.name.function",
-      "settings": {
-        "foreground": "#d6ffdc"
-      }
-    },
-
-    // Accessing
-    {
-      "scope": "entity.name.type, meta.interface variable.other.readwrite, meta.interface entity.other.inherited-class, meta.interface variable.other.property",
-      "settings": {
-        "foreground": "#9ec5a4",
-        "fontStyle": ""
-      }
-    },
-
-    // Primitives
-    {
-      "scope": "support.type.primitive, meta.type.parameters string, meta.type.annotation string, meta.type.annotation support.type.builtin, meta.interface support.type.builtin, meta.type.declaration support.type.builtin, meta.namespace.declaration string, meta.interface constant",
-      "settings": {
-        "foreground": "#93a27e",
-        "fontStyle": "bold"
-      }
-    },
-    // Object properties
-    {
-      "scope": "meta.field.declaration, meta.object.type variable.object.property, meta.interface meta.objectliteral",
-      "settings": {
-        "foreground": "#93a27e"
-      }
-    },
-    // Function definitions italic
-    {
-      "scope": "meta.interface entity.name.function",
-      "settings": {
-        "fontStyle": "italic"
-      }
-    },
-
-    // Type support code
-    {
-      "scope": "meta.type.declaration storage.type, storage.type.interface, storage.type.namespace, meta.field.declaration storage.modifier",
-      "settings": {
-        "foreground": "#71957a"
-      }
-    },
-
-    //#endregion
-
-    //#region Comments
-
-    // Comments
-
-    {
-      "scope": "comment, comment.block.documentation",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        // "foreground": "#6c6c6c"
-        "foreground": "#cca879"
-      }
-    },
-
-    {
-      "scope": "storage.type.class.jsdoc",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        // "foreground": "#6c6c6c"
-        "foreground": "#fba83b"
-      }
-    },
-
-    {
-      "scope": "variable.other.jsdoc",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        // "foreground": "#6c6c6c"
-        "foreground": "#f7dcb9"
-      }
-    },
-
-    {
-      "scope": "punctuation.definition.comment, punctuation.definition.block.tag.jsdoc",
-      "settings": {
-        // "foreground": "#8a8a8a" // Placeholder
-        // "foreground": "#6c6c6c"
-        "foreground": "#55514b"
-      }
-    },
-
-    //#endregion
-
-    //#region Markdown
-
-    // Headers
-    {
-      "scope": "markup.heading",
-      "settings": {
-        "foreground": "#ff8cf5",
-        "fontStyle": "bold"
-      }
-    },
-
-    // Text
-    {
-      "scope": "meta.paragraph.markdown, punctuation.definition.list.begin.markdown",
-      "settings": {
-        "foreground": "#f3f3f3"
-      }
-    },
-
-    // Bold
-    {
-      "scope": "markup.bold",
-      "settings": {
-        "fontStyle": "bold"
-      }
-    },
-
-    // Italic
-    {
-      "scope": "markup.italic",
-      "settings": {
-        "fontStyle": "italic"
-      }
-    },
-
-    // Underline
-    {
-      "scope": "markup.underline",
-      "settings": {
-        "fontStyle": "underline"
-      }
-    },
-
-    // Link
-    {
-      "scope": "string.other.link.title.markdown",
-      "settings": {
-        "foreground": "#ca94ff",
-        "fontStyle": "underline"
-      }
-    },
-
-    {
-      "scope": "constant.other.reference.link.markdown",
-      "settings": {
-        "fontStyle": "underline"
-      }
-    },
-
-    // Formatting, link definitions, etc.
-    {
-      "scope": "meta.link.inline.markdown, meta.link.reference.def.markdown, constant.other.reference.link.markdown, punctuation.definition.raw.markdown, punctuation.definition.bold.markdown, punctuation.definition.italic.markdown",
-      "settings": {
-        "foreground": "#8a8a8a"
-      }
-    },
-
-    // Raw
-    {
-      "scope": "markup.inline.raw.string.markdown",
-      "settings": {
-        "foreground": "#8c99b5"
-      }
-    },
-
-    //#endregion
-
-    //#region JSON
-
-    {
-      "scope": "punctuation.support.type.property-name.begin.json, punctuation.support.type.property-name.end.json, punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json",
-      "settings": {
-        "foreground": "#696969"
-      }
-    },
-
-    // Property name
-    {
-      "scope": "support.type.property-name.json",
+      "scope": "variable.parameter, variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, entity.name.type.class, meta.field.declaration variable.object.property, meta.definition.method, meta.method.declaration storage.type, variable.fsharp, entity.name.section.fsharp, support.type.property-name.json, meta.paragraph.markdown, punctuation.definition.list.begin.markdown",
       "settings": {
         "foreground": "#F3F3F3"
       }
     },
-
-    // Nested property names
     {
-      "scope": "meta.structure.dictionary.value.json support.type.property-name.json",
+      "scope": "variable.other.readwrite, variable.other.property, support.variable.property, entity.name.tag, source.fsharp.fsl, meta.structure.dictionary.value.json support.type.property-name.json, source.makefile",
       "settings": {
-        "foreground": "#c5c5c5"
+        "foreground": "#C5C5C5"
       }
     },
-
-    // Reset bold for property names and strings
     {
-      "scope": "support.type.property-name.json, string.quoted.double.json",
+      "scope": "meta.type.declaration storage.type, storage.type.interface, storage.type.namespace, meta.field.declaration storage.modifier, meta.interface, keyword.operator.type.annotation, meta.field.declaration, meta.type.declaration, meta.type.annotation, meta.interface, meta.type.annotation entity.name.type.module, meta.namespace.declaration punctuation.terminator, entity.name.type.module",
       "settings": {
-        "fontStyle": ""
+        "foreground": "#6b876e"
       }
     },
-
-    //#endregion
-
-    //#region Makefile
-
     {
-      "scope": "source.makefile",
+      "scope": "meta.namespace.declaration keyword.control.export, meta.type.declaration keyword.control.export, meta.interface keyword.control.export, meta.type.declaration keyword.operator.ternary, meta.type.infer keyword.operator.expression.extends, meta.type.declaration storage.modifier, meta.type.parameters storage.modifier, meta.interface keyword.operator.ternary, meta.method.declaration storage.modifier, keyword.control.satisfies",
       "settings": {
-        "foreground": "#c5c5c5"
+        "foreground": "#46F4A6"
       }
     },
-
     {
-      "scope": "entity.name.function.target.makefile, keyword.control.@.makefile",
+      "scope": "keyword.operator.type, keyword.operator.expression.infer, meta.indexer.mappedtype.declaration keyword.operator.expression.in, keyword.operator.expression.keyof, meta.interface storage.modifier, meta.type.annotation storage.modifier, keyword.control.as",
       "settings": {
-        "foreground": "#ff8cf5"
+        "foreground": "#3AECE1"
       }
     },
-
     {
-      "scope": "meta.scope.prerequisites.makefile",
+      "scope": "support.type.primitive, meta.type.parameters string, meta.type.annotation string, meta.type.annotation support.type.builtin, meta.interface support.type.builtin, meta.type.declaration support.type.builtin, meta.namespace.declaration string, meta.interface constant, meta.field.declaration, meta.object.type variable.object.property, meta.interface meta.objectliteral",
       "settings": {
-        "foreground": "#ca94ff"
+        "foreground": "#93A27E"
       }
     },
-
     {
-      "scope": "punctuation.separator.key-value.makefile",
+      "scope": "entity.name.type.interface, entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter, meta.interface variable.object.property, meta.interface entity.name.function",
       "settings": {
-        "foreground": "#696969"
+        "foreground": "#D6FFDC"
       }
     },
-
-    //#endregion
-
-    //#region F#
-
-    // Control flow
     {
-      "scope": "entity.name.section.fsharp keyword.fsharp",
+      "scope": "entity.name.type, meta.interface variable.other.readwrite, meta.interface entity.other.inherited-class, meta.interface variable.other.property",
       "settings": {
-        "foreground": "#ff8cf5"
+        "foreground": "#9EC5A4"
       }
     },
-
-    // Effects
-    // [NOTE] F# tokens are limited, so we set all symbols to the "effects" color
-    // and assign specific symbols to their own color.
     {
-      "scope": "keyword.symbol.fsharp",
+      "scope": "comment, comment.block.documentation",
       "settings": {
-        "foreground": "#ca94ff"
+        "foreground": "#cca879"
       }
     },
-
-    // Declarations
     {
-      "scope": "variable.fsharp, entity.name.section.fsharp",
+      "scope": "storage.type.class.jsdoc",
       "settings": {
-        "foreground": "#f3f3f3"
+        "foreground": "#fba83b"
       }
     },
-
-    // Access
-    // [NOTE] F# tokens are limited, so we set the default color to the "access" color
     {
-      "scope": "source.fsharp.fsl",
+      "scope": "variable.other.jsdoc",
       "settings": {
-        "foreground": "#c5c5c5"
+        "foreground": "#f7dcb9"
       }
     },
-
-    // Support
     {
-      "scope": "binding.fsharp keyword.fsharp, binding.fsharp keyword.symbol.fsharp",
+      "scope": "punctuation.definition.comment, punctuation.definition.block.tag.jsdoc",
       "settings": {
-        "foreground": "#8a8a8a"
+        "foreground": "#55514b"
       }
-    },
-
-    //#endregion
-
-    {}
+    }
   ]
 }

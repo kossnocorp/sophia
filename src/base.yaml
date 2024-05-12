@@ -1,0 +1,88 @@
+titleBar.activeBackground: "#000000"
+
+# Activity bar
+
+activityBar.border: "#303030"
+activityBar.activeBackground: "#000000"
+
+activityBar.background: "#000000"
+activityBar.foreground: "#bebeb1"
+
+activityBar.activeBorder: "#FFFF00"
+
+activityBarBadge.background: "#FFFF00"
+activityBarBadge.foreground: "#000000"
+
+# Sidebar
+
+sideBar.border: "#303030"
+sideBar.background: "#000000"
+sideBar.foreground: "#bebeb1"
+
+#region Statusbar
+
+statusBar.background: "#000000"
+statusBar.border: "#303030"
+statusBar.foreground: "#4d4d4d"
+
+# WSL label remote connection etc.
+statusBarItem.remoteBackground: "#000000"
+statusBarItem.remoteForeground: "#BBE1CA"
+
+#endregion
+
+# File tree
+
+tree.indentGuidesStroke: "#202020"
+
+# Menu
+
+menu.background: "#171717"
+
+# Terminal
+
+terminal.background: "#000000"
+
+# Tabs
+
+# Active
+tab.activeBackground: "#000000"
+tab.activeForeground: "#ffffff"
+# Active unfocused
+tab.unfocusedActiveBackground: "#000000"
+tab.unfocusedActiveForeground: "#bebeb1"
+# Inactive
+tab.inactiveBackground: "#000000"
+tab.inactiveForeground: "#bebeb1"
+# Border
+tab.border: "#000000"
+tab.activeBorderTop: "#FFFF00"
+
+# Editor group
+
+editorGroup.border: "#303030"
+editorGroupHeader.border: "#000000"
+editorGroupHeader.noTabsBackground: "#ff0000"
+editorGroupHeader.tabsBackground: "#000000"
+
+# Editor
+
+editor.background: "#000000"
+editor.foreground: "#7e7e7e"
+
+editorLineNumber.foreground: "#4d4d4d"
+
+# Current line
+editor.lineHighlightBackground: "#0f0f0f"
+# editorRuler.foreground: "#ff0000"
+editorIndentGuide.background1: "#101010"
+editorIndentGuide.activeBackground1: "#252525"
+
+editorRuler.foreground: "#101010"
+
+# Folds
+editor.foldBackground: "#0f0f0f7b"
+
+# Terminal
+
+terminal.tab.activeBorder: "#8904e8bc"

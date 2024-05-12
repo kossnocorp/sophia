@@ -1,0 +1,26 @@
+slug: dark
+name: Sophia Dark
+type: dark
+
+syntax:
+  runtime:
+    base: "#7e7e7e"
+    control: "#FF8CF5"
+    effect: "#CA94FF"
+    primitive: "#8C99B5"
+    declare: "#F3F3F3"
+    access: "#C5C5C5"
+
+  types:
+    base: "#6b876e"
+    control: "#46F4A6"
+    effect: "#3AECE1"
+    primitive: "#93A27E"
+    declare: "#D6FFDC"
+    access: "#9EC5A4"
+
+  comments:
+    base: "#cca879"
+    control: "#fba83b"
+    declare: "#f7dcb9"
+    detail: "#55514b"

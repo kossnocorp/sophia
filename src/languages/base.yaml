@@ -1,0 +1,141 @@
+# Base language definitions for all languages
+
+runtime:
+  base:
+    - meta.embedded.line
+    - storage.type
+    - variable.object.property
+    - meta.var.expr
+    - variable.other.constant.object
+    - support.class
+    - storage.modifier
+    - keyword.operator.rest
+    - keyword.operator.spread
+    - keyword.operator.expression.typeof
+    - keyword.operator.expression.instanceof
+    - keyword.operator.assignment
+    - keyword.control.import
+    - keyword.control.from
+    - meta.jsx.children
+    - meta.import keyword.control.as
+
+  effect:
+    - meta.function-call entity.name.function
+    - keyword.operator.expression.delete
+    - keyword.operator.logical
+    - keyword.operator.comparison
+    - keyword.operator.expression.extends
+    - keyword.operator.expression.instanceof
+    - keyword.operator.expression.of
+    - keyword.operator.new
+    - support.class.component
+
+  control:
+    - keyword.control.export
+    - keyword.control.flow
+    - keyword.control.conditional
+    - keyword.operator.ternary
+    - keyword.control.loop
+    - keyword.control.switch
+
+  declare:
+    - variable.parameter
+    - variable.other.readwrite.alias
+    - meta.definition.function
+    - meta.definition.variable
+    - entity.name.type.class
+    - meta.field.declaration variable.object.property
+    - meta.definition.method
+    - meta.method.declaration storage.type
+
+  primitive:
+    - string
+    - support.type.builtin
+    - constant
+    - meta.objectliteral
+    - entity.other.attribute-name
+
+  access:
+    - variable.other.readwrite
+    - variable.other.property
+    - support.variable.property
+    - entity.name.tag
+
+types:
+  base:
+    - meta.type.declaration storage.type
+    - storage.type.interface
+    - storage.type.namespace
+    - meta.field.declaration storage.modifier
+    - meta.interface
+    - keyword.operator.type.annotation
+    - meta.field.declaration
+    - meta.type.declaration
+    - meta.type.annotation
+    - meta.interface
+    - meta.type.annotation entity.name.type.module
+    - meta.namespace.declaration punctuation.terminator
+    - entity.name.type.module
+
+  control:
+    - meta.namespace.declaration keyword.control.export
+    - meta.type.declaration keyword.control.export
+    - meta.interface keyword.control.export
+    - meta.type.declaration keyword.operator.ternary
+    - meta.type.infer keyword.operator.expression.extends
+    - meta.type.declaration storage.modifier
+    - meta.type.parameters storage.modifier
+    - meta.interface keyword.operator.ternary
+    - meta.method.declaration storage.modifier
+    - keyword.control.satisfies
+
+  effect:
+    - keyword.operator.type
+    - keyword.operator.expression.infer
+    - meta.indexer.mappedtype.declaration keyword.operator.expression.in
+    - keyword.operator.expression.keyof
+    - meta.interface storage.modifier
+    - meta.type.annotation storage.modifier
+    - keyword.control.as
+
+  primitive:
+    - support.type.primitive
+    - meta.type.parameters string
+    - meta.type.annotation string
+    - meta.type.annotation support.type.builtin
+    - meta.interface support.type.builtin
+    - meta.type.declaration support.type.builtin
+    - meta.namespace.declaration string
+    - meta.interface constant
+    - meta.field.declaration
+    - meta.object.type variable.object.property
+    - meta.interface meta.objectliteral
+
+  declare:
+    - entity.name.type.interface
+    - entity.name.type.alias
+    - meta.type.infer entity.name.type
+    - meta.interface variable.parameter
+    - meta.interface variable.object.property
+    - meta.interface entity.name.function
+
+  access:
+    - entity.name.type
+    - meta.interface variable.other.readwrite
+    - meta.interface entity.other.inherited-class
+    - meta.interface variable.other.property
+
+comments:
+  base:
+    - comment
+    - comment.block.documentation
+
+  control:
+    - storage.type.class.jsdoc
+
+  declare:
+    - variable.other.jsdoc
+
+  detail:
+    - punctuation.definition.comment
+    - punctuation.definition.block.tag.jsdoc

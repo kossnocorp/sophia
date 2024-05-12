@@ -1,0 +1,25 @@
+# F#
+
+runtime:
+  control:
+    - entity.name.section.fsharp keyword.fsharp
+
+  # [NOTE] F# scopes are limited, so I set all symbols to the effect group
+  # and assign specific symbols to their own group.
+  effect:
+    - keyword.symbol.fsharp
+
+  declare:
+    - variable.fsharp
+    - entity.name.section.fsharp
+
+  # [NOTE] F# scopes are limited, so I assign the default scope to the access
+  # group and hand-assign the rest scopes.
+  access:
+    - source.fsharp.fsl
+
+  support:
+    - binding.fsharp
+    - keyword.fsharp
+    - binding.fsharp
+    - keyword.symbol.fsharp

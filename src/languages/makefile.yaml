@@ -1,0 +1,16 @@
+# Makefile
+
+runtime:
+  base:
+    - punctuation.separator.key-value.makefile
+
+  control:
+    - entity.name.function.target.makefile
+    - keyword.control.@.makefile
+    - constant.character.escape.continuation.makefile
+
+  effect:
+    - meta.scope.prerequisites.makefile
+
+  access:
+    - source.makefile
