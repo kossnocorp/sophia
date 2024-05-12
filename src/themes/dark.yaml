@@ -2,7 +2,7 @@ slug: dark
 name: Sophia Dark
 type: dark
 
-syntax:
+layers:
   runtime:
     base: "#7e7e7e"
     control: "#FF8CF5"

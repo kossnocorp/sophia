@@ -1,5 +1,6 @@
 # JavaScript
 
-runtime:
-  control:
-    - storage.modifier.async
+layers:
+  runtime:
+    control:
+      - storage.modifier.async

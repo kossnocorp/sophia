@@ -54,7 +54,7 @@ async function generateTheme(theme, base, languages) {
   const layers = {};
 
   languages.forEach((language) => {
-    Object.entries(language).forEach(([layer, groups]) => {
+    Object.entries(language.layers || {}).forEach(([layer, groups]) => {
       layers[layer] ||= {};
       Object.entries(groups).forEach(([group, scopes]) =>
         (layers[layer][group] ||= []).push(...scopes)
@@ -62,7 +62,7 @@ async function generateTheme(theme, base, languages) {
     });
   });
 
-  Object.entries(theme.syntax).forEach(([layer, groups]) => {
+  Object.entries(theme.layers || {}).forEach(([layer, groups]) => {
     Object.entries(groups).forEach(([group, color]) => {
       const scopes = layers[layer]?.[group];
       if (!scopes?.length) return;

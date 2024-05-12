@@ -1,23 +1,24 @@
 # Markdown
 
-runtime:
-  base:
-    - meta.link.inline.markdown
-    - meta.link.reference.def.markdown
-    - constant.other.reference.link.markdown
-    - punctuation.definition.raw.markdown
-    - punctuation.definition.bold.markdown
-    - punctuation.definition.italic.markdown
+layers:
+  runtime:
+    base:
+      - meta.link.inline.markdown
+      - meta.link.reference.def.markdown
+      - constant.other.reference.link.markdown
+      - punctuation.definition.raw.markdown
+      - punctuation.definition.bold.markdown
+      - punctuation.definition.italic.markdown
 
-  control:
-    - markup.heading
+    control:
+      - markup.heading
 
-  effect:
-    - string.other.link.title.markdown
+    effect:
+      - string.other.link.title.markdown
 
-  primitive:
-    - markup.inline.raw.string.markdown
+    primitive:
+      - markup.inline.raw.string.markdown
 
-  declare:
-    - meta.paragraph.markdown
-    - punctuation.definition.list.begin.markdown
+    declare:
+      - meta.paragraph.markdown
+      - punctuation.definition.list.begin.markdown
