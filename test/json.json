@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "hello-world",
+  "version": "1.0.0",
+  "number": 1,
+  "boolean": true,
+  "object": {
+    "key": "value",
+    "nested": {
+      "key": "value"
+    }
+  },
+  "array": [1, 2, 3]
+}

@@ -22,3 +22,16 @@ layers:
     declare:
       - meta.paragraph.markdown
       - punctuation.definition.list.begin.markdown
+
+styles:
+  bold:
+    - markup.heading
+    - markup.bold
+
+  italic:
+    - markup.italic
+
+  underline:
+    - markup.underline
+    - string.other.link.title.markdown
+    - constant.other.reference.link.markdown

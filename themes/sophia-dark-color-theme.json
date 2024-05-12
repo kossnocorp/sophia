@@ -139,6 +139,24 @@
       "settings": {
         "foreground": "#55514b"
       }
+    },
+    {
+      "scope": "markup.heading, markup.bold",
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "markup.italic",
+      "settings": {
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "markup.underline, string.other.link.title.markdown, constant.other.reference.link.markdown",
+      "settings": {
+        "fontStyle": "underline"
+      }
     }
   ]
 }

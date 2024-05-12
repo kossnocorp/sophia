@@ -52,6 +52,7 @@ async function generateTheme(theme, base, languages) {
   };
 
   const layers = {};
+  const styles = {};
 
   languages.forEach((language) => {
     Object.entries(language.layers || {}).forEach(([layer, groups]) => {
@@ -59,6 +60,10 @@ async function generateTheme(theme, base, languages) {
       Object.entries(groups).forEach(([group, scopes]) =>
         (layers[layer][group] ||= []).push(...scopes)
       );
+    });
+
+    Object.entries(language.styles || {}).forEach(([style, scopes]) => {
+      (styles[style] ||= []).push(...scopes);
     });
   });
 
@@ -72,6 +77,16 @@ async function generateTheme(theme, base, languages) {
           foreground: color,
         },
       });
+    });
+  });
+
+  Object.entries(styles || {}).forEach(([style, scopes]) => {
+    if (!scopes?.length) return;
+    obj.tokenColors.push({
+      scope: scopes.join(", "),
+      settings: {
+        fontStyle: style,
+      },
     });
   });
 
