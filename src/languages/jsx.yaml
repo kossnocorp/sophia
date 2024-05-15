@@ -1,0 +1,18 @@
+# JSX
+
+layers:
+  data:
+    text:
+      # <div>*Hello*</div>
+      - meta.jsx.children meta.jsx.children
+
+    property:
+      # <button *onClick*={...}>...</button>
+      - entity.other.attribute-name.js.jsx
+
+    detail:
+      # <div>*{*...*}*</div>
+      - punctuation.section.embedded.begin.js.jsx
+      - punctuation.section.embedded.end.js.jsx
+      # <a href*=*"...">...
+      - meta.tag.attributes.js.jsx keyword.operator.assignment.js.jsx

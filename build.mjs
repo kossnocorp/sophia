@@ -55,10 +55,13 @@ async function generateTheme(theme, base, languages) {
   const styles = {};
 
   languages.forEach((language) => {
+    // Ignore freshly created YAML
+    if (!language) return;
+
     Object.entries(language.layers || {}).forEach(([layer, groups]) => {
       layers[layer] ||= {};
-      Object.entries(groups).forEach(([group, scopes]) =>
-        (layers[layer][group] ||= []).push(...scopes)
+      Object.entries(groups || {}).forEach(([group, scopes]) =>
+        (layers[layer][group] ||= []).push(...(scopes || []))
       );
     });
 

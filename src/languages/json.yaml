@@ -1,15 +1,33 @@
 # JSON
 
 layers:
-  runtime:
-    base:
-      - punctuation.support.type.property-name.begin.json
-      - punctuation.support.type.property-name.end.json
-      - punctuation.definition.dictionary.begin.json
-      - punctuation.definition.dictionary.end.json
+  # runtime:
+  #   base:
+  #     - punctuation.support.type.property-name.begin.json
+  #     - punctuation.support.type.property-name.end.json
+  #     - punctuation.definition.dictionary.begin.json
+  #     - punctuation.definition.dictionary.end.json
 
-    declare:
+  data:
+    property:
+      # "*name*": ...
       - support.type.property-name.json
 
-    access:
-      - meta.structure.dictionary.value.json support.type.property-name.json
+    detail:
+      # *{* ... *}*
+      - punctuation.definition.dictionary.begin.json
+      - punctuation.definition.dictionary.end.json
+      # *"*name*"*
+      - punctuation.support.type.property-name.begin.json
+      - punctuation.support.type.property-name.end.json
+      - punctuation.definition.string.begin.json
+      - punctuation.definition.string.end.json
+      # "name"*:* ...
+      - punctuation.separator.dictionary.key-value.json
+      # *[*1, 2...*]*
+      - punctuation.definition.array.begin.json
+      - punctuation.definition.array.end.json
+      # [1*,* 2...]
+      - punctuation.separator.array.json
+      # ...: "hello"*,*
+      - punctuation.separator.dictionary.pair.json

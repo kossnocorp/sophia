@@ -51,3 +51,46 @@ export class HelloWorld extends Hello {
     console.log(`Hola, ${this.who}`);
   }
 }
+
+const hello = {
+  world: "Hello, World!",
+  yeah: true,
+  num: 123,
+};
+
+const re = /(Hello+), Worl[d]?!/;
+
+re.test("What's up?!");
+
+namespace Hello {
+  export interface Yup {
+    yeah: boolean;
+  }
+
+  export type AnyBrand = { [key: string | number | symbol]: any };
+
+  export type Debrand<Type> = Type extends infer _Brand extends AnyBrand &
+    infer Debranded extends string | number | symbol
+    ? Debranded
+    : Type;
+
+  export type UnionKeys<Type> = Type extends Type ? keyof Type : never;
+
+  export type WithoutIndexed<Model> = {
+    [Key in keyof Model as string extends Debrand<Key>
+      ? never
+      : number extends Debrand<Key>
+      ? never
+      : symbol extends Debrand<Key>
+      ? never
+      : Key]: Model[Key];
+  };
+
+  export type AllOptionalBut<Model, Key extends keyof Model> = Partial<
+    Omit<WithoutIndexed<Model>, Key>
+  > extends Omit<WithoutIndexed<Model>, Key>
+    ? true
+    : false;
+}
+
+type Test = Hello.AnyBrand

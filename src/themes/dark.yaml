@@ -8,16 +8,26 @@ layers:
     control: "#FF8CF5"
     effect: "#CA94FF"
     primitive: "#8C99B5"
-    declare: "#F3F3F3"
+    declare: "#FFFFFF"
     access: "#C5C5C5"
+    detail: "#565656"
+
+  data:
+    base: "#8491b0"
+    control: "#57a5fe"
+    property: "#b3c9e2"
+    primitive: "#a4cbc6"
+    text: "#ebf1ff"
+    detail: "#4d5974"
 
   types:
-    base: "#6b876e"
+    base: "#89a98c"
     control: "#46F4A6"
     effect: "#3AECE1"
-    primitive: "#93A27E"
-    declare: "#D6FFDC"
-    access: "#9EC5A4"
+    primitive: "#88bdae"
+    declare: "#edfff0"
+    access: "#b7d9bc"
+    detail: "#547458"
 
   comments:
     base: "#cca879"

@@ -1,0 +1,24 @@
+# HTML
+
+layers:
+  data:
+    base:
+      # <*div*>...</*div*>
+      - entity.name.tag
+
+    property:
+      # <button *disabled*>...</button>
+      - entity.other.attribute-name.html
+
+    text:
+      # <div>*Hello*</div>
+      - text.html.derivative
+
+    detail:
+      # *<*div*>*...*</*div*>*
+      - punctuation.definition.tag
+      # <html lang*=*"en">...
+      - punctuation.separator.key-value.html
+      # <html lang=*"*en*"*>...
+      - punctuation.definition.string.begin.html
+      - punctuation.definition.string.end.html

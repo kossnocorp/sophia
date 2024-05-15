@@ -14,8 +14,11 @@ I'm not a polyglot by any means, so if you notice an idiosyncrasy, please [DM me
 
 - **JavaScript**
 - **TypeScript**
-- **JSON**
+- **JSX**
 - **Markdown**
+- **JSON**
+- **YAML**
+- **HTML**
 - **Makefile**
 - F#
 

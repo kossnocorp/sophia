@@ -1,0 +1,30 @@
+# TypeScript
+
+layers:
+  types:
+    base:
+      # import *type* ...
+      - meta.import keyword.control.type
+      # *Hello*.World
+      - entity.name.type.module
+
+    control:
+      # export *type* ...
+      - meta.export keyword.control.type
+
+    declare:
+      # namespace *Hello* { ... }
+      - meta.namespace.declaration entity.name.type.module
+
+    detail:
+      # type Test*<*Type*>* = { ... }
+      - punctuation.definition.typeparameters.begin
+      - punctuation.definition.typeparameters.end
+      # type Test<Type1*,* Type2> = { ... }
+      - meta.type.parameters.ts punctuation.separator.comma.ts
+      # type Test = *{* ... *}*
+      - meta.object.type.ts punctuation.definition.block.ts
+      # type Test = { *[* ... *]*: ... }
+      - meta.object.type.ts meta.brace.square.ts
+      # function hello(arg*:* string)*:* string { ... }
+      - keyword.operator.type.annotation

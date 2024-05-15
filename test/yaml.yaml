@@ -1,0 +1,38 @@
+# Hello!
+
+hello:
+  world: "Hello, World!"
+
+hola:
+  mundo:
+    - 1
+    - true
+    - "Hello, World!"
+    - [1, 2, 3, 4, 5]
+    - !!float 123
+    - !!str String
+
+--- # Another document
+
+lorem: |
+  Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit. Nullam nec
+
+picture: !!binary |
+  R0lGODdhDQAIAIAAAAAAANn
+  Z2SwAAAAADQAIAAACF4SDGQ
+  ar3xxbJ9p0qa7R0YxwzaFME
+  1IAADs=
+
+---
+- user: &id1
+  name: Sasha
+
+- user: &id2
+  name: Sasha
+
+- user: &id3
+  name: Sophia
+  parents:
+    - *id1
+    - *id2

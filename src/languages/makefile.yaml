@@ -2,9 +2,6 @@
 
 layers:
   runtime:
-    base:
-      - punctuation.separator.key-value.makefile
-
     control:
       - entity.name.function.target.makefile
       - keyword.control.@.makefile
@@ -15,3 +12,6 @@ layers:
 
     access:
       - source.makefile
+
+    detail:
+      - punctuation.separator.key-value.makefile

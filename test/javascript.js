@@ -5,6 +5,7 @@ import { spawn } from "child_process";
 export { path };
 export * from "fs";
 
+
 export default function helloWorld(arg) {
   console.log("Arguments:", arguments);
   return Boolean(arg);
@@ -45,3 +46,13 @@ export class HelloWorld extends Hello {
     console.log(`Hola, ${this.who}`);
   }
 }
+
+const hello = {
+  world: "Hello, World!",
+  yeah: true,
+  num: 123
+}
+
+const re = /(Hello+), Worl[d]?!/;
+
+re.test("What's up?!")

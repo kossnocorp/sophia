@@ -1,0 +1,40 @@
+# YAML
+
+layers:
+  types:
+    base:
+      # - *!!float* 3.14
+      - storage.type.tag-handle.yaml
+
+  data:
+    control:
+      # *---* ...
+      - entity.other.document.begin.yaml
+      # lorem: *|* ...
+      - keyword.control.flow.block-scalar.literal.yaml
+      # - user: *&*id1
+      - punctuation.definition.anchor.yaml
+      # - user: &*id1*
+      - entity.name.type.anchor.yaml
+      # - owner: ***id1
+      - punctuation.definition.alias.yaml
+      # - owner: **id1*
+      - variable.other.alias.yaml
+
+    property:
+      # *hello*: ...
+      - entity.name.tag.yaml
+
+    detail:
+      # *-* hello: ...
+      - punctuation.definition.block.sequence.item.yaml
+      # hello*:* ...
+      - punctuation.separator.key-value.mapping.yaml
+      # *"*...*"*
+      - punctuation.definition.string.begin.yaml
+      - punctuation.definition.string.end.yaml
+      # *[*1, 2...*]*
+      - punctuation.definition.sequence.begin.yaml
+      - punctuation.definition.sequence.end.yaml
+      # [1*,* 2...]
+      - punctuation.separator.sequence.yaml

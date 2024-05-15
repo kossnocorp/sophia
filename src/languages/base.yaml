@@ -3,6 +3,7 @@
 layers:
   runtime:
     base:
+      - meta.brace
       - meta.embedded.line
       - storage.type
       - variable.object.property
@@ -17,10 +18,11 @@ layers:
       - keyword.operator.assignment
       - keyword.control.import
       - keyword.control.from
-      - meta.jsx.children
       - meta.import keyword.control.as
 
     effect:
+      # ... *=* ...
+      # - keyword.operator.assignment
       - meta.function-call entity.name.function
       - keyword.operator.expression.delete
       - keyword.operator.logical
@@ -49,18 +51,43 @@ layers:
       - meta.definition.method
       - meta.method.declaration storage.type
 
-    primitive:
-      - string
-      - support.type.builtin
-      - constant
-      - meta.objectliteral
-      - entity.other.attribute-name
+    # primitive:
+    #   - string
+    #   - support.type.builtin
+    #   - constant
+    #   - meta.objectliteral
 
     access:
       - variable.other.readwrite
       - variable.other.property
       - support.variable.property
       - entity.name.tag
+
+    detail:
+      # ...*;*
+      - punctuation.terminator.statement
+      # function fn*(*...*)* ...
+      - punctuation.definition.parameters.begin
+      - punctuation.definition.parameters.end
+      # console.log*(*...*)*
+      - meta.brace.round
+      # const hello = *{* ... *}*
+      - punctuation.definition.block
+
+  data:
+    property:
+      - meta.object-literal.key
+
+    primitive:
+      - constant.numeric
+      - constant.language
+      - string
+
+    detail:
+      # const hello = *{* ... *}*
+      - meta.objectliteral punctuation.definition.block
+      # { hello*:* ... }
+      - punctuation.separator.key-value
 
   types:
     base:
@@ -71,12 +98,11 @@ layers:
       - meta.interface
       - keyword.operator.type.annotation
       - meta.field.declaration
-      - meta.type.declaration
+      # - meta.type.declaration
       - meta.type.annotation
       - meta.interface
       - meta.type.annotation entity.name.type.module
       - meta.namespace.declaration punctuation.terminator
-      - entity.name.type.module
 
     control:
       - meta.namespace.declaration keyword.control.export
