@@ -83,12 +83,6 @@ layers:
       - constant.language
       - string
 
-    detail:
-      # const hello = *{* ... *}*
-      - meta.objectliteral punctuation.definition.block
-      # { hello*:* ... }
-      - punctuation.separator.key-value
-
   types:
     base:
       - meta.type.declaration storage.type

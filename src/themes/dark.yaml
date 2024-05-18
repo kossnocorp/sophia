@@ -13,12 +13,12 @@ layers:
     detail: "#565656"
 
   data:
-    base: "#8491b0"
-    control: "#57a5fe"
-    property: "#b3c9e2"
-    primitive: "#a4cbc6"
-    text: "#ebf1ff"
-    detail: "#4d5974"
+    base: "#a2acec"
+    control: "#8e9dfe"
+    property: "#bfc5e9"
+    primitive: "#94c0ef"
+    text: "#e8efff"
+    detail: "#4b5072"
 
   types:
     base: "#89a98c"
@@ -28,6 +28,11 @@ layers:
     declare: "#edfff0"
     access: "#b7d9bc"
     detail: "#547458"
+
+  memory:
+    base: "#d6887f"
+    control: "#f53823"
+    effect: "#f5234a"
 
   comments:
     base: "#cca879"

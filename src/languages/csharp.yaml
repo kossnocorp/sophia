@@ -1,0 +1,11 @@
+# C#
+
+layers:
+  memory:
+    control:
+      # public *unsafe* ...
+      - storage.modifier.unsafe.cs
+
+    effect:
+      # int*** ptr = &value;
+      - punctuation.separator.asterisk.cs

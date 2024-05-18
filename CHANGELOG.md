@@ -8,6 +8,16 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
+## v0.3.0 - 2024-05-??
+
+### Added
+
+- Introduced a new memory layer for system languages. It uses red tint to make sure memory managment is always prominent.
+
+### Changed
+
+- Made the data layer more bluish to distinguish it from the types that has the green tint.
+
 ## v0.2.0 - 2024-05-15
 
 ### Added

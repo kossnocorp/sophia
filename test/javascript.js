@@ -5,7 +5,12 @@ import { spawn } from "child_process";
 export { path };
 export * from "fs";
 
-
+/**
+ * Returns boolean for whatever reason also prints what you pass to it.
+ *
+ * @param {string} arg - String argument, maybe
+ * @returns {boolean} - True if argument is truthy, otherwise false
+ */
 export default function helloWorld(arg) {
   console.log("Arguments:", arguments);
   return Boolean(arg);
@@ -50,9 +55,9 @@ export class HelloWorld extends Hello {
 const hello = {
   world: "Hello, World!",
   yeah: true,
-  num: 123
-}
+  num: 123,
+};
 
 const re = /(Hello+), Worl[d]?!/;
 
-re.test("What's up?!")
+re.test("What's up?!");

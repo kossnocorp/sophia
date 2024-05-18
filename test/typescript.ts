@@ -93,4 +93,4 @@ namespace Hello {
     : false;
 }
 
-type Test = Hello.AnyBrand
+type Test = Hello.AnyBrand;

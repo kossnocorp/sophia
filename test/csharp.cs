@@ -89,3 +89,96 @@ namespace Hello
     }
   }
 }
+
+class PointerExample
+{
+  public unsafe void Demonstrate()
+  {
+    int value = 42;
+    int* ptr = &value;
+    Console.WriteLine(*ptr); // Output: 42
+  }
+}
+
+class PointerExample
+{
+  public unsafe void Demonstrate()
+  {
+    int value = 42;
+    int* ptr = &value;
+    Console.WriteLine(*ptr); // Output: 42
+  }
+}
+
+
+class SpanAndMemoryExample
+{
+  public void Demonstrate()
+  {
+    Span<int> span = stackalloc int[5];
+    for (int i = 0; i < span.Length; i++)
+    {
+      span[i] = i * i;
+    }
+
+    foreach (var item in span)
+    {
+      Console.WriteLine(item);
+    }
+
+    int[] array = new int[5];
+    Memory<int> memory = array;
+    for (int i = 0; i < memory.Length; i++)
+    {
+      memory.Span[i] = i * i;
+    }
+
+    foreach (var item in memory.Span)
+    {
+      Console.WriteLine(item);
+    }
+  }
+}
+
+struct FixedBufferExample
+{
+  public unsafe fixed int Buffer[5];
+
+  public unsafe void Demonstrate()
+  {
+    for (int i = 0; i < 5; i++)
+    {
+      Buffer[i] = i * i;
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+      Console.WriteLine(Buffer[i]);
+    }
+  }
+}
+
+class UnmanagedMemoryExample
+{
+  public void Demonstrate()
+  {
+    IntPtr unmanagedPointer = Marshal.AllocHGlobal(sizeof(int) * 5);
+    try
+    {
+      for (int i = 0; i < 5; i++)
+      {
+        Marshal.WriteInt32(unmanagedPointer, i * sizeof(int), i * i);
+      }
+
+      for (int i = 0; i < 5; i++)
+      {
+        int value = Marshal.ReadInt32(unmanagedPointer, i * sizeof(int));
+        Console.WriteLine(value);
+      }
+    }
+    finally
+    {
+      Marshal.FreeHGlobal(unmanagedPointer);
+    }
+  }
+}

@@ -83,37 +83,37 @@
     {
       "scope": "entity.name.tag, markup.quote.markdown, punctuation.definition.list.begin.markdown, meta.separator.markdown, markup.underline.link.markdown, constant.other.reference.link.markdown",
       "settings": {
-        "foreground": "#8491b0"
+        "foreground": "#a2acec"
       }
     },
     {
       "scope": "markup.heading, string.other.link.title.markdown, markup.underline.link.image.markdown, entity.other.document.begin.yaml, keyword.control.flow.block-scalar.literal.yaml, punctuation.definition.anchor.yaml, entity.name.type.anchor.yaml, punctuation.definition.alias.yaml, variable.other.alias.yaml",
       "settings": {
-        "foreground": "#57a5fe"
+        "foreground": "#8e9dfe"
       }
     },
     {
       "scope": "meta.object-literal.key, entity.other.attribute-name.html, support.type.property-name.json, entity.other.attribute-name.js.jsx, entity.name.tag.yaml",
       "settings": {
-        "foreground": "#b3c9e2"
+        "foreground": "#bfc5e9"
       }
     },
     {
       "scope": "constant.numeric, constant.language, string, markup.inline.raw.string.markdown",
       "settings": {
-        "foreground": "#a4cbc6"
+        "foreground": "#94c0ef"
       }
     },
     {
       "scope": "text.html.derivative, meta.jsx.children meta.jsx.children, meta.paragraph.markdown, text.html.markdown",
       "settings": {
-        "foreground": "#ebf1ff"
+        "foreground": "#e8efff"
       }
     },
     {
-      "scope": "meta.objectliteral punctuation.definition.block, punctuation.separator.key-value, punctuation.definition.tag, punctuation.separator.key-value.html, punctuation.definition.string.begin.html, punctuation.definition.string.end.html, meta.array.literal meta.brace.square, meta.array.literal punctuation.separator.comma, punctuation.definition.string.begin, punctuation.definition.string.end, punctuation.definition.string.template.begin, punctuation.definition.string.template.end, punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json, punctuation.support.type.property-name.begin.json, punctuation.support.type.property-name.end.json, punctuation.definition.string.begin.json, punctuation.definition.string.end.json, punctuation.separator.dictionary.key-value.json, punctuation.definition.array.begin.json, punctuation.definition.array.end.json, punctuation.separator.array.json, punctuation.separator.dictionary.pair.json, punctuation.section.embedded.begin.js.jsx, punctuation.section.embedded.end.js.jsx, meta.tag.attributes.js.jsx keyword.operator.assignment.js.jsx, meta.link.inline.markdown, meta.link.reference.def.markdown, punctuation.definition.raw.markdown, punctuation.definition.bold.markdown, punctuation.definition.italic.markdown, punctuation.definition.markdown, fenced_code.block.language.markdown, punctuation.definition.link.description.begin.markdown, punctuation.definition.link.description.end.markdown, punctuation.definition.metadata.markdown, meta.link.reference.markdown, punctuation.definition.block.sequence.item.yaml, punctuation.separator.key-value.mapping.yaml, punctuation.definition.string.begin.yaml, punctuation.definition.string.end.yaml, punctuation.definition.sequence.begin.yaml, punctuation.definition.sequence.end.yaml, punctuation.separator.sequence.yaml",
+      "scope": "punctuation.definition.tag, punctuation.separator.key-value.html, punctuation.definition.string.begin.html, punctuation.definition.string.end.html, meta.objectliteral punctuation.definition.block, punctuation.separator.key-value, meta.objectliteral punctuation.separator.comma, meta.array.literal meta.brace.square, meta.array.literal punctuation.separator.comma, punctuation.definition.string.begin, punctuation.definition.string.end, punctuation.definition.string.template.begin, punctuation.definition.string.template.end, punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json, punctuation.support.type.property-name.begin.json, punctuation.support.type.property-name.end.json, punctuation.definition.string.begin.json, punctuation.definition.string.end.json, punctuation.separator.dictionary.key-value.json, punctuation.definition.array.begin.json, punctuation.definition.array.end.json, punctuation.separator.array.json, punctuation.separator.dictionary.pair.json, punctuation.section.embedded.begin.js.jsx, punctuation.section.embedded.end.js.jsx, meta.tag.attributes.js.jsx keyword.operator.assignment.js.jsx, meta.link.inline.markdown, meta.link.reference.def.markdown, punctuation.definition.raw.markdown, punctuation.definition.bold.markdown, punctuation.definition.italic.markdown, punctuation.definition.markdown, fenced_code.block.language.markdown, punctuation.definition.link.description.begin.markdown, punctuation.definition.link.description.end.markdown, punctuation.definition.metadata.markdown, meta.link.reference.markdown, punctuation.definition.block.sequence.item.yaml, punctuation.separator.key-value.mapping.yaml, punctuation.definition.string.begin.yaml, punctuation.definition.string.end.yaml, punctuation.definition.sequence.begin.yaml, punctuation.definition.sequence.end.yaml, punctuation.separator.sequence.yaml",
       "settings": {
-        "foreground": "#4d5974"
+        "foreground": "#4b5072"
       }
     },
     {
@@ -156,6 +156,18 @@
       "scope": "punctuation.definition.typeparameters.begin, punctuation.definition.typeparameters.end, meta.type.parameters.ts punctuation.separator.comma.ts, meta.object.type.ts punctuation.definition.block.ts, meta.object.type.ts meta.brace.square.ts, keyword.operator.type.annotation",
       "settings": {
         "foreground": "#547458"
+      }
+    },
+    {
+      "scope": "storage.modifier.unsafe.cs",
+      "settings": {
+        "foreground": "#f53823"
+      }
+    },
+    {
+      "scope": "punctuation.separator.asterisk.cs",
+      "settings": {
+        "foreground": "#f5234a"
       }
     },
     {

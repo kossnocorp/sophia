@@ -24,6 +24,12 @@ layers:
 
   data:
     detail:
+      # const hello = *{* ... *}*
+      - meta.objectliteral punctuation.definition.block
+      # { hello*:* ... }
+      - punctuation.separator.key-value
+      # { hello: ...*,* ... }
+      - meta.objectliteral punctuation.separator.comma
       # *[*1, 2...*]*
       - meta.array.literal meta.brace.square
       # [1*,* 2...]
