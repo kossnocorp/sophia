@@ -1,4 +1,5 @@
 # HTML
+# [NOTE] It provides foundation for JSX, Astro and other HTML-like languages.
 
 layers:
   data:
@@ -8,7 +9,7 @@ layers:
 
     property:
       # <button *disabled*>...</button>
-      - entity.other.attribute-name.html
+      - entity.other.attribute-name
 
     text:
       # <div>*Hello*</div>
@@ -18,7 +19,7 @@ layers:
       # *<*div*>*...*</*div*>*
       - punctuation.definition.tag
       # <html lang*=*"en">...
-      - punctuation.separator.key-value.html
+      - punctuation.separator.key-value
       # <html lang=*"*en*"*>...
       - punctuation.definition.string.begin.html
       - punctuation.definition.string.end.html

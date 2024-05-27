@@ -1,0 +1,32 @@
+# Rust
+
+layers:
+  runtime:
+    access:
+      - variable.other.rust
+
+    control:
+      # *if* a.len() > b.len() {
+      - keyword.control.rust
+
+    effect:
+      # Box::*new*(...)
+      - meta.function.call.rust entity.name.function.rust
+
+    declare:
+      # fn *mutable_reference*() {
+      - meta.function.definition.rust entity.name.function.rust
+
+  memory:
+    effect:
+      # let r1 = *&*x as *const i32
+      - keyword.operator.borrow.and.rust
+      # ***y += 5;
+      - keyword.operator.dereference.rust
+      # struct RefStruct<*'*a> { ...
+      - punctuation.definition.lifetime.rust
+
+  macro:
+    effect:
+      # *println!*("Hello, world!");
+      - meta.macro.rust

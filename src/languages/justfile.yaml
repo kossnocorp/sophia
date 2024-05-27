@@ -1,0 +1,19 @@
+# Justfile
+
+layers:
+  runtime:
+    control:
+      # *recipe*: ...
+      - entity.name.function.just
+      # *@*command ...
+      - keyword.operator.quiet.just
+      # *[confirm]*
+      - support.function.system.just
+
+    access:
+      # Baseline
+      - source.just
+
+    detail:
+      # command*:*
+      - keyword.operator.recipe.end.just

@@ -11,18 +11,24 @@ layers:
       - meta.class storage.modifier
       # *try* { ... } *catch* { ... }
       - keyword.control.trycatch
+      # function*** () { ...
+      - keyword.generator.asterisk
 
     effect:
       # new *Promise*(...)
       - meta.function-call support.class
       # *super*(...)
       - meta.function-call variable.language.super
+      # *sql*`...`
+      - entity.name.function.tagged-template
 
     access:
       # *arguments*
       - variable.language.arguments
 
   data:
+    primitive:
+
     detail:
       # const hello = *{* ... *}*
       - meta.objectliteral punctuation.definition.block

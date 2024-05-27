@@ -12,9 +12,17 @@ layers:
       # export *type* ...
       - meta.export keyword.control.type
 
+    effect:
+      # *typeof* Symbol.iterator
+      - keyword.operator.expression.typeof
+
     declare:
       # namespace *Hello* { ... }
       - meta.namespace.declaration entity.name.type.module
+
+    primitive:
+      # satisfies *undefined*
+      - support.type.builtin
 
     detail:
       # type Test*<*Type*>* = { ... }

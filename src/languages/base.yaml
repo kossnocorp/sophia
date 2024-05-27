@@ -49,13 +49,12 @@ layers:
       - entity.name.type.class
       - meta.field.declaration variable.object.property
       - meta.definition.method
-      - meta.method.declaration storage.type
+      # - meta.method.declaration storage.type
 
-    # primitive:
-    #   - string
-    #   - support.type.builtin
-    #   - constant
-    #   - meta.objectliteral
+    primitive:
+      #   - string
+      #   - constant
+      #   - meta.objectliteral
 
     access:
       - variable.other.readwrite
@@ -107,7 +106,7 @@ layers:
       - meta.type.declaration storage.modifier
       - meta.type.parameters storage.modifier
       - meta.interface keyword.operator.ternary
-      - meta.method.declaration storage.modifier
+      # - meta.method.declaration storage.modifier
       - keyword.control.satisfies
 
     effect:

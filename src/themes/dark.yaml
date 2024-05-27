@@ -5,7 +5,7 @@ type: dark
 layers:
   runtime:
     base: "#7e7e7e"
-    control: "#FF8CF5"
+    control: "#ff8cfd"
     effect: "#CA94FF"
     primitive: "#8C99B5"
     declare: "#FFFFFF"
@@ -22,17 +22,20 @@ layers:
 
   types:
     base: "#89a98c"
-    control: "#46F4A6"
-    effect: "#3AECE1"
-    primitive: "#88bdae"
+    control: "#55e679"
+    effect: "#3aeca8"
+    primitive: "#94edef"
     declare: "#edfff0"
     access: "#b7d9bc"
-    detail: "#547458"
+    detail: "#3e4a40"
 
   memory:
-    base: "#d6887f"
-    control: "#f53823"
-    effect: "#f5234a"
+    base: "#d67f7f"
+    control: "#ff8989"
+    effect: "#ff718b"
+
+  macro:
+    effect: "#d67f7f"
 
   comments:
     base: "#cca879"

@@ -1,0 +1,7 @@
+# Astro
+
+layers:
+  data:
+    text:
+      # <div>*Hello*</div>
+      - text.astro
