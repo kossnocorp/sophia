@@ -117,45 +117,51 @@
       }
     },
     {
-      "scope": "meta.type.declaration storage.type, storage.type.interface, storage.type.namespace, meta.field.declaration storage.modifier, meta.interface, keyword.operator.type.annotation, meta.field.declaration, meta.type.annotation, meta.interface, meta.type.annotation entity.name.type.module, meta.namespace.declaration punctuation.terminator, meta.import keyword.control.type, entity.name.type.module, storage.type.tag-handle.yaml",
+      "scope": "meta.type.declaration storage.type, storage.type.interface, storage.type.namespace, meta.field.declaration storage.modifier, meta.interface, keyword.operator.type.annotation, meta.field.declaration, meta.type.annotation, meta.interface, meta.type.annotation entity.name.type.module, meta.namespace.declaration punctuation.terminator, source.graphql, meta.import keyword.control.type, entity.name.type.module, storage.type.tag-handle.yaml",
       "settings": {
         "foreground": "#89a98c"
       }
     },
     {
-      "scope": "meta.namespace.declaration keyword.control.export, meta.type.declaration keyword.control.export, meta.interface keyword.control.export, meta.type.declaration keyword.operator.ternary, meta.type.infer keyword.operator.expression.extends, meta.type.declaration storage.modifier, meta.type.parameters storage.modifier, meta.interface keyword.operator.ternary, keyword.control.satisfies, meta.export keyword.control.type",
+      "scope": "meta.namespace.declaration keyword.control.export, meta.type.declaration keyword.control.export, meta.interface keyword.control.export, meta.type.declaration keyword.operator.ternary, meta.type.infer keyword.operator.expression.extends, meta.type.declaration storage.modifier, meta.type.parameters storage.modifier, meta.interface keyword.operator.ternary, keyword.control.satisfies, keyword.schema.graphql, keyword.type.graphql, punctuation.or.graphql, keyword.directive.graphql, keyword.fragment.graphql, keyword.operation.graphql, keyword.union.graphql, keyword.input.graphql, keyword.interface.graphql, keyword.enum.graphql, keyword.scalar.graphql, meta.export keyword.control.type",
       "settings": {
         "foreground": "#55e679"
       }
     },
     {
-      "scope": "keyword.operator.type, keyword.operator.expression.infer, meta.indexer.mappedtype.declaration keyword.operator.expression.in, keyword.operator.expression.keyof, meta.interface storage.modifier, meta.type.annotation storage.modifier, keyword.control.as, keyword.operator.expression.typeof",
+      "scope": "keyword.operator.type, keyword.operator.expression.infer, meta.indexer.mappedtype.declaration keyword.operator.expression.in, keyword.operator.expression.keyof, meta.interface storage.modifier, meta.type.annotation storage.modifier, keyword.control.as, keyword.operator.nulltype.graphql, meta.type.object.graphql entity.name.function.directive.graphql, keyword.operator.expression.typeof",
       "settings": {
         "foreground": "#3aeca8"
       }
     },
     {
-      "scope": "support.type.primitive, meta.type.parameters string, meta.type.annotation string, meta.type.annotation support.type.builtin, meta.interface support.type.builtin, meta.type.declaration support.type.builtin, meta.namespace.declaration string, meta.interface constant, meta.field.declaration, meta.object.type variable.object.property, meta.interface meta.objectliteral, support.type.builtin",
+      "scope": "support.type.primitive, meta.type.parameters string, meta.type.annotation string, meta.type.annotation support.type.builtin, meta.interface support.type.builtin, meta.type.declaration support.type.builtin, meta.namespace.declaration string, meta.interface constant, meta.field.declaration, meta.object.type variable.object.property, meta.interface meta.objectliteral, support.type.builtin.graphql, string.quoted.double.graphql, support.type.builtin",
       "settings": {
         "foreground": "#94edef"
       }
     },
     {
-      "scope": "entity.name.type.interface, entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter, meta.interface variable.object.property, meta.interface entity.name.function, meta.namespace.declaration entity.name.type.module",
+      "scope": "entity.name.type.interface, entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter, meta.interface variable.object.property, meta.interface entity.name.function, support.type.enum.graphql, support.type.graphql, entity.scalar.graphql, entity.name.fragment.graphql, entity.name.function.directive.graphql, entity.name.function.graphql, constant.character.enum.graphql, meta.namespace.declaration entity.name.type.module",
       "settings": {
         "foreground": "#edfff0"
       }
     },
     {
-      "scope": "entity.name.type, meta.interface variable.other.readwrite, meta.interface entity.other.inherited-class, meta.interface variable.other.property",
+      "scope": "entity.name.type, meta.interface variable.other.readwrite, meta.interface entity.other.inherited-class, meta.interface variable.other.property, variable.parameter.graphql, variable.fragment.graphql",
       "settings": {
         "foreground": "#b7d9bc"
       }
     },
     {
-      "scope": "punctuation.definition.typeparameters.begin, punctuation.definition.typeparameters.end, meta.type.parameters.ts punctuation.separator.comma.ts, meta.object.type.ts punctuation.definition.block.ts, meta.object.type.ts meta.brace.square.ts, keyword.operator.type.annotation",
+      "scope": "punctuation.colon.graphql, punctuation.operation.graphql, punctuation.definition.string.begin.graphql, punctuation.definition.string.begin.graphql, punctuation.definition.string.end.graphql, meta.brace.round.directive.graphql, meta.brace.square.graphql, punctuation.comma.graphql, meta.brace.round.graphql, punctuation.definition.typeparameters.begin, punctuation.definition.typeparameters.end, meta.type.parameters.ts punctuation.separator.comma.ts, meta.object.type.ts punctuation.definition.block.ts, meta.object.type.ts meta.brace.square.ts, keyword.operator.type.annotation",
       "settings": {
         "foreground": "#3e4a40"
+      }
+    },
+    {
+      "scope": "variable.graphql, variable.arguments.graphql",
+      "settings": {
+        "foreground": "#a9d4d0"
       }
     },
     {

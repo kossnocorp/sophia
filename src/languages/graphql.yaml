@@ -1,0 +1,96 @@
+# GraphQL
+
+layers:
+  types:
+    base:
+      # Set default source color
+      - source.graphql
+
+    control:
+      # [NOTE] Just like in JavaScript where export is on the control flow
+      # layer, type, fragment, schema, etc. keywords define what is exported,
+      # so they are here as well.
+
+      # *schema* { ... }
+      - keyword.schema.graphql
+      # *type* User { ... }
+      - keyword.type.graphql
+      # union SearchResult = User *|* Post *|* Comment
+      - punctuation.or.graphql
+      # *directive* @customDirective(arg: String) on FIELD_DEFINITION
+      - keyword.directive.graphql
+      # *fragment* UserFields on User { ... }
+      - keyword.fragment.graphql
+      # *query* GetUserWithAlias { ... }
+      # *mutation* CreateUser { ... }
+      - keyword.operation.graphql
+      # *union* SearchResult = User | Post | Comment
+      - keyword.union.graphql
+      # *input* CreateUserInput { ... }
+      - keyword.input.graphql
+      # *interface* Node { ... }
+      - keyword.interface.graphql
+      # *enum* Role { ... }
+      - keyword.enum.graphql
+      # scalar *DateTime*
+      - keyword.scalar.graphql
+
+    effect:
+      # user(id: ID*!*): User
+      - keyword.operator.nulltype.graphql
+      # email: String! *@auth*(requires: ADMIN)
+      - meta.type.object.graphql entity.name.function.directive.graphql
+
+    primitive:
+      # deleteUser(id: *ID*!): *Boolean*
+      - support.type.builtin.graphql
+      # user1: user(id: "*1*") {
+      - string.quoted.double.graphql
+
+    declare:
+      # enum *Role* { ... }
+      - support.type.enum.graphql
+      # type *PageInfo* { ... }
+      - support.type.graphql
+      # scalar *DateTime*
+      - entity.scalar.graphql
+      # fragment *UserFields* on User { ... }
+      - entity.name.fragment.graphql
+      # directive *@auth*(requires: Role = USER) on FIELD_DEFINITION
+      - entity.name.function.directive.graphql
+      # query *GetUserWithAlias* { ... }
+      - entity.name.function.graphql
+      # enum Role { *USER* }
+      - constant.character.enum.graphql
+
+    access:
+      # user(*id*: ID!): User
+      - variable.parameter.graphql
+      # ...*UserFields*
+      - variable.fragment.graphql
+      #
+      # - meta.type.object.graphql support.type.graphql
+
+    detail:
+      # createdAt*:* DateTime!
+      - punctuation.colon.graphql
+      # type Comment implements Node *{* ... *}*
+      - punctuation.operation.graphql
+      - punctuation.definition.string.begin.graphql
+      # user2: user(id: *"*2*"*) { ... }
+      - punctuation.definition.string.begin.graphql
+      - punctuation.definition.string.end.graphql
+      # user2: user*(*id: "2"*)* { ... }
+      - meta.brace.round.directive.graphql
+      # edges: *[*UserEdge!*]*!
+      - meta.brace.square.graphql
+      # createPost(title: String!*,* content: String!): Post
+      - punctuation.comma.graphql
+      # user*(*id: ID!*)*: User
+      - meta.brace.round.graphql
+
+    property:
+      # type Subscription { *userCreated*: User, ... }
+      - variable.graphql
+      # schema { *subscription*: Subscription, ... }
+      - variable.arguments.graphql

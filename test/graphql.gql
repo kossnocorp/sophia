@@ -1,0 +1,123 @@
+scalar DateTime
+
+directive @deprecated(reason: String = "No longer supported") on FIELD_DEFINITION | ENUM_VALUE
+
+directive @auth(requires: Role = USER) on FIELD_DEFINITION
+
+enum Role {
+  USER
+  ADMIN
+  MODERATOR
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String!
+  endCursor: String!
+}
+
+type UserEdge {
+  cursor: String!
+  node: User!
+}
+
+type UserConnection {
+  edges: [UserEdge!]!
+  pageInfo: PageInfo!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String! @auth(requires: ADMIN)
+  role: Role!
+  createdAt: DateTime!
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+  password: String!
+}
+
+input UpdateUserInput {
+  name: String
+  email: String
+  password: String
+}
+
+interface Node {
+  id: ID!
+}
+
+type Post implements Node {
+  id: ID!
+  title: String!
+  content: String!
+  author: User!
+  publishedAt: DateTime
+}
+
+type Comment implements Node {
+  id: ID!
+  content: String!
+  author: User!
+  post: Post!
+  createdAt: DateTime!
+}
+
+union SearchResult = User | Post | Comment
+
+type Query {
+  user(id: ID!): User
+  users(first: Int, after: String): UserConnection!
+  post(id: ID!): Post
+  posts: [Post!]!
+  search(text: String!): [SearchResult!]!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): User
+  updateUser(id: ID!, input: UpdateUserInput!): User
+  deleteUser(id: ID!): Boolean
+  createPost(title: String!, content: String!): Post
+  updatePost(id: ID!, title: String, content: String): Post
+  deletePost(id: ID!): Boolean
+}
+
+type Subscription {
+  userCreated: User
+  postCreated: Post
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+directive @customDirective(arg: String) on FIELD_DEFINITION
+
+fragment UserFields on User {
+  id
+  name
+  email
+  role
+}
+
+query GetUserWithAlias {
+  user1: user(id: "1") {
+    ...UserFields
+  }
+  user2: user(id: "2") {
+    ...UserFields
+  }
+}
+
+mutation CreateUser {
+  createUser(input: { name: "John Doe", email: "john@example.com", password: "password" }) {
+    id
+    name
+  }
+}

@@ -28,6 +28,7 @@ layers:
     declare: "#edfff0"
     access: "#b7d9bc"
     detail: "#3e4a40"
+    property: "#a9d4d0"
 
   memory:
     base: "#d67f7f"

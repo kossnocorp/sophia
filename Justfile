@@ -1,5 +1,5 @@
 dev:
-	@node --watch ./build.mjs
+	@node --watch ./build.mjs --watch
 
 build:
 	@npx vsce package
