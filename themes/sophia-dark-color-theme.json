@@ -41,8 +41,11 @@
     "editorIndentGuide.activeBackground1": "#252525",
     "editorRuler.foreground": "#101010",
     "editor.foldBackground": "#0f0f0f7b",
-    "terminal.tab.activeBorder": "#8904e8bc"
+    "terminal.tab.activeBorder": "#8904e8bc",
+    "editorInlayHint.foreground": "#565656",
+    "editorInlayHint.typeForeground": "#445047"
   },
+  "semanticHighlighting": true,
   "tokenColors": [
     {
       "scope": "meta.brace, meta.embedded.line, storage.type, variable.object.property, meta.var.expr, variable.other.constant.object, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.import keyword.control.as",
@@ -51,7 +54,7 @@
       }
     },
     {
-      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, keyword.control.default, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, keyword.generator.asterisk, entity.name.function.just, keyword.operator.quiet.just, support.function.system.just, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, keyword.control.rust",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, keyword.control.default, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, keyword.generator.asterisk, entity.name.function.just, keyword.operator.quiet.just, support.function.system.just, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, keyword.control.rust, keyword.operator.arrow.fat.rust, meta.use.rust keyword.other.rust, keyword.operator.question.rust",
       "settings": {
         "foreground": "#ff8cfd"
       }
@@ -153,15 +156,15 @@
       }
     },
     {
-      "scope": "punctuation.colon.graphql, punctuation.operation.graphql, punctuation.definition.string.begin.graphql, punctuation.definition.string.begin.graphql, punctuation.definition.string.end.graphql, meta.brace.round.directive.graphql, meta.brace.square.graphql, punctuation.comma.graphql, meta.brace.round.graphql, punctuation.definition.typeparameters.begin, punctuation.definition.typeparameters.end, meta.type.parameters.ts punctuation.separator.comma.ts, meta.object.type.ts punctuation.definition.block.ts, meta.object.type.ts meta.brace.square.ts, keyword.operator.type.annotation",
-      "settings": {
-        "foreground": "#3e4a40"
-      }
-    },
-    {
       "scope": "variable.graphql, variable.arguments.graphql",
       "settings": {
         "foreground": "#a9d4d0"
+      }
+    },
+    {
+      "scope": "punctuation.colon.graphql, punctuation.operation.graphql, punctuation.definition.string.begin.graphql, punctuation.definition.string.begin.graphql, punctuation.definition.string.end.graphql, meta.brace.round.directive.graphql, meta.brace.square.graphql, punctuation.comma.graphql, meta.brace.round.graphql, punctuation.brackets.angle.rust, punctuation.definition.typeparameters.begin, punctuation.definition.typeparameters.end, meta.type.parameters.ts punctuation.separator.comma.ts, meta.object.type.ts punctuation.definition.block.ts, meta.object.type.ts meta.brace.square.ts, keyword.operator.type.annotation",
+      "settings": {
+        "foreground": "#445047"
       }
     },
     {
@@ -171,7 +174,7 @@
       }
     },
     {
-      "scope": "punctuation.separator.asterisk.cs, keyword.operator.borrow.and.rust, keyword.operator.dereference.rust, punctuation.definition.lifetime.rust",
+      "scope": "punctuation.separator.asterisk.cs, keyword.operator.borrow.and.rust, keyword.operator.dereference.rust, punctuation.definition.lifetime.rust, storage.modifier.mut.rust",
       "settings": {
         "foreground": "#ff718b"
       }

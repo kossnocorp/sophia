@@ -8,6 +8,18 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
+## v0.4.0 - 2024-06-??
+
+### Added
+
+- Added support for Rust and GraphQL.
+
+- Added a new property color to the types layer.
+
+### Changed
+
+- Enabled `semanticHighlighting` option allowing the theme to use semantic tokens for syntax highlighting. It makes the theme more consistent and accurate.
+
 ## v0.3.0 - 2024-05-27
 
 ### Added

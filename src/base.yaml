@@ -86,3 +86,7 @@ editor.foldBackground: "#0f0f0f7b"
 # Terminal
 
 terminal.tab.activeBorder: "#8904e8bc"
+
+editorInlayHint.foreground: "#565656" # runtime.detail
+# editorInlayHint.parameterForeground: "#ff0000"
+editorInlayHint.typeForeground: "#445047" # types.detail

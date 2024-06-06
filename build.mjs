@@ -48,6 +48,7 @@ async function generateTheme(theme, base, languages) {
     name: theme.name,
     type: theme.type,
     colors: base,
+    semanticHighlighting: true,
     tokenColors: [],
   };
 
