@@ -20,6 +20,8 @@ This change log follows the format documented in [Keep a CHANGELOG].
 
 - Enabled `semanticHighlighting` option allowing the theme to use semantic tokens for syntax highlighting. It makes the theme more consistent and accurate.
 
+- Make the macro layer yellow rather than red that is easier to confuse with the memory layer.
+
 ## v0.3.0 - 2024-05-27
 
 ### Added

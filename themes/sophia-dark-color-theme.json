@@ -78,7 +78,7 @@
       }
     },
     {
-      "scope": "punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile",
+      "scope": "punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust",
       "settings": {
         "foreground": "#565656"
       }
@@ -180,9 +180,21 @@
       }
     },
     {
+      "scope": "entity.name.function.macro.rules.rust, keyword.operator.macro.dollar.rust",
+      "settings": {
+        "foreground": "#ffdd00"
+      }
+    },
+    {
       "scope": "meta.macro.rust",
       "settings": {
-        "foreground": "#d67f7f"
+        "foreground": "#d7cb5e"
+      }
+    },
+    {
+      "scope": "entity.name.function.macro.rust",
+      "settings": {
+        "foreground": "#fff193"
       }
     },
     {

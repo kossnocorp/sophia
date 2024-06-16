@@ -23,6 +23,21 @@ layers:
       # fn *mutable_reference*() {
       - meta.function.definition.rust entity.name.function.rust
 
+    detail:
+      # [NOTE] Reset predefined keyword.operator.logical as Rust
+      # marks a lot of stuff like this *(|*error*|* ...
+      - keyword.operator.logical.rust
+      #  println!*(*"{error:?}"*)*
+      - punctuation.brackets.round.rust
+      # match *{* ... *}*
+      - punctuation.brackets.curly.rust
+      # println!()*;*
+      - punctuation.semi.rust
+      # fn main() *->* ...
+      - keyword.operator.arrow.skinny.rust
+      # std*::*sync*::*mpsc*::*channel();
+      - keyword.operator.namespace.rust
+
   memory:
     effect:
       # let r1 = *&*x as *const i32
@@ -40,6 +55,16 @@ layers:
       - punctuation.brackets.angle.rust
 
   macro:
+    control:
+      # *macro_rules!* println { ... }
+      - entity.name.function.macro.rules.rust
+      #
+      - keyword.operator.macro.dollar.rust
+
     effect:
       # *println!*("Hello, world!");
       - meta.macro.rust
+
+    declare:
+      # macro_rules! *println* { ... }
+      - entity.name.function.macro.rust

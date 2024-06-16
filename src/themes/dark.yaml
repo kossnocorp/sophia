@@ -36,7 +36,9 @@ layers:
     effect: "#ff718b"
 
   macro:
-    effect: "#d67f7f"
+    control: "#ffdd00"
+    effect: "#d7cb5e"
+    declare: "#fff193"
 
   comments:
     base: "#cca879"
