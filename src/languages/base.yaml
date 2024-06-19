@@ -3,12 +3,13 @@
 layers:
   runtime:
     base:
-      - meta.brace
+      - source
+      # Most of the read-write is a variable
+      - variable
       - meta.embedded.line
-      - storage.type
       - variable.object.property
-      - meta.var.expr
-      - variable.other.constant.object
+      # - meta.var.expr
+      # - variable.other.constant.object
       - support.class
       - storage.modifier
       - keyword.operator.rest
@@ -22,7 +23,7 @@ layers:
 
     effect:
       # ... *=* ...
-      # - keyword.operator.assignment
+      - keyword.operator.assignment
       - meta.function-call entity.name.function
       - keyword.operator.expression.delete
       - keyword.operator.logical
@@ -41,8 +42,17 @@ layers:
       - keyword.control.loop
       - keyword.control.switch
 
+    type:
+      # *function* fn() { ... }
+      - storage.type
+
     declare:
-      - variable.parameter
+      # const *hello* = ...
+      - variable:
+          - declaration
+      # function fn(*arg*) { ... }
+      - parameter:
+          - declaration
       - variable.other.readwrite.alias
       - meta.definition.function
       - meta.definition.variable
@@ -57,8 +67,8 @@ layers:
       #   - meta.objectliteral
 
     access:
-      - variable.other.readwrite
-      - variable.other.property
+      # - variable.other.readwrite
+      # - variable.other.property
       - support.variable.property
       - entity.name.tag
 
@@ -72,20 +82,37 @@ layers:
       - meta.brace.round
       # const hello = *{* ... *}*
       - punctuation.definition.block
+      # () *=>* { ... }
+      - storage.type.function.arrow
+      # console.log(arg1*,* arg2)
+      - punctuation.separator.comma
+      # (arg1*,* arg2) => { ... }
+      - punctuation.separator.parameter
+      # switch (...) { case*:* ... }
+      - punctuation.definition.section.case-statement
+      # console*.*.log(...)
+      - punctuation.accessor
 
   data:
     property:
       - meta.object-literal.key
+      # { *hello*: "world" }
+      - property:
+          - declaration
 
     primitive:
       - constant.numeric
       - constant.language
       - string
 
+    detail:
+      # *"*..."*
+      - punctuation.definition.string.begin
+      - punctuation.definition.string.end
+
   types:
     base:
       - meta.type.declaration storage.type
-      - storage.type.interface
       - storage.type.namespace
       - meta.field.declaration storage.modifier
       - meta.interface
@@ -94,7 +121,7 @@ layers:
       # - meta.type.declaration
       - meta.type.annotation
       - meta.interface
-      - meta.type.annotation entity.name.type.module
+      # - meta.type.annotation entity.name.type.module
       - meta.namespace.declaration punctuation.terminator
 
     control:
@@ -118,6 +145,9 @@ layers:
       - meta.type.annotation storage.modifier
       - keyword.control.as
 
+    type:
+      - storage.type.interface
+
     primitive:
       - support.type.primitive
       - meta.type.parameters string
@@ -132,7 +162,7 @@ layers:
       - meta.interface meta.objectliteral
 
     declare:
-      - entity.name.type.interface
+      # - entity.name.type.interface
       - entity.name.type.alias
       - meta.type.infer entity.name.type
       - meta.interface variable.parameter
@@ -140,7 +170,7 @@ layers:
       - meta.interface entity.name.function
 
     access:
-      - entity.name.type
+      # - entity.name.type
       - meta.interface variable.other.readwrite
       - meta.interface entity.other.inherited-class
       - meta.interface variable.other.property

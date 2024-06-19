@@ -48,39 +48,45 @@
   "semanticHighlighting": true,
   "tokenColors": [
     {
-      "scope": "meta.brace, meta.embedded.line, storage.type, variable.object.property, meta.var.expr, variable.other.constant.object, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.import keyword.control.as",
+      "scope": "source, variable, meta.embedded.line, variable.object.property, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.import keyword.control.as, meta.use.rust keyword.other.rust",
       "settings": {
-        "foreground": "#7e7e7e"
+        "foreground": "#b8b0cb"
       }
     },
     {
-      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, keyword.control.default, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, keyword.generator.asterisk, entity.name.function.just, keyword.operator.quiet.just, support.function.system.just, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, keyword.control.rust, keyword.operator.arrow.fat.rust, meta.use.rust keyword.other.rust, keyword.operator.question.rust",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, keyword.control.default, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, keyword.generator.asterisk, entity.name.function.just, keyword.operator.quiet.just, support.function.system.just, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, keyword.control.rust, keyword.operator.arrow.fat.rust, keyword.operator.question.rust",
       "settings": {
-        "foreground": "#ff8cfd"
+        "foreground": "#ff8df4"
       }
     },
     {
-      "scope": "meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component, keyword.symbol.fsharp, meta.function-call support.class, meta.function-call variable.language.super, entity.name.function.tagged-template, meta.scope.prerequisites.makefile, meta.function.call.rust entity.name.function.rust",
+      "scope": "keyword.operator.assignment, meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component, keyword.symbol.fsharp, meta.function-call support.class, meta.function-call variable.language.super, entity.name.function.tagged-template, meta.scope.prerequisites.makefile, meta.function.call.rust entity.name.function.rust",
       "settings": {
-        "foreground": "#CA94FF"
+        "foreground": "#d4b0ff"
       }
     },
     {
-      "scope": "variable.parameter, variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, entity.name.type.class, meta.field.declaration variable.object.property, meta.definition.method, variable.fsharp, entity.name.section.fsharp, meta.function.definition.rust entity.name.function.rust",
+      "scope": "storage.type, source keyword.other.rust, keyword.other.fn.rust",
       "settings": {
-        "foreground": "#FFFFFF"
+        "foreground": "#a39be3"
       }
     },
     {
-      "scope": "variable.other.readwrite, variable.other.property, support.variable.property, entity.name.tag, source.fsharp.fsl, variable.language.arguments, source.just, source.makefile, variable.other.rust",
+      "scope": "variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, entity.name.type.class, meta.field.declaration variable.object.property, meta.definition.method, variable.fsharp, entity.name.section.fsharp, meta.function.definition.rust entity.name.function.rust, meta.use.rust entity.name.type.rust",
+      "settings": {
+        "foreground": "#f2ebff"
+      }
+    },
+    {
+      "scope": "support.variable.property, entity.name.tag, source.fsharp.fsl, variable.language.arguments, source.just, source.makefile",
       "settings": {
         "foreground": "#C5C5C5"
       }
     },
     {
-      "scope": "punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust",
+      "scope": "punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, storage.type.function.arrow, punctuation.separator.comma, punctuation.separator.parameter, punctuation.definition.section.case-statement, punctuation.accessor, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust",
       "settings": {
-        "foreground": "#565656"
+        "foreground": "#575165"
       }
     },
     {
@@ -114,21 +120,21 @@
       }
     },
     {
-      "scope": "punctuation.definition.tag, punctuation.separator.key-value, punctuation.definition.string.begin.html, punctuation.definition.string.end.html, meta.objectliteral punctuation.definition.block, punctuation.separator.key-value, meta.objectliteral punctuation.separator.comma, meta.array.literal meta.brace.square, meta.array.literal punctuation.separator.comma, punctuation.definition.string.begin, punctuation.definition.string.end, punctuation.definition.string.template.begin, punctuation.definition.string.template.end, punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json, punctuation.support.type.property-name.begin.json, punctuation.support.type.property-name.end.json, punctuation.definition.string.begin.json, punctuation.definition.string.end.json, punctuation.separator.dictionary.key-value.json, punctuation.definition.array.begin.json, punctuation.definition.array.end.json, punctuation.separator.array.json, punctuation.separator.dictionary.pair.json, punctuation.section.embedded.begin.js.jsx, punctuation.section.embedded.end.js.jsx, meta.tag.attributes.js.jsx keyword.operator.assignment.js.jsx, meta.link.inline.markdown, meta.link.reference.def.markdown, punctuation.definition.raw.markdown, punctuation.definition.bold.markdown, punctuation.definition.italic.markdown, punctuation.definition.markdown, fenced_code.block.language.markdown, punctuation.definition.link.description.begin.markdown, punctuation.definition.link.description.end.markdown, punctuation.definition.metadata.markdown, meta.link.reference.markdown, punctuation.definition.block.sequence.item.yaml, punctuation.separator.key-value.mapping.yaml, punctuation.definition.string.begin.yaml, punctuation.definition.string.end.yaml, punctuation.definition.sequence.begin.yaml, punctuation.definition.sequence.end.yaml, punctuation.separator.sequence.yaml",
+      "scope": "punctuation.definition.string.begin, punctuation.definition.string.end, punctuation.definition.tag, punctuation.separator.key-value, punctuation.definition.string.begin.html, punctuation.definition.string.end.html, meta.objectliteral punctuation.definition.block, punctuation.separator.key-value, meta.objectliteral punctuation.separator.comma, meta.array.literal meta.brace.square, meta.array.literal punctuation.separator.comma, punctuation.definition.string.template.begin, punctuation.definition.string.template.end, punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json, punctuation.support.type.property-name.begin.json, punctuation.support.type.property-name.end.json, punctuation.definition.string.begin.json, punctuation.definition.string.end.json, punctuation.separator.dictionary.key-value.json, punctuation.definition.array.begin.json, punctuation.definition.array.end.json, punctuation.separator.array.json, punctuation.separator.dictionary.pair.json, punctuation.section.embedded.begin.js.jsx, punctuation.section.embedded.end.js.jsx, meta.tag.attributes.js.jsx keyword.operator.assignment.js.jsx, meta.link.inline.markdown, meta.link.reference.def.markdown, punctuation.definition.raw.markdown, punctuation.definition.bold.markdown, punctuation.definition.italic.markdown, punctuation.definition.markdown, fenced_code.block.language.markdown, punctuation.definition.link.description.begin.markdown, punctuation.definition.link.description.end.markdown, punctuation.definition.metadata.markdown, meta.link.reference.markdown, punctuation.definition.block.sequence.item.yaml, punctuation.separator.key-value.mapping.yaml, punctuation.definition.string.begin.yaml, punctuation.definition.string.end.yaml, punctuation.definition.sequence.begin.yaml, punctuation.definition.sequence.end.yaml, punctuation.separator.sequence.yaml",
       "settings": {
         "foreground": "#4b5072"
       }
     },
     {
-      "scope": "meta.type.declaration storage.type, storage.type.interface, storage.type.namespace, meta.field.declaration storage.modifier, meta.interface, keyword.operator.type.annotation, meta.field.declaration, meta.type.annotation, meta.interface, meta.type.annotation entity.name.type.module, meta.namespace.declaration punctuation.terminator, source.graphql, meta.import keyword.control.type, entity.name.type.module, storage.type.tag-handle.yaml",
+      "scope": "meta.type.declaration storage.type, storage.type.namespace, meta.field.declaration storage.modifier, meta.interface, keyword.operator.type.annotation, meta.field.declaration, meta.type.annotation, meta.interface, meta.namespace.declaration punctuation.terminator, source.graphql, meta.function.definition.rust entity.name.type.rust, entity.name.type.rust, meta.import keyword.control.type, storage.type.tag-handle.yaml",
       "settings": {
-        "foreground": "#89a98c"
+        "foreground": "#b5cfb7"
       }
     },
     {
       "scope": "meta.namespace.declaration keyword.control.export, meta.type.declaration keyword.control.export, meta.interface keyword.control.export, meta.type.declaration keyword.operator.ternary, meta.type.infer keyword.operator.expression.extends, meta.type.declaration storage.modifier, meta.type.parameters storage.modifier, meta.interface keyword.operator.ternary, keyword.control.satisfies, keyword.schema.graphql, keyword.type.graphql, punctuation.or.graphql, keyword.directive.graphql, keyword.fragment.graphql, keyword.operation.graphql, keyword.union.graphql, keyword.input.graphql, keyword.interface.graphql, keyword.enum.graphql, keyword.scalar.graphql, meta.export keyword.control.type",
       "settings": {
-        "foreground": "#55e679"
+        "foreground": "#5ff0b1"
       }
     },
     {
@@ -138,19 +144,25 @@
       }
     },
     {
+      "scope": "storage.type.interface",
+      "settings": {
+        "foreground": "#86d2a9"
+      }
+    },
+    {
       "scope": "support.type.primitive, meta.type.parameters string, meta.type.annotation string, meta.type.annotation support.type.builtin, meta.interface support.type.builtin, meta.type.declaration support.type.builtin, meta.namespace.declaration string, meta.interface constant, meta.field.declaration, meta.object.type variable.object.property, meta.interface meta.objectliteral, support.type.builtin.graphql, string.quoted.double.graphql, support.type.builtin",
       "settings": {
         "foreground": "#94edef"
       }
     },
     {
-      "scope": "entity.name.type.interface, entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter, meta.interface variable.object.property, meta.interface entity.name.function, support.type.enum.graphql, support.type.graphql, entity.scalar.graphql, entity.name.fragment.graphql, entity.name.function.directive.graphql, entity.name.function.graphql, constant.character.enum.graphql, meta.namespace.declaration entity.name.type.module",
+      "scope": "entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter, meta.interface variable.object.property, meta.interface entity.name.function, support.type.enum.graphql, support.type.graphql, entity.scalar.graphql, entity.name.fragment.graphql, entity.name.function.directive.graphql, entity.name.function.graphql, constant.character.enum.graphql",
       "settings": {
         "foreground": "#edfff0"
       }
     },
     {
-      "scope": "entity.name.type, meta.interface variable.other.readwrite, meta.interface entity.other.inherited-class, meta.interface variable.other.property, variable.parameter.graphql, variable.fragment.graphql",
+      "scope": "meta.interface variable.other.readwrite, meta.interface entity.other.inherited-class, meta.interface variable.other.property, variable.parameter.graphql, variable.fragment.graphql",
       "settings": {
         "foreground": "#b7d9bc"
       }
@@ -162,7 +174,7 @@
       }
     },
     {
-      "scope": "punctuation.colon.graphql, punctuation.operation.graphql, punctuation.definition.string.begin.graphql, punctuation.definition.string.begin.graphql, punctuation.definition.string.end.graphql, meta.brace.round.directive.graphql, meta.brace.square.graphql, punctuation.comma.graphql, meta.brace.round.graphql, punctuation.brackets.angle.rust, punctuation.definition.typeparameters.begin, punctuation.definition.typeparameters.end, meta.type.parameters.ts punctuation.separator.comma.ts, meta.object.type.ts punctuation.definition.block.ts, meta.object.type.ts meta.brace.square.ts, keyword.operator.type.annotation",
+      "scope": "punctuation.colon.graphql, punctuation.operation.graphql, punctuation.definition.string.begin.graphql, punctuation.definition.string.begin.graphql, punctuation.definition.string.end.graphql, meta.brace.round.directive.graphql, meta.brace.square.graphql, punctuation.comma.graphql, meta.brace.round.graphql, punctuation.brackets.angle.rust, punctuation.definition.typeparameters.begin, punctuation.definition.typeparameters.end, meta.type.parameters punctuation.separator.comma, meta.object.type.ts punctuation.definition.block.ts, meta.object.type.ts meta.brace.square.ts, keyword.operator.type.annotation, meta.return.type punctuation.accessor",
       "settings": {
         "foreground": "#445047"
       }
@@ -239,5 +251,13 @@
         "fontStyle": "underline"
       }
     }
-  ]
+  ],
+  "semanticTokenColors": {
+    "variable.declaration": "#f2ebff",
+    "parameter.declaration": "#f2ebff",
+    "property.declaration": "#bfc5e9",
+    "namespace:typescript": "#b5cfb7",
+    "interface:typescript": "#b5cfb7",
+    "type:typescript": "#b5cfb7"
+  }
 }

@@ -1,12 +1,21 @@
 # TypeScript
 
+id: typescript
+
 layers:
   types:
     base:
       # import *type* ...
       - meta.import keyword.control.type
       # *Hello*.World
-      - entity.name.type.module
+      # [TODO] Find a proper scope, it breaks in JS
+      # - entity.name.type.module
+      # ... : *Namespace*.Interface { ... }
+      - namespace: true
+      # ... : Namespace.*Interface* { ... }
+      - interface: true
+      # ... : *Record*<...> *{* ... *}*
+      - type: true
 
     control:
       # export *type* ...
@@ -18,7 +27,7 @@ layers:
 
     declare:
       # namespace *Hello* { ... }
-      - meta.namespace.declaration entity.name.type.module
+      # - meta.namespace.declaration entity.name.type.module
 
     primitive:
       # satisfies *undefined*
@@ -29,10 +38,12 @@ layers:
       - punctuation.definition.typeparameters.begin
       - punctuation.definition.typeparameters.end
       # type Test<Type1*,* Type2> = { ... }
-      - meta.type.parameters.ts punctuation.separator.comma.ts
+      - meta.type.parameters punctuation.separator.comma
       # type Test = *{* ... *}*
       - meta.object.type.ts punctuation.definition.block.ts
       # type Test = { *[* ... *]*: ... }
       - meta.object.type.ts meta.brace.square.ts
       # function hello(arg*:* string)*:* string { ... }
       - keyword.operator.type.annotation
+      # ... : Namespace*.*Interface { ... }
+      - meta.return.type punctuation.accessor

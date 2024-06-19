@@ -50,6 +50,7 @@ async function generateTheme(theme, base, languages) {
     colors: base,
     semanticHighlighting: true,
     tokenColors: [],
+    semanticTokenColors: {},
   };
 
   const layers = {};
@@ -62,7 +63,14 @@ async function generateTheme(theme, base, languages) {
     Object.entries(language.layers || {}).forEach(([layer, groups]) => {
       layers[layer] ||= {};
       Object.entries(groups || {}).forEach(([group, scopes]) =>
-        (layers[layer][group] ||= []).push(...(scopes || []))
+        (layers[layer][group] ||= []).push(
+          ...(scopes?.map((scope) => {
+            // Add language id if defined, it will allow distinguishing between languages
+            if (typeof scope === "object" && language.id)
+              return { ...scope, language_: language.id };
+            return scope;
+          }) || [])
+        )
       );
     });
 
@@ -73,14 +81,56 @@ async function generateTheme(theme, base, languages) {
 
   Object.entries(theme.layers || {}).forEach(([layer, groups]) => {
     Object.entries(groups).forEach(([group, color]) => {
-      const scopes = layers[layer]?.[group];
-      if (!scopes?.length) return;
-      obj.tokenColors.push({
-        scope: scopes.join(", "),
-        settings: {
-          foreground: color,
-        },
+      const basic = [];
+      const semantic = [];
+
+      layers[layer]?.[group]?.forEach((scope) => {
+        // The semantic tokens is defined as an object:
+        //
+        //   - variable: true
+        //
+        // ...or:
+        //
+        //   - variable:
+        //     - declaration
+        //     - local
+        if (scope && typeof scope === "object") {
+          const name = Object.keys(scope)[0];
+
+          // Prepare segments. If the semantic token is defined via true
+          // (`- variable: true`) then add only the name, otherwise add name
+          // followed by modifiers.
+          const segments = [];
+          if (scope[name] === true) segments.push(name);
+          else segments.push(name, ...scope[name]);
+
+          // Language is added to the end: variable.declaration.local:js
+          // See: https://github.com/microsoft/vscode/wiki/Semantic-Highlighting-Overview#as-a-theme-author-do-i-need-to-change-my-theme-to-make-it-work-with-semantic-highlighting
+          const add = (lang) =>
+            semantic.push([segments.join(".")].concat(lang || []).join(":"));
+
+          // Add semantic tokens for all languages
+          if (Array.isArray(scope.language_)) scope.language_.forEach(add);
+          else add(scope.language_);
+        }
+
+        // Basic token scopes
+        else basic.push(scope);
       });
+
+      // Add basic tokens
+      if (basic.length)
+        obj.tokenColors.push({
+          scope: basic.join(", "),
+          settings: {
+            foreground: color,
+          },
+        });
+
+      // Add semantic tokens
+      semantic.forEach(
+        (semantic) => (obj.semanticTokenColors[semantic] = color)
+      );
     });
   });
 

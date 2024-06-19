@@ -8,7 +8,7 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
-## v0.4.0 - 2024-06-??
+## v0.4.0 - 2024-06-20
 
 ### Added
 
@@ -21,6 +21,10 @@ This change log follows the format documented in [Keep a CHANGELOG].
 - Enabled `semanticHighlighting` option allowing the theme to use semantic tokens for syntax highlighting. It makes the theme more consistent and accurate.
 
 - Make the macro layer yellow rather than red that is easier to confuse with the memory layer.
+
+- Add purple tint to the runtime layer to distinguish it from the other layers better.
+
+- Improved colors consistency.
 
 ## v0.3.0 - 2024-05-27
 

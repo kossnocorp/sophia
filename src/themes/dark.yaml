@@ -4,13 +4,21 @@ type: dark
 
 layers:
   runtime:
-    base: "#7e7e7e"
-    control: "#ff8cfd"
-    effect: "#CA94FF"
+    # Base color. This is the default color for all layers. Colors can be more
+    # dimmed (detail) or more prominent (most of the other colors).
+    #
+    # Runtime base color is slightly dimmed to give more prominence to the
+    # declarations.
+    base: "#b8b0cb"
+    control: "#ff8df4"
+    effect: "#d4b0ff"
     primitive: "#8C99B5"
-    declare: "#FFFFFF"
+    # Runtime type is assigned keywords that define the entity type, i.e. var,
+    # function, class, etc.
+    type: "#a39be3"
+    declare: "#f2ebff"
     access: "#C5C5C5"
-    detail: "#565656"
+    detail: "#575165"
 
   data:
     base: "#a2acec"
@@ -21,9 +29,10 @@ layers:
     detail: "#4b5072"
 
   types:
-    base: "#89a98c"
-    control: "#55e679"
+    base: "#b5cfb7"
+    control: "#5ff0b1"
     effect: "#3aeca8"
+    type: "#86d2a9"
     primitive: "#94edef"
     declare: "#edfff0"
     access: "#b7d9bc"

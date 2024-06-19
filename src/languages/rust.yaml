@@ -2,16 +2,15 @@
 
 layers:
   runtime:
-    access:
-      - variable.other.rust
+    base:
+      # *use* worker::Request;
+      - meta.use.rust keyword.other.rust
 
     control:
       # *if* a.len() > b.len() {
       - keyword.control.rust
       #
       - keyword.operator.arrow.fat.rust
-      # *use* worker::Request;
-      - meta.use.rust keyword.other.rust
       # query.first::<Prompts>(None).await*?*;
       - keyword.operator.question.rust
 
@@ -19,9 +18,18 @@ layers:
       # Box::*new*(...)
       - meta.function.call.rust entity.name.function.rust
 
+    type:
+      # Rust syntax doesn't have designated tokens for impl
+      # we I have to use the most generic keyword token.
+      - source keyword.other.rust
+      # *fn* get_direct(...) -> ...
+      - keyword.other.fn.rust
+
     declare:
       # fn *mutable_reference*() {
       - meta.function.definition.rust entity.name.function.rust
+      # use worker::*Request*;
+      - meta.use.rust entity.name.type.rust
 
     detail:
       # [NOTE] Reset predefined keyword.operator.logical as Rust
@@ -50,6 +58,12 @@ layers:
       - storage.modifier.mut.rust
 
   types:
+    base:
+      # pub fn get_token(req: *Request*) -> *Option<String>*
+      - meta.function.definition.rust entity.name.type.rust
+      # pub collection_uid: *String*,
+      - entity.name.type.rust
+
     detail:
       # Result*<*Response, Error*>*
       - punctuation.brackets.angle.rust

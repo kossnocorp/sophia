@@ -40,9 +40,6 @@ layers:
       - meta.array.literal meta.brace.square
       # [1*,* 2...]
       - meta.array.literal punctuation.separator.comma
-      # *"*..."*
-      - punctuation.definition.string.begin
-      - punctuation.definition.string.end
       # *`*...`*
       - punctuation.definition.string.template.begin
       - punctuation.definition.string.template.end
