@@ -48,7 +48,7 @@
   "semanticHighlighting": true,
   "tokenColors": [
     {
-      "scope": "source, variable, meta.embedded.line, variable.object.property, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.import keyword.control.as, meta.use.rust keyword.other.rust",
+      "scope": "source, variable, meta.embedded.line, variable.object.property, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.import keyword.control.as",
       "settings": {
         "foreground": "#b8b0cb"
       }
@@ -84,7 +84,7 @@
       }
     },
     {
-      "scope": "punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, storage.type.function.arrow, punctuation.separator.comma, punctuation.separator.parameter, punctuation.definition.section.case-statement, punctuation.accessor, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust",
+      "scope": "punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, storage.type.function.arrow, punctuation.separator.comma, punctuation.separator.parameter, punctuation.definition.section.case-statement, punctuation.accessor, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust, keyword.operator.key-value.rust",
       "settings": {
         "foreground": "#575165"
       }
@@ -192,21 +192,21 @@
       }
     },
     {
-      "scope": "entity.name.function.macro.rules.rust, keyword.operator.macro.dollar.rust",
+      "scope": "entity.name.function.macro.rules.rust, keyword.operator.macro.dollar.rust, variable.other.metavariable",
       "settings": {
-        "foreground": "#ffdd00"
+        "foreground": "#eeff01"
       }
     },
     {
       "scope": "meta.macro.rust",
       "settings": {
-        "foreground": "#d7cb5e"
+        "foreground": "#e8d84a"
       }
     },
     {
-      "scope": "entity.name.function.macro.rust",
+      "scope": "meta.macro.metavariable.rust keyword.operator.key-value.rust",
       "settings": {
-        "foreground": "#fff193"
+        "foreground": "#564e16"
       }
     },
     {
@@ -258,6 +258,11 @@
     "property.declaration": "#bfc5e9",
     "namespace:typescript": "#b5cfb7",
     "interface:typescript": "#b5cfb7",
-    "type:typescript": "#b5cfb7"
+    "type:typescript": "#b5cfb7",
+    "lifetime": "#ff718b",
+    "decorator": "#e8d84a",
+    "builtinAttribute": "#e8d84a",
+    "macro.declaration": "#fff6bd",
+    "attributeBracket": "#564e16"
   }
 }

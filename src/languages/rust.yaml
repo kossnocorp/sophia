@@ -4,7 +4,7 @@ layers:
   runtime:
     base:
       # *use* worker::Request;
-      - meta.use.rust keyword.other.rust
+      # - meta.use.rust keyword.other.rust
 
     control:
       # *if* a.len() > b.len() {
@@ -45,6 +45,8 @@ layers:
       - keyword.operator.arrow.skinny.rust
       # std*::*sync*::*mpsc*::*channel();
       - keyword.operator.namespace.rust
+      # fn name(arg*:* StructName) -> ...
+      - keyword.operator.key-value.rust
 
   memory:
     effect:
@@ -56,6 +58,8 @@ layers:
       - punctuation.definition.lifetime.rust
       # *mut* i32
       - storage.modifier.mut.rust
+      # pub fn get_metadata_any<*'a*>(...) ...
+      - lifetime: true
 
   types:
     base:
@@ -72,13 +76,26 @@ layers:
     control:
       # *macro_rules!* println { ... }
       - entity.name.function.macro.rules.rust
-      #
+      # ... *$*dst:expr ...
       - keyword.operator.macro.dollar.rust
+      # ... $*dst*:*expr* ...
+      - variable.other.metavariable
 
     effect:
       # *println!*("Hello, world!");
       - meta.macro.rust
+      # #[*serde*(tag = "type")]
+      - decorator: true
+      # #[*macro_export*]
+      - builtinAttribute: true
 
     declare:
       # macro_rules! *println* { ... }
-      - entity.name.function.macro.rust
+      - macro:
+          - declaration
+
+    detail:
+      # #*[*serde(tag = "type")*]*
+      - attributeBracket: true
+      # ... $dst*:*expr ...
+      - meta.macro.metavariable.rust keyword.operator.key-value.rust

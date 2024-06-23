@@ -45,9 +45,10 @@ layers:
     effect: "#ff718b"
 
   macro:
-    control: "#ffdd00"
-    effect: "#d7cb5e"
-    declare: "#fff193"
+    control: "#eeff01"
+    effect: "#e8d84a"
+    declare: "#fff6bd"
+    detail: "#564e16"
 
   comments:
     base: "#cca879"
