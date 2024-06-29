@@ -8,6 +8,12 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
+## v0.5.0 - 2024-06-29
+
+### Added
+
+- Added bracket blocks highlight colors.
+
 ## v0.4.0 - 2024-06-20
 
 ### Added

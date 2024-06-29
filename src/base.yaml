@@ -90,3 +90,12 @@ terminal.tab.activeBorder: "#8904e8bc"
 editorInlayHint.foreground: "#565656" # runtime.detail
 # editorInlayHint.parameterForeground: "#ff0000"
 editorInlayHint.typeForeground: "#445047" # types.detail
+
+# Bracket pairs
+
+editorBracketHighlight.foreground1: "#290014"
+editorBracketHighlight.foreground2: "#002017"
+editorBracketHighlight.foreground3: "#00153c"
+editorBracketHighlight.foreground4: "#290014"
+editorBracketHighlight.foreground5: "#002017"
+editorBracketHighlight.foreground6: "#00153c"
