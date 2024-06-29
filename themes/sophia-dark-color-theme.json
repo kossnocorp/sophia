@@ -43,7 +43,13 @@
     "editor.foldBackground": "#0f0f0f7b",
     "terminal.tab.activeBorder": "#8904e8bc",
     "editorInlayHint.foreground": "#565656",
-    "editorInlayHint.typeForeground": "#445047"
+    "editorInlayHint.typeForeground": "#445047",
+    "editorBracketHighlight.foreground1": "#290014",
+    "editorBracketHighlight.foreground2": "#002017",
+    "editorBracketHighlight.foreground3": "#00153c",
+    "editorBracketHighlight.foreground4": "#290014",
+    "editorBracketHighlight.foreground5": "#002017",
+    "editorBracketHighlight.foreground6": "#00153c"
   },
   "semanticHighlighting": true,
   "tokenColors": [
@@ -84,7 +90,7 @@
       }
     },
     {
-      "scope": "punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, storage.type.function.arrow, punctuation.separator.comma, punctuation.separator.parameter, punctuation.definition.section.case-statement, punctuation.accessor, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust, keyword.operator.key-value.rust",
+      "scope": "punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, storage.type.function.arrow, punctuation.separator.comma, punctuation.separator.parameter, punctuation.definition.section.case-statement, punctuation.accessor, punctuation.comma, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust, keyword.operator.key-value.rust, punctuation.brackets.square.rust, keyword.operator.access.dot.rust",
       "settings": {
         "foreground": "#575165"
       }
@@ -120,7 +126,7 @@
       }
     },
     {
-      "scope": "punctuation.definition.string.begin, punctuation.definition.string.end, punctuation.definition.tag, punctuation.separator.key-value, punctuation.definition.string.begin.html, punctuation.definition.string.end.html, meta.objectliteral punctuation.definition.block, punctuation.separator.key-value, meta.objectliteral punctuation.separator.comma, meta.array.literal meta.brace.square, meta.array.literal punctuation.separator.comma, punctuation.definition.string.template.begin, punctuation.definition.string.template.end, punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json, punctuation.support.type.property-name.begin.json, punctuation.support.type.property-name.end.json, punctuation.definition.string.begin.json, punctuation.definition.string.end.json, punctuation.separator.dictionary.key-value.json, punctuation.definition.array.begin.json, punctuation.definition.array.end.json, punctuation.separator.array.json, punctuation.separator.dictionary.pair.json, punctuation.section.embedded.begin.js.jsx, punctuation.section.embedded.end.js.jsx, meta.tag.attributes.js.jsx keyword.operator.assignment.js.jsx, meta.link.inline.markdown, meta.link.reference.def.markdown, punctuation.definition.raw.markdown, punctuation.definition.bold.markdown, punctuation.definition.italic.markdown, punctuation.definition.markdown, fenced_code.block.language.markdown, punctuation.definition.link.description.begin.markdown, punctuation.definition.link.description.end.markdown, punctuation.definition.metadata.markdown, meta.link.reference.markdown, punctuation.definition.block.sequence.item.yaml, punctuation.separator.key-value.mapping.yaml, punctuation.definition.string.begin.yaml, punctuation.definition.string.end.yaml, punctuation.definition.sequence.begin.yaml, punctuation.definition.sequence.end.yaml, punctuation.separator.sequence.yaml",
+      "scope": "punctuation.definition.string.begin, punctuation.definition.string.end, punctuation.definition.tag, punctuation.separator.key-value, punctuation.definition.string.begin.html, punctuation.definition.string.end.html, meta.objectliteral punctuation.definition.block, punctuation.separator.key-value, meta.objectliteral punctuation.separator.comma, meta.array.literal meta.brace.square, meta.array.literal punctuation.separator.comma, punctuation.definition.string.template.begin, punctuation.definition.string.template.end, punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json, punctuation.support.type.property-name.begin.json, punctuation.support.type.property-name.end.json, punctuation.definition.string.begin.json, punctuation.definition.string.end.json, punctuation.separator.dictionary.key-value.json, punctuation.definition.array.begin.json, punctuation.definition.array.end.json, punctuation.separator.array.json, punctuation.separator.dictionary.pair.json, punctuation.section.embedded.begin.jsx, punctuation.section.embedded.end.jsx, punctuation.section.embedded.begin.tsx, punctuation.section.embedded.end.tsx, meta.tag.attributes.js.jsx keyword.operator.assignment.js.jsx, meta.link.inline.markdown, meta.link.reference.def.markdown, punctuation.definition.raw.markdown, punctuation.definition.bold.markdown, punctuation.definition.italic.markdown, punctuation.definition.markdown, fenced_code.block.language.markdown, punctuation.definition.link.description.begin.markdown, punctuation.definition.link.description.end.markdown, punctuation.definition.metadata.markdown, meta.link.reference.markdown, punctuation.definition.block.sequence.item.yaml, punctuation.separator.key-value.mapping.yaml, punctuation.definition.string.begin.yaml, punctuation.definition.string.end.yaml, punctuation.definition.sequence.begin.yaml, punctuation.definition.sequence.end.yaml, punctuation.separator.sequence.yaml",
       "settings": {
         "foreground": "#4b5072"
       }
@@ -256,13 +262,19 @@
     "variable.declaration": "#f2ebff",
     "parameter.declaration": "#f2ebff",
     "property.declaration": "#bfc5e9",
+    "property:rust": "#bfc5e9",
+    "enumMember:rust": "#b5cfb7",
+    "struct:rust": "#b5cfb7",
+    "enum:rust": "#b5cfb7",
+    "interface:rust": "#b5cfb7",
     "namespace:typescript": "#b5cfb7",
     "interface:typescript": "#b5cfb7",
     "type:typescript": "#b5cfb7",
-    "lifetime": "#ff718b",
-    "decorator": "#e8d84a",
-    "builtinAttribute": "#e8d84a",
-    "macro.declaration": "#fff6bd",
-    "attributeBracket": "#564e16"
+    "lifetime:rust": "#ff718b",
+    "decorator:rust": "#e8d84a",
+    "builtinAttribute:rust": "#e8d84a",
+    "deriveHelper:rust": "#e8d84a",
+    "macro.declaration:rust": "#fff6bd",
+    "attributeBracket:rust": "#564e16"
   }
 }

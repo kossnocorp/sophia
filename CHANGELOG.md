@@ -14,6 +14,10 @@ This change log follows the format documented in [Keep a CHANGELOG].
 
 - Added bracket blocks highlight colors.
 
+### Changed
+
+- Improved Rust and JavaScript syntax highlighting.
+
 ## v0.4.0 - 2024-06-20
 
 ### Added

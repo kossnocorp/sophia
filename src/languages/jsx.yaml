@@ -12,7 +12,9 @@ layers:
 
     detail:
       # <div>*{*...*}*</div>
-      - punctuation.section.embedded.begin.js.jsx
-      - punctuation.section.embedded.end.js.jsx
+      - punctuation.section.embedded.begin.jsx
+      - punctuation.section.embedded.end.jsx
+      - punctuation.section.embedded.begin.tsx
+      - punctuation.section.embedded.end.tsx
       # <a href*=*"...">...
       - meta.tag.attributes.js.jsx keyword.operator.assignment.js.jsx

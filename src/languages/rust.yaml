@@ -1,5 +1,7 @@
 # Rust
 
+id: rust
+
 layers:
   runtime:
     base:
@@ -47,6 +49,15 @@ layers:
       - keyword.operator.namespace.rust
       # fn name(arg*:* StructName) -> ...
       - keyword.operator.key-value.rust
+      # vec!*[*PromptMessageV1 { ...
+      - punctuation.brackets.square.rust
+      # "question"*.*to_owned(),
+      - keyword.operator.access.dot.rust
+
+  data:
+    property:
+      # *var1*: VarV1
+      - property: true
 
   memory:
     effect:
@@ -67,6 +78,14 @@ layers:
       - meta.function.definition.rust entity.name.type.rust
       # pub collection_uid: *String*,
       - entity.name.type.rust
+      # Schema::*Properties*( ... )
+      - enumMember: true
+      # *HashMap*::from([])
+      - struct: true
+      # *Schema*::Properties( ... )
+      - enum: true
+      # std::error::*Error*
+      - interface: true
 
     detail:
       # Result*<*Response, Error*>*
@@ -88,6 +107,8 @@ layers:
       - decorator: true
       # #[*macro_export*]
       - builtinAttribute: true
+      # #[*serde*(rename = "boolean")]
+      - deriveHelper: true
 
     declare:
       # macro_rules! *println* { ... }

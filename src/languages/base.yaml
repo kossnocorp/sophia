@@ -92,6 +92,8 @@ layers:
       - punctuation.definition.section.case-statement
       # console*.*.log(...)
       - punctuation.accessor
+      # vec!*[*SignatureInputV1 { ...
+      - punctuation.comma
 
   data:
     property:
