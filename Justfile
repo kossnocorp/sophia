@@ -4,5 +4,5 @@ dev:
 build:
 	@pnpm exec vsce package
 	
-publish:
+publish: build
 	@pnpm exec vsce publish
