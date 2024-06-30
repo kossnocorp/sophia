@@ -2,7 +2,7 @@ dev:
 	@node --watch ./build.mjs --watch
 
 build:
-	@npx vsce package
+	@pnpm exec vsce package
 	
 publish:
-	@npx vsce publish
+	@pnpm exec vsce publish
