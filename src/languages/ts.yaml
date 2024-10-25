@@ -1,6 +1,8 @@
 # TypeScript
 
-id: typescript
+id:
+  - typescript
+  - typescriptreact
 
 layers:
   types:
