@@ -1,0 +1,38 @@
+# Swift
+
+id: swift
+
+layers:
+  runtime:
+    base:
+      # *import* AppKit
+      - keyword.control.import.swift
+
+    control:
+      # private *lazy* var eventEmitter = EventEmitter()
+      - storage.modifier.swift
+      # *private* lazy var eventEmitter = EventEmitter()
+      - keyword.other.declaration-specifier.accessibility.swift
+
+    type:
+      # private lazy *var* eventEmitter = EventEmitter()
+      - keyword.other.declaration-specifier.swift
+
+    declare:
+      # import *AppKit*
+      - meta.import.swift entity.name.type.swift
+
+    detail:
+      # func hello(arg: String) -> String *{* ... *}*
+      - punctuation.section.function.begin.swift
+      - punctuation.section.function.end.swift
+      # if triggerKeys.contains(key) *{* ... *}*
+      - punctuation.section.scope.begin.swift
+      - punctuation.section.scope.end.swift
+
+  types:
+    base:
+      #
+      - support.type.swift
+      #
+      # - meta.parameter-clause.swift
