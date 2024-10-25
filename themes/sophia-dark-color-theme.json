@@ -31,7 +31,7 @@
     "tab.activeBorderTop": "#FFFF00",
     "editorGroup.border": "#303030",
     "editorGroupHeader.border": "#000000",
-    "editorGroupHeader.noTabsBackground": "#ff0000",
+    "editorGroupHeader.noTabsBackground": "#000000",
     "editorGroupHeader.tabsBackground": "#000000",
     "editor.background": "#000000",
     "editor.foreground": "#7e7e7e",
@@ -54,13 +54,13 @@
   "semanticHighlighting": true,
   "tokenColors": [
     {
-      "scope": "source, variable, meta.embedded.line, variable.object.property, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.import keyword.control.as",
+      "scope": "source, variable, meta.embedded.line, variable.object.property, support.class, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.import keyword.control.as, keyword.control.import.swift",
       "settings": {
         "foreground": "#b8b0cb"
       }
     },
     {
-      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, keyword.control.default, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, keyword.generator.asterisk, entity.name.function.just, keyword.operator.quiet.just, support.function.system.just, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, keyword.control.rust, keyword.operator.arrow.fat.rust, keyword.operator.question.rust",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, entity.name.section.fsharp keyword.fsharp, keyword.control.default, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, keyword.generator.asterisk, entity.name.function.just, keyword.operator.quiet.just, support.function.system.just, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, keyword.control.rust, keyword.operator.arrow.fat.rust, keyword.operator.question.rust, storage.modifier.swift, keyword.other.declaration-specifier.accessibility.swift",
       "settings": {
         "foreground": "#ff8df4"
       }
@@ -72,13 +72,13 @@
       }
     },
     {
-      "scope": "storage.type, source keyword.other.rust, keyword.other.fn.rust",
+      "scope": "storage.type, source keyword.other.rust, keyword.other.fn.rust, keyword.other.declaration-specifier.swift",
       "settings": {
         "foreground": "#a39be3"
       }
     },
     {
-      "scope": "variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, entity.name.type.class, meta.field.declaration variable.object.property, meta.definition.method, variable.fsharp, entity.name.section.fsharp, meta.function.definition.rust entity.name.function.rust, meta.use.rust entity.name.type.rust",
+      "scope": "variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, entity.name.type.class, meta.field.declaration variable.object.property, meta.definition.method, variable.fsharp, entity.name.section.fsharp, meta.function.definition.rust entity.name.function.rust, meta.use.rust entity.name.type.rust, meta.import.swift entity.name.type.swift",
       "settings": {
         "foreground": "#f2ebff"
       }
@@ -90,7 +90,7 @@
       }
     },
     {
-      "scope": "punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, storage.type.function.arrow, punctuation.separator.comma, punctuation.separator.parameter, punctuation.definition.section.case-statement, punctuation.accessor, punctuation.comma, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust, keyword.operator.key-value.rust, punctuation.brackets.square.rust, keyword.operator.access.dot.rust",
+      "scope": "punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, storage.type.function.arrow, punctuation.separator.comma, punctuation.separator.parameter, punctuation.definition.section.case-statement, punctuation.accessor, punctuation.comma, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust, keyword.operator.key-value.rust, punctuation.brackets.square.rust, keyword.operator.access.dot.rust, punctuation.section.function.begin.swift, punctuation.section.function.end.swift, punctuation.section.scope.begin.swift, punctuation.section.scope.end.swift",
       "settings": {
         "foreground": "#575165"
       }
@@ -132,7 +132,7 @@
       }
     },
     {
-      "scope": "meta.type.declaration storage.type, storage.type.namespace, meta.field.declaration storage.modifier, meta.interface, keyword.operator.type.annotation, meta.field.declaration, meta.type.annotation, meta.interface, meta.namespace.declaration punctuation.terminator, source.graphql, meta.function.definition.rust entity.name.type.rust, entity.name.type.rust, meta.import keyword.control.type, storage.type.tag-handle.yaml",
+      "scope": "meta.type.declaration storage.type, storage.type.namespace, meta.field.declaration storage.modifier, meta.interface, keyword.operator.type.annotation, meta.field.declaration, meta.type.annotation, meta.interface, meta.namespace.declaration punctuation.terminator, source.graphql, meta.function.definition.rust entity.name.type.rust, entity.name.type.rust, support.type.swift, meta.import keyword.control.type, storage.type.tag-handle.yaml",
       "settings": {
         "foreground": "#b5cfb7"
       }
@@ -268,8 +268,11 @@
     "enum:rust": "#b5cfb7",
     "interface:rust": "#b5cfb7",
     "namespace:typescript": "#b5cfb7",
+    "namespace:typescriptreact": "#b5cfb7",
     "interface:typescript": "#b5cfb7",
+    "interface:typescriptreact": "#b5cfb7",
     "type:typescript": "#b5cfb7",
+    "type:typescriptreact": "#b5cfb7",
     "lifetime:rust": "#ff718b",
     "decorator:rust": "#e8d84a",
     "builtinAttribute:rust": "#e8d84a",
