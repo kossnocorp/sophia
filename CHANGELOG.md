@@ -16,6 +16,8 @@ This change log follows the format documented in [Keep a CHANGELOG].
 
 - Added decorators colors distinct from much more prominent macros.
 
+### Changed
+
 - Improved Rust and JavaScript syntax highlighting.
 
 ## v0.5.0 - 2024-06-30
