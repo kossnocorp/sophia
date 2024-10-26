@@ -21,13 +21,18 @@ layers:
       - meta.function-call variable.language.super
       # *sql*`...`
       - entity.name.function.tagged-template
+      # *...*message
+      - keyword.operator.spread
 
     access:
       # *arguments*
       - variable.language.arguments
 
   data:
-    primitive:
+    control:
+      # `...$*{*...*}*...`
+      - punctuation.definition.template-expression.begin
+      - punctuation.definition.template-expression.end
 
     detail:
       # const hello = *{* ... *}*

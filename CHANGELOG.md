@@ -8,6 +8,16 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
+## v0.6.0 - 2024-10-26
+
+### Added
+
+- Added support for Python and basic support for Swift.
+
+- Added decorators colors distinct from much more prominent macros.
+
+- Improved Rust and JavaScript syntax highlighting.
+
 ## v0.5.0 - 2024-06-30
 
 ### Added

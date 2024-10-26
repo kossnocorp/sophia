@@ -10,7 +10,7 @@ layers:
       - variable.object.property
       # - meta.var.expr
       # - variable.other.constant.object
-      - support.class
+      # - support.class [TODO] It conflicts with str(...) in Python
       - storage.modifier
       - keyword.operator.rest
       - keyword.operator.spread
@@ -41,6 +41,9 @@ layers:
       - keyword.operator.ternary
       - keyword.control.loop
       - keyword.control.switch
+      # *import* { ... } *from* ...
+      - keyword.control.import
+      - keyword.control.from
 
     type:
       # *function* fn() { ... }
@@ -56,7 +59,7 @@ layers:
       - variable.other.readwrite.alias
       - meta.definition.function
       - meta.definition.variable
-      - entity.name.type.class
+      # - entity.name.type.class [TODO] It conflicts with str(...) in Python
       - meta.field.declaration variable.object.property
       - meta.definition.method
       # - meta.method.declaration storage.type

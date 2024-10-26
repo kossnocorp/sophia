@@ -1,0 +1,105 @@
+# Python
+
+id: python
+
+layers:
+  runtime:
+    effect:
+      # *print*("Hello, World!")
+      - meta.function-call.python
+
+    control:
+      # *async* def prompt(...):
+      - storage.type.function.async.python
+
+    declare:
+      # def *interpolate_prompt*(...
+      - function:
+          - declaration
+      # class *CollectionBase*:
+      - class:
+          - declaration
+      # def *data*(...):
+      - method:
+          - declaration
+
+    detail:
+      # class CollectionBase*(*Model*)*:
+      - punctuation.definition.inheritance.begin.python
+      - punctuation.definition.inheritance.end.python
+      # class CollectionV1(CollectionBase*,* Model):
+      - punctuation.separator.inheritance.python
+      # class CollectionV1(CollectionBase, Model)*:*
+      - punctuation.section.class.begin.python
+      # def interpolate_string(...)*:*
+      - punctuation.section.function.begin.python
+      # def interpolate_string(messages*,* ...)
+      - punctuation.separator.parameters.python
+      # payload*:* str
+      - punctuation.separator.colon.python
+      # package: Optional*[*PackageSettings*]* = None
+      - punctuation.definition.arguments.begin.python
+      - punctuation.definition.arguments.end.python
+      # Dict[str*,* Any]
+      - punctuation.separator.element.python
+      # hello("cruel"*,* "world")
+      - punctuation.separator.arguments.python
+      # return *(* ... *)*
+      - punctuation.parenthesis.begin.python
+      - punctuation.parenthesis.end.python
+      # hello*.*world
+      - meta.function-call.python punctuation.separator.period.python
+      - meta.member.access.python punctuation.separator.period.python
+
+  data:
+    control:
+      # *f*"Bearer {self.config['token']}"
+      - string.interpolated.python storage.type
+      # f"Bearer *{*self.config['token']*}*"
+      - constant.character.format.placeholder.other.python
+
+    primitive:
+      # from *genotype* import Model
+      - module: true
+
+    detail:
+      # return *[* ... *]*
+      - punctuation.definition.list.begin.python
+      - punctuation.definition.list.end.python
+      # return *{* ... *}*
+      - punctuation.definition.dict.begin.python
+      - punctuation.definition.dict.end.python
+      # { hello*:* "world" }
+      - punctuation.separator.dict.python
+
+  types:
+    base:
+      # time: *int*
+      - class:
+          - typeHint
+      # whatever: *Dict*[str, Any]
+      - variable:
+          - typeHint
+      # nothing: *None*
+      - builtinConstant:
+          - typeHint
+
+    detail:
+      # def interpolate_string(...) *->* str:
+      - punctuation.separator.annotation.result.python
+      # def interpolate_string(prompt*:* str, ...)
+      - punctuation.separator.annotation.python
+
+  macro:
+    decorate:
+      - entity.name.function.decorator.python
+
+  comments:
+    base:
+      # """*Collection payload.*"""
+      - string.quoted.docstring
+
+    detail:
+      # *"""*Collection payload.*"""*
+      - string.quoted.docstring.multi.python punctuation.definition.string.begin.python
+      - string.quoted.docstring.multi.python punctuation.definition.string.end.python

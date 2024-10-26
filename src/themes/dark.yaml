@@ -22,7 +22,7 @@ layers:
 
   data:
     base: "#a2acec"
-    control: "#8e9dfe"
+    control: "#668aff"
     property: "#bfc5e9"
     primitive: "#94c0ef"
     text: "#e8efff"
@@ -45,8 +45,10 @@ layers:
     effect: "#ff718b"
 
   macro:
+    base: "#bcb789"
     control: "#eeff01"
     effect: "#e8d84a"
+    decorate: "#cbc05e"
     declare: "#fff6bd"
     detail: "#564e16"
 

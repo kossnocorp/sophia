@@ -15,6 +15,8 @@ layers:
       - keyword.operator.arrow.fat.rust
       # query.first::<Prompts>(None).await*?*;
       - keyword.operator.question.rust
+      # *use* serde_json::Value;
+      - meta.use.rust keyword.other.rust
 
     effect:
       # Box::*new*(...)
@@ -55,6 +57,11 @@ layers:
       - keyword.operator.access.dot.rust
 
   data:
+    base:
+      - namespace: true
+      - keyword:
+          - crateRoot
+
     property:
       # *var1*: VarV1
       - property: true
@@ -92,6 +99,11 @@ layers:
       - punctuation.brackets.angle.rust
 
   macro:
+    base:
+      # #[serde(*untagged*)]
+      - generic:
+          - attribute
+
     control:
       # *macro_rules!* println { ... }
       - entity.name.function.macro.rules.rust
@@ -103,6 +115,8 @@ layers:
     effect:
       # *println!*("Hello, world!");
       - meta.macro.rust
+
+    decorate:
       # #[*serde*(tag = "type")]
       - decorator: true
       # #[*macro_export*]
