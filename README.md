@@ -24,6 +24,7 @@ I'm not a polyglot by any means, so if you notice an idiosyncrasy, please [DM me
 - **GraphQL**
 - **Makefile**
 - **Justfile**
+- **Nix**
 - Swift
 - F#
 

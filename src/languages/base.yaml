@@ -35,6 +35,9 @@ layers:
       - support.class.component
 
     control:
+      # *if* ...
+      - keyword:
+          - conditional
       - keyword.control.export
       - keyword.control.flow
       - keyword.control.conditional
@@ -53,9 +56,13 @@ layers:
       # const *hello* = ...
       - variable:
           - declaration
-      # function fn(*arg*) { ... }
+      - property:
+          - definition
+      - parameter:
+          - definition
       - parameter:
           - declaration
+      # function fn(*arg*) { ... }
       - variable.other.readwrite.alias
       - meta.definition.function
       - meta.definition.variable
@@ -76,6 +83,8 @@ layers:
       - entity.name.tag
 
     detail:
+      # # All the punctuation
+      - punctuation
       # ...*;*
       - punctuation.terminator.statement
       # function fn*(*...*)* ...

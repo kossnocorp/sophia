@@ -1,0 +1,40 @@
+# Nix
+
+id: nix
+
+layers:
+  runtime:
+    control:
+      - keyword.other.inherit.nix
+
+    effect:
+      - support.function.nix
+      - operator: true
+      - keyword.operator.nix
+      # let y *=* x
+      - keyword.operator.bind.nix
+
+    type:
+      - keyword.other.nix
+
+  data:
+    control:
+      - punctuation.section.embedded.begin.nix
+      - punctuation.section.embedded.end.nix
+
+    property:
+      # *zsh* = { ... }
+      - property:
+          - definition
+
+    detail:
+      # [TODO] Figure out why VS Code won't apply this even though it's more
+      # specific than `string`
+      # *"*...*"*
+      - punctuation.definition.string.double.start.nix
+      - punctuation.definition.string.double.end.nix
+      # *''* ... *''*
+      - punctuation.definition.string.other.start.nix
+      - punctuation.definition.string.other.end.nix
+      # - punctuation:
+      #     - delimiter

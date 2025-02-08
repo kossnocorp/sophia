@@ -8,6 +8,12 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
+## v0.7.0 - 2025-02-09
+
+### Added
+
+- Added support for Nix.
+
 ## v0.6.0 - 2024-10-26
 
 ### Added
