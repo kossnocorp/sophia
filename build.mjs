@@ -1,6 +1,5 @@
 import watcher from "@parcel/watcher";
-import { spawn } from "child_process";
-import { readFile, writeFile, readdir } from "fs/promises";
+import { readdir, readFile, writeFile } from "fs/promises";
 import { minimatch } from "minimatch";
 import { relative, resolve } from "path";
 import { parse } from "yaml";
@@ -12,7 +11,7 @@ generate();
 
 const watch = !!process.argv.find((arg) => arg === "--watch");
 if (watch) {
-  const debouncedGenereate = debounce(generate, 50);
+  const debouncedGenerate = debounce(generate, 50);
 
   watcher.subscribe(process.cwd(), (error, events) => {
     if (error) {
@@ -26,7 +25,7 @@ if (watch) {
       const path = relative(process.cwd(), event.path);
 
       if (!paths.some((pattern) => minimatch(path, pattern))) return;
-      debouncedGenereate();
+      debouncedGenerate();
     });
   });
 }
