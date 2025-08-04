@@ -1,5 +1,6 @@
-node_modules
+# Node.js
+node_modules/
+.pnpm-store/
+# VS Code
 *.vsix
 *~lock~*
-.envrc
-.direnv
