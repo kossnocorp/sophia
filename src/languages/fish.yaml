@@ -1,0 +1,12 @@
+# Fish
+
+# TODO: I think we future for Fish syntax highlighting is in fish-lsp by @ndonfris
+# https://github.com/ndonfris/fish-lsp, but for now the tokens it generates are
+# barebone and not enough for semantic highlighting.
+
+id: fish
+
+layers:
+  runtime:
+    access:
+      - variable.other.fish

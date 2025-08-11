@@ -84,7 +84,7 @@
       }
     },
     {
-      "scope": "support.variable.property, entity.name.tag, source.fsharp.fsl, variable.language.arguments, source.just, source.makefile",
+      "scope": "support.variable.property, entity.name.tag, variable.other.fish, source.fsharp.fsl, variable.language.arguments, source.just, source.makefile",
       "settings": {
         "foreground": "#C5C5C5"
       }

@@ -25,10 +25,15 @@ I'm not a polyglot by any means, so if you notice an idiosyncrasy, please [DM me
 - **Makefile**
 - **Justfile**
 - **Nix**
+- **Bash**
+- **Zsh**
+- **Fish**¹
 - Swift
 - F#
 
 The languages marked with **bold** are the ones I'm the most proficient in and/or have the most detailed support.
+
+- ¹ Fish works the best when identified as _Shell Script_, so that it uses _Bash_/_Zsh_ parsing rules. I think the future is in [`fish-lsp`](https://github.com/ndonfris/fish-lsp) by [@https://github.com/ndonfris](https://github.com/ndonfris), but currently the tokens it generates are barebone and not enough for semantic highlighting.
 
 Other languages might work well, but I haven't tested them yet.
 
