@@ -1,0 +1,42 @@
+# Shell
+
+id: shellscript
+
+layers:
+  runtime:
+    control:
+      - keyword.other.inherit.nix
+      - punctuation.separator.statement.background.shell
+      - keyword.control
+      - storage.modifier.export.shell
+      - keyword.operator.pipe.shell
+      - keyword.operator.pattern.case.shell
+      - punctuation.definition.evaluation.backticks.shell
+      - punctuation.separator.statement.and.shell
+      - keyword.operator.redirect.shell
+
+    effect:
+      - entity.name.function.call.shell
+      - variable.language.special.wildcard.shell
+      - storage.modifier.declare.shell
+
+    declare:
+      - variable.other.assignment.shell
+      - entity.name.function.shell
+      # for *name* in ...
+      - variable.other.for.shell
+
+    type:
+      - storage.modifier.local.shell
+      - storage.modifier.readonly.shell
+
+    detail:
+      - constant.character.escape.line-continuation.shell
+
+  data:
+    base:
+      - string.unquoted.argument
+
+    control:
+      - punctuation.definition.subshell.single.shell
+      - punctuation.definition.variable.shell

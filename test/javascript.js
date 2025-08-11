@@ -1,9 +1,8 @@
 import { readFile } from "fs";
 import * as path from "path";
-import { spawn } from "child_process";
 
-export { path };
 export * from "fs";
+export { path };
 
 /**
  * Returns boolean for whatever reason also prints what you pass to it.
@@ -61,3 +60,13 @@ const hello = {
 const re = /(Hello+), Worl[d]?!/;
 
 re.test("What's up?!");
+
+for (const [key, value] of Object.entries(hello)) {
+  console.log(`${key}: ${value}`);
+}
+
+if (1 === 2 || (2 == 3 && 4 != 5)) {
+  while (true) {
+    break;
+  }
+}

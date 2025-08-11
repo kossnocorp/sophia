@@ -16,7 +16,6 @@ layers:
       - keyword.operator.spread
       - keyword.operator.expression.typeof
       - keyword.operator.expression.instanceof
-      - keyword.operator.assignment
       - keyword.control.import
       - keyword.control.from
       - meta.import keyword.control.as
@@ -26,7 +25,6 @@ layers:
       - keyword.operator.assignment
       - meta.function-call entity.name.function
       - keyword.operator.expression.delete
-      - keyword.operator.logical
       - keyword.operator.comparison
       - keyword.operator.expression.extends
       - keyword.operator.expression.instanceof
@@ -47,6 +45,8 @@ layers:
       # *import* { ... } *from* ...
       - keyword.control.import
       - keyword.control.from
+      # a *&&* b
+      - keyword.operator.logical
 
     type:
       # *function* fn() { ... }

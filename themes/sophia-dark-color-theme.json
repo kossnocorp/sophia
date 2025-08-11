@@ -54,31 +54,31 @@
   "semanticHighlighting": true,
   "tokenColors": [
     {
-      "scope": "source, variable, meta.embedded.line, variable.object.property, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.operator.assignment, keyword.control.import, keyword.control.from, meta.import keyword.control.as, keyword.control.import.swift",
+      "scope": "source, variable, meta.embedded.line, variable.object.property, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.control.import, keyword.control.from, meta.import keyword.control.as, keyword.control.import.swift",
       "settings": {
         "foreground": "#b8b0cb"
       }
     },
     {
-      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, keyword.control.import, keyword.control.from, entity.name.section.fsharp keyword.fsharp, keyword.control.default, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, keyword.generator.asterisk, entity.name.function.just, keyword.operator.quiet.just, support.function.system.just, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, keyword.other.inherit.nix, storage.type.function.async.python, keyword.control.rust, keyword.operator.arrow.fat.rust, keyword.operator.question.rust, meta.use.rust keyword.other.rust, storage.modifier.swift, keyword.other.declaration-specifier.accessibility.swift",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, keyword.control.import, keyword.control.from, keyword.operator.logical, entity.name.section.fsharp keyword.fsharp, keyword.control.default, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, keyword.generator.asterisk, entity.name.function.just, keyword.operator.quiet.just, support.function.system.just, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, keyword.other.inherit.nix, storage.type.function.async.python, keyword.control.rust, keyword.operator.arrow.fat.rust, keyword.operator.question.rust, meta.use.rust keyword.other.rust, keyword.other.inherit.nix, punctuation.separator.statement.background.shell, keyword.control, storage.modifier.export.shell, keyword.operator.pipe.shell, keyword.operator.pattern.case.shell, punctuation.definition.evaluation.backticks.shell, punctuation.separator.statement.and.shell, keyword.operator.redirect.shell, storage.modifier.swift, keyword.other.declaration-specifier.accessibility.swift",
       "settings": {
         "foreground": "#ff8df4"
       }
     },
     {
-      "scope": "keyword.operator.assignment, meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.logical, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component, keyword.symbol.fsharp, meta.function-call support.class, meta.function-call variable.language.super, entity.name.function.tagged-template, keyword.operator.spread, meta.scope.prerequisites.makefile, support.function.nix, keyword.operator.nix, keyword.operator.bind.nix, meta.function-call.python, meta.function.call.rust entity.name.function.rust",
+      "scope": "keyword.operator.assignment, meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component, keyword.symbol.fsharp, meta.function-call support.class, meta.function-call variable.language.super, entity.name.function.tagged-template, keyword.operator.spread, meta.scope.prerequisites.makefile, support.function.nix, keyword.operator.nix, keyword.operator.bind.nix, meta.function-call.python, meta.function.call.rust entity.name.function.rust, entity.name.function.call.shell, variable.language.special.wildcard.shell, storage.modifier.declare.shell",
       "settings": {
         "foreground": "#d4b0ff"
       }
     },
     {
-      "scope": "storage.type, keyword.other.nix, source keyword.other.rust, keyword.other.fn.rust, keyword.other.declaration-specifier.swift",
+      "scope": "storage.type, keyword.other.nix, source keyword.other.rust, keyword.other.fn.rust, storage.modifier.local.shell, storage.modifier.readonly.shell, keyword.other.declaration-specifier.swift",
       "settings": {
         "foreground": "#a39be3"
       }
     },
     {
-      "scope": "variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, meta.field.declaration variable.object.property, meta.definition.method, variable.fsharp, entity.name.section.fsharp, meta.function.definition.rust entity.name.function.rust, meta.use.rust entity.name.type.rust, meta.import.swift entity.name.type.swift",
+      "scope": "variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, meta.field.declaration variable.object.property, meta.definition.method, variable.fsharp, entity.name.section.fsharp, meta.function.definition.rust entity.name.function.rust, meta.use.rust entity.name.type.rust, variable.other.assignment.shell, entity.name.function.shell, variable.other.for.shell, meta.import.swift entity.name.type.swift",
       "settings": {
         "foreground": "#f2ebff"
       }
@@ -90,19 +90,19 @@
       }
     },
     {
-      "scope": "punctuation, punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, storage.type.function.arrow, punctuation.separator.comma, punctuation.separator.parameter, punctuation.definition.section.case-statement, punctuation.accessor, punctuation.comma, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, punctuation.definition.inheritance.begin.python, punctuation.definition.inheritance.end.python, punctuation.separator.inheritance.python, punctuation.section.class.begin.python, punctuation.section.function.begin.python, punctuation.separator.parameters.python, punctuation.separator.colon.python, punctuation.definition.arguments.begin.python, punctuation.definition.arguments.end.python, punctuation.separator.element.python, punctuation.separator.arguments.python, punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, meta.function-call.python punctuation.separator.period.python, meta.member.access.python punctuation.separator.period.python, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust, keyword.operator.key-value.rust, punctuation.brackets.square.rust, keyword.operator.access.dot.rust, punctuation.section.function.begin.swift, punctuation.section.function.end.swift, punctuation.section.scope.begin.swift, punctuation.section.scope.end.swift",
+      "scope": "punctuation, punctuation.terminator.statement, punctuation.definition.parameters.begin, punctuation.definition.parameters.end, meta.brace.round, punctuation.definition.block, storage.type.function.arrow, punctuation.separator.comma, punctuation.separator.parameter, punctuation.definition.section.case-statement, punctuation.accessor, punctuation.comma, keyword.operator.recipe.end.just, punctuation.separator.key-value.makefile, punctuation.definition.inheritance.begin.python, punctuation.definition.inheritance.end.python, punctuation.separator.inheritance.python, punctuation.section.class.begin.python, punctuation.section.function.begin.python, punctuation.separator.parameters.python, punctuation.separator.colon.python, punctuation.definition.arguments.begin.python, punctuation.definition.arguments.end.python, punctuation.separator.element.python, punctuation.separator.arguments.python, punctuation.parenthesis.begin.python, punctuation.parenthesis.end.python, meta.function-call.python punctuation.separator.period.python, meta.member.access.python punctuation.separator.period.python, keyword.operator.logical.rust, punctuation.brackets.round.rust, punctuation.brackets.curly.rust, punctuation.semi.rust, keyword.operator.arrow.skinny.rust, keyword.operator.namespace.rust, keyword.operator.key-value.rust, punctuation.brackets.square.rust, keyword.operator.access.dot.rust, constant.character.escape.line-continuation.shell, punctuation.section.function.begin.swift, punctuation.section.function.end.swift, punctuation.section.scope.begin.swift, punctuation.section.scope.end.swift",
       "settings": {
         "foreground": "#575165"
       }
     },
     {
-      "scope": "entity.name.tag, markup.quote.markdown, punctuation.definition.list.begin.markdown, meta.separator.markdown, markup.underline.link.markdown, constant.other.reference.link.markdown",
+      "scope": "entity.name.tag, markup.quote.markdown, punctuation.definition.list.begin.markdown, meta.separator.markdown, markup.underline.link.markdown, constant.other.reference.link.markdown, string.unquoted.argument",
       "settings": {
         "foreground": "#a2acec"
       }
     },
     {
-      "scope": "punctuation.definition.template-expression.begin, punctuation.definition.template-expression.end, markup.heading, string.other.link.title.markdown, markup.underline.link.image.markdown, punctuation.section.embedded.begin.nix, punctuation.section.embedded.end.nix, string.interpolated.python storage.type, constant.character.format.placeholder.other.python, entity.other.document.begin.yaml, keyword.control.flow.block-scalar.literal.yaml, punctuation.definition.anchor.yaml, entity.name.type.anchor.yaml, punctuation.definition.alias.yaml, variable.other.alias.yaml",
+      "scope": "punctuation.definition.template-expression.begin, punctuation.definition.template-expression.end, markup.heading, string.other.link.title.markdown, markup.underline.link.image.markdown, punctuation.section.embedded.begin.nix, punctuation.section.embedded.end.nix, string.interpolated.python storage.type, constant.character.format.placeholder.other.python, punctuation.definition.subshell.single.shell, punctuation.definition.variable.shell, entity.other.document.begin.yaml, keyword.control.flow.block-scalar.literal.yaml, punctuation.definition.anchor.yaml, entity.name.type.anchor.yaml, punctuation.definition.alias.yaml, variable.other.alias.yaml",
       "settings": {
         "foreground": "#668aff"
       }

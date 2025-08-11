@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { readFile } from "fs";
 import * as path from "path";
 import { join } from "path";
