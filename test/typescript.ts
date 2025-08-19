@@ -2,7 +2,7 @@
 
 import { readFile } from "fs";
 import * as path from "path";
-import { join } from "path";
+import { join, resolve as pathResolve } from "path";
 import type { ParsedPath } from "path";
 import { type PathLike } from "fs";
 import { type ChildProcess, spawn } from "child_process";

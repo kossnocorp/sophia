@@ -25,6 +25,7 @@ I'm not a polyglot by any means, so if you notice an idiosyncrasy, please [DM me
 - **Makefile**
 - **Justfile**
 - **Nix**
+- **Go**
 - **Bash**
 - **Zsh**
 - **Fish**¹

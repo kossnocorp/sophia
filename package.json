@@ -4,7 +4,7 @@
   "description": "Code semantics-focused theme",
   "publisher": "nocorp",
   "icon": "./icon.png",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "engines": {
     "vscode": "^1.88.0"
   },

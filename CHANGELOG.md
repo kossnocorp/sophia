@@ -8,6 +8,12 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
+## v0.8.0 - 2025-08-19
+
+### Added
+
+- Added support for Go, Bash, Zsh and Fish.
+
 ## v0.7.0 - 2025-02-09
 
 ### Added

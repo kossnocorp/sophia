@@ -1,0 +1,72 @@
+# Go
+
+layers:
+  runtime:
+    control:
+      # *package* main
+      - keyword.package.go
+      # *const* ...
+      - keyword.const.go
+      - keyword.var.go
+      # case *<-*ctx.Done():
+      - keyword.operator.channel.go
+
+    effect:
+      # startupOnce.*Do*(...)
+      - entity.name.function.support.go
+      # *make*(...)
+      - entity.name.function.support.builtin.go
+      # string *|* float64
+      - keyword.operator.arithmetic.bitwise.go
+
+    declare:
+      # const *Pi* = ...
+      - variable.other.constant.go
+      - variable.other.assignment.go
+      # func (*box* Box[T])
+      - variable.parameter.go
+
+    access:
+      # jsonMarshal = alias.*Marshal*
+      - variable.other.go
+
+    type:
+      - keyword.function.go
+
+  types:
+    base:
+      # *sync.Once*
+      - entity.name.type.go
+
+    declare:
+      # *User* struct { ...
+      - entity.name.type.go
+      # func *controlExamples*
+      - entity.name.function.go
+
+    type:
+      # *User* *struct* { ...
+      - keyword.struct.go
+      # *interface*{ Close() error }
+      - keyword.interface.go
+
+    primitive:
+      # *0b*_1010_0110
+      - keyword.other.unit.binary.go
+      - keyword.other.unit.octal.go
+      - keyword.other.unit.hexadecimal.go
+      # ID *int*
+      - storage.type.numeric.go
+      - storage.type.string.go
+      - storage.type.byte.go
+      - entity.name.type.any.go
+      - keyword.map.go
+      # compileTimeError *error*
+      - storage.type.error.go
+      # U *comparable*
+      - entity.name.type.comparable.go
+
+  data:
+    property:
+      # *ID* int
+      - variable.other.property.go
