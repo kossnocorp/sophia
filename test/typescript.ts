@@ -1,15 +1,15 @@
 // @ts-nocheck
 
 import { readFile } from "fs";
-import * as path from "path";
-import { join, resolve as pathResolve } from "path";
 import type { ParsedPath } from "path";
-import { type PathLike } from "fs";
-import { type ChildProcess, spawn } from "child_process";
+import * as path from "path";
+import { resolve as pathResolve } from "path";
 
-export { path };
 export * from "fs";
+export { path };
 export type { ParsedPath, PathLike };
+
+pathResolve("src/index.ts");
 
 export default function helloWorld(arg: string): boolean {
   console.log("Arguments:", arguments);
@@ -67,12 +67,13 @@ re.test("What's up?!");
 namespace Hello {
   export interface Yup {
     yeah: boolean;
+    aha: "yep";
   }
 
   export type AnyBrand = { [key: string | number | symbol]: any };
 
   export type Debrand<Type> = Type extends infer _Brand extends AnyBrand &
-    infer Debranded extends string | number | symbol
+    (infer Debranded extends string | number | symbol)
     ? Debranded
     : Type;
 
@@ -82,17 +83,16 @@ namespace Hello {
     [Key in keyof Model as string extends Debrand<Key>
       ? never
       : number extends Debrand<Key>
-      ? never
-      : symbol extends Debrand<Key>
-      ? never
-      : Key]: Model[Key];
+        ? never
+        : symbol extends Debrand<Key>
+          ? never
+          : Key]: Model[Key];
   };
 
-  export type AllOptionalBut<Model, Key extends keyof Model> = Partial<
-    Omit<WithoutIndexed<Model>, Key>
-  > extends Omit<WithoutIndexed<Model>, Key>
-    ? true
-    : false;
+  export type AllOptionalBut<Model, Key extends keyof Model> =
+    Partial<Omit<WithoutIndexed<Model>, Key>> extends Omit<WithoutIndexed<Model>, Key>
+      ? true
+      : false;
 }
 
 type Test = Hello.AnyBrand;

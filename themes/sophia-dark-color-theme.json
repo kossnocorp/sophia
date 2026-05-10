@@ -164,7 +164,7 @@
     {
       "scope": "entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter, meta.interface variable.object.property, meta.interface entity.name.function, entity.name.type.go, entity.name.function.go, support.type.enum.graphql, support.type.graphql, entity.scalar.graphql, entity.name.fragment.graphql, entity.name.function.directive.graphql, entity.name.function.graphql, constant.character.enum.graphql",
       "settings": {
-        "foreground": "#edfff0"
+        "foreground": "#9AFFBC"
       }
     },
     {
@@ -284,21 +284,25 @@
     "variable.typeHint:python": "#b5cfb7",
     "builtinConstant.typeHint:python": "#b5cfb7",
     "enumMember:rust": "#b5cfb7",
-    "struct:rust": "#b5cfb7",
     "enum:rust": "#b5cfb7",
-    "interface:rust": "#b5cfb7",
     "namespace:typescript": "#b5cfb7",
     "namespace:typescriptreact": "#b5cfb7",
     "interface:typescript": "#b5cfb7",
     "interface:typescriptreact": "#b5cfb7",
     "type:typescript": "#b5cfb7",
     "type:typescriptreact": "#b5cfb7",
+    "struct.declaration:rust": "#72FFC0",
+    "interface.declaration:rust": "#85FF85",
+    "typeParameter.declaration:rust": "#A3DE6D",
+    "struct.documentation:rust": "#b7d9bc",
+    "interface.documentation:rust": "#b7d9bc",
     "lifetime:rust": "#ff718b",
     "generic.attribute:rust": "#bcb789",
     "decorator:rust": "#cbc05e",
     "builtinAttribute:rust": "#cbc05e",
     "deriveHelper:rust": "#cbc05e",
     "macro.declaration:rust": "#fff6bd",
-    "attributeBracket:rust": "#564e16"
+    "attributeBracket:rust": "#564e16",
+    "comment.documentation:rust": "#FFDEB2"
   }
 }

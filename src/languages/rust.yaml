@@ -88,15 +88,39 @@ layers:
       # Schema::*Properties*( ... )
       - enumMember: true
       # *HashMap*::from([])
-      - struct: true
+      # - struct: true
       # *Schema*::Properties( ... )
       - enum: true
       # std::error::*Error*
-      - interface: true
+      # - interface: true
 
     detail:
       # Result*<*Response, Error*>*
       - punctuation.brackets.angle.rust
+
+    runtime-declare:
+      # struct *StructName* { ...
+      - struct:
+          - declaration
+
+    interface-declare:
+      # trait *TraitName* { ...
+      - interface:
+          - declaration
+
+    generic-declare:
+      # struct StructName<*Type*> { ...
+      - typeParameter:
+          - declaration
+
+    access:
+      # /// See *[User]* struct ...
+      - struct:
+          - documentation
+
+      # /// See *[Named]* trait ...
+      - interface:
+          - documentation
 
   macro:
     base:
@@ -134,3 +158,9 @@ layers:
       - attributeBracket: true
       # ... $dst*:*expr ...
       - meta.macro.metavariable.rust keyword.operator.key-value.rust
+
+  comments:
+    doc-content:
+      # /// *Doc content* ...
+      - comment:
+          - documentation

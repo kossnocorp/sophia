@@ -1,3 +1,76 @@
+# Dark Sophia theme.
+#
+# This is the reference theme that documents all the available layers and their
+# colors.
+#
+# ## Concepts
+#
+# Few important concepts to understand when looking at the theme:
+#
+# - TODO: Describe layers and sub-layers, and their semantics documentation.
+# - TODO: Describe tokens and their relationship to sub-layers.
+# - TODO: Describe spectrum and spectrum ranges.
+# - TODO: Define semantics.
+#
+# ## Colors
+#
+# Entity colors are picked based on the semantic meaning, importance and also
+# relationship to other entities. Each layer occupies a certain color range of
+# the spectrum, that conveys it. Sub-layers are also arranged semantically, so
+# on the edges of a layer's spectrum they are closer to the adjacent layers when
+# they are semantically close to them.
+#
+# ### Hue
+#
+# To make it easier, the seven colors of the rainbow are picked to define these
+# ranges:
+#
+# - Red: Memory layer.
+# - Orange: WIP (TODO: Right now it's comments, but better to rearrange it)
+# - Yellow: Macros.
+# - Green: Types (TODO: Maybe rearrange it between runtime and data or comments).
+# - Blue: WIP (TODO: Right now it's data, but better to rearrange it)
+# - Indigo: Runtime (TODO: Looks good, but consider making them closer to types).
+# - Violet: WIP (TODO: Currently not used)
+#
+# ### Lightness and Saturation
+#
+# On a spectrum range, sub-layer colors' lightness and saturation also used to
+# convey semantics deeper.
+#
+# #### Lightness
+#
+# Lightness is used to make certain sub-layers more dimmed, i.e., punctuation,
+# or more prominent, i.e., declarations.
+#
+# To make it less distracting, most sub-layers generally are on the same
+# lightness level, and have three distinct levels of lightness:
+#
+# - Base: The default lightness for most of the sub-layers.
+# - Light: The most prominent sub-layers, i.e., declarations.
+# - Dimmed: The most dimmed sub-layers, i.e., punctuation.
+#
+# Certain layers, like data is generally more light, so a document files, i.e.,
+# Markdown, is generally more light than code files to make them easier to read.
+#
+# Lightness also varies when used in combination with saturation, for more
+# details, see the [Saturation](#saturation) section below.
+#
+# #### Saturation
+#
+# Saturation is used to make certain sub-layers pop out more, i.e., to highlight
+# a declaration (e.g., `const *user* = ...`) over usage (e.g., `*user.name*`).
+#
+# Similar to lightness, to reduce distraction, most sub-layers are on the same
+# saturation level, and have three distinct levels of saturation:
+#
+# - Base: The default saturation for most of the sub-layers.
+# - Saturated: The most saturated sub-layers, i.e., declarations.
+# - Desaturated: The most desaturated sub-layers, i.e., punctuation.
+#
+# Saturated colors are generally more dimmed than base colors, to limit their
+# highlight power.
+
 slug: dark
 name: Sophia Dark
 type: dark
@@ -20,6 +93,7 @@ layers:
     access: "#C5C5C5"
     detail: "#575165"
 
+  # TODO: Make it more
   data:
     base: "#a2acec"
     control: "#668aff"
@@ -28,22 +102,59 @@ layers:
     text: "#e8efff"
     detail: "#4b5072"
 
+  # Types layer represents the colors of both runtime types and annotation
+  # types.
+  #
+  # Distinct color layer for types allows to quickly identify them and
+  # distinguish from runtime code.
+  #
+  # There are five distinct kinds of types:
+  #
+  # - Runtime types: I.e., Rust's structs and enums, or TypeScript's enums and
+  #   classes. They are have distinct runtime representations and can be
+  #   distinguished from other data types. This is the default type layer,
+  #   albeit not common in dynamic languages like Python or JavaScript, where
+  #   runtime types (i.e., classes) often not perceived as such by the devs.
+  #
+  # - Annotation types: I.e., Python or most of TypeScript types. This is
+  #   the most common in dynamic languages. They are semantically close to
+  #   the comments layer.
+  #
+  # - Interface types: I.e., Rust's traits or C# interfaces. They are never used
+  #   at runtime, but provide a template for runtime types.
+  #
+  # - Generic types: I.e., TypeScript's or Rust's generic params. They are not
+  #   distinct types per se, but provide a placeholder for other types. They are
+  #   always belong to a parent type.
+  #
+  # - Literal types: I.e., TypeScript's string or number literals. They are
+  #   semantically close to the data layer.
   types:
     base: "#b5cfb7"
     control: "#5ff0b1"
     effect: "#3aeca8"
     type: "#86d2a9"
     primitive: "#94edef"
-    declare: "#edfff0"
+    runtime-declare: "#72FFC0"
+    # TODO: Get rid of shared `declare` and pick a distinct color for annotation.
+    declare: "#9AFFBC"
+    annotation-declare: "#9AFFBC"
+    interface-declare: "#85FF85"
+    generic-declare: "#A3DE6D"
     access: "#b7d9bc"
     property: "#a9d4d0"
     detail: "#445047"
 
+  # TODO: Rearrange to the top (Roygbiv/1st)
   memory:
     base: "#d67f7f"
     control: "#ff8989"
     effect: "#ff718b"
 
+  # TODO: Consider moving this layer to the bottom of spectrum (purple), to
+  # properly semantically position it among the other layers.
+  #
+  # TODO: After, rearrange to the bottom (roygbiV/7th)
   macro:
     base: "#bcb789"
     control: "#eeff01"
@@ -52,8 +163,11 @@ layers:
     declare: "#fff6bd"
     detail: "#564e16"
 
+  # TODO: Rearrange to the top (rOygbiv/2nd)
   comments:
     base: "#cca879"
     control: "#fba83b"
     declare: "#f7dcb9"
+    # Doc comments content, i.e. `/// *doc content*` in Rust.
+    doc-content: "#FFDEB2"
     detail: "#55514b"
