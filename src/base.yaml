@@ -1,3 +1,9 @@
+#region Base -------------------------------------------------------------------
+
+icon.foreground: "#7A7A7A"
+
+#endregion
+
 #region Title bar --------------------------------------------------------------
 
 titleBar.activeBackground: "#000000"
@@ -14,8 +20,8 @@ activityBar.foreground: "#bebeb1"
 
 activityBar.activeBorder: "#FFFF00"
 
-activityBarBadge.background: "#FFFF00"
-activityBarBadge.foreground: "#000000"
+activityBarBadge.background: "#FF9DF2"
+activityBarBadge.foreground: "#160013"
 
 #endregion
 
@@ -23,7 +29,7 @@ activityBarBadge.foreground: "#000000"
 
 sideBar.border: "#303030"
 sideBar.background: "#000000"
-sideBar.foreground: "#bebeb1"
+sideBar.foreground: "#989898"
 
 #endregion
 
@@ -31,11 +37,16 @@ sideBar.foreground: "#bebeb1"
 
 statusBar.background: "#000000"
 statusBar.border: "#303030"
-statusBar.foreground: "#4d4d4d"
+statusBar.foreground: "#818181"
 
 # WSL label remote connection etc.
-statusBarItem.remoteBackground: "#000000"
-statusBarItem.remoteForeground: "#BBE1CA"
+statusBarItem.remoteBackground: "#58004C"
+statusBarItem.remoteForeground: "#FF8CF0"
+
+# Debugger status
+statusBar.debuggingBackground: "#180034"
+statusBar.debuggingForeground: "#BA91DF"
+statusBar.debuggingBorder: "#4B00A1"
 
 #endregion
 
@@ -57,18 +68,28 @@ menu.background: "#171717"
 tab.border: "#000000"
 
 # Active focused
-tab.activeBackground: "#31000E"
+tab.activeBackground: "#400037"
 tab.activeForeground: "#ffffff"
-tab.activeBorderTop: "#FF004C"
+tab.activeBorderTop: "#FF00DD"
 
 # Active unfocused
-tab.unfocusedActiveBackground: "#000000"
+tab.unfocusedActiveBackground: "#1E001A"
 tab.unfocusedActiveForeground: "#bebeb1"
-tab.unfocusedActiveBorderTop: "#450015"
+tab.unfocusedActiveBorderTop: "#57004B"
 
 # Inactive
 tab.inactiveBackground: "#000000"
 tab.inactiveForeground: "#bebeb1"
+
+#endregion
+
+#region Breadcrumbs ------------------------------------------------------------
+
+breadcrumb.foreground: "#7A7A7A"
+# breadcrumb.background: "#000000"
+# breadcrumb.focusForeground: "#00ff00"
+# breadcrumb.activeSelectionForeground: "#0000ff"
+# breadcrumbPicker.background: "#257CFF"
 
 #endregion
 
@@ -119,5 +140,22 @@ editorInlayHint.typeForeground: "#445047" # types.detail
 terminal.background: "#000000"
 
 terminal.tab.activeBorder: "#8904e8bc"
+
+#endregion
+
+#region List -------------------------------------------------------------------
+
+# Entity with warnings, i.e., tab name
+list.warningForeground: "#FFE137"
+list.errorForeground: "#FF7B7B"
+
+#endregion
+
+#region Git --------------------------------------------------------------------
+
+gitDecoration.modifiedResourceForeground: "#91AFFF"
+gitDecoration.stageModifiedResourceForeground: "#A2B2DF"
+gitDecoration.addedResourceForeground: "#A1D2A4"
+gitDecoration.deletedResourceForeground: "#DCB09A"
 
 #endregion

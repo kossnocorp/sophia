@@ -10,13 +10,23 @@ layers:
 
     control:
       # *if* a.len() > b.len() {
-      - keyword.control.rust
+      - keyword.control.flow.rust
       #
       - keyword.operator.arrow.fat.rust
       # query.first::<Prompts>(None).await*?*;
       - keyword.operator.question.rust
       # *use* serde_json::Value;
       - meta.use.rust keyword.other.rust
+      # use *crate*::utils;
+      - meta.use.rust keyword.other.crate.rust
+      - keyword:
+        - controlFlow
+      - source.rust keyword.other.rust
+      - source.rust keyword.control.rust
+      # hello(&mut *self*)
+      - meta.function.definition.rust variable.language.self.rust
+      - source.rust storage.type.rust
+
 
     effect:
       # Box::*new*(...)
@@ -25,7 +35,6 @@ layers:
     type:
       # Rust syntax doesn't have designated tokens for impl
       # we I have to use the most generic keyword token.
-      - source keyword.other.rust
       # *fn* get_direct(...) -> ...
       - keyword.other.fn.rust
 
@@ -94,6 +103,14 @@ layers:
       # std::error::*Error*
       # - interface: true
 
+    # effect:
+
+    control:
+      - keyword.declaration.type.rust storage.type.rust
+      - keyword.declaration.trait.rust storage.type.rust
+      # *Self*::AssociatedType
+      - selfTypeKeyword: true
+
     detail:
       # Result*<*Response, Error*>*
       - punctuation.brackets.angle.rust
@@ -112,6 +129,8 @@ layers:
       # struct StructName<*Type*> { ...
       - typeParameter:
           - declaration
+      - typeAlias:
+          - associated
 
     access:
       # /// See *[User]* struct ...
