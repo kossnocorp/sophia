@@ -128,7 +128,7 @@ layers:
     base:
       - meta.type.declaration storage.type
       - storage.type.namespace
-      - meta.field.declaration storage.modifier
+      # - meta.field.declaration storage.modifier
       - meta.interface
       - keyword.operator.type.annotation
       - meta.field.declaration

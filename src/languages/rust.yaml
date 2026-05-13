@@ -26,7 +26,14 @@ layers:
       # hello(&mut *self*)
       - meta.function.definition.rust variable.language.self.rust
       - source.rust storage.type.rust
+      # state *@* ModuleState::ConvertError(_) =>
+      - keyword.operator.subpattern.rust
 
+      # Self::ConvertError(_) *|* Self::Converted(_) *|* Self::ResolveError(_) => None,
+      # .map(*|*reference*|* reference.definition_id)
+      - keyword.operator.logical.rust
+      - selfKeyword: true
+      - selfTypeKeyword: true
 
     effect:
       # Box::*new*(...)
@@ -47,7 +54,7 @@ layers:
     detail:
       # [NOTE] Reset predefined keyword.operator.logical as Rust
       # marks a lot of stuff like this *(|*error*|* ...
-      - keyword.operator.logical.rust
+      # - meta.function.call.rust keyword.operator.logical.rust
       #  println!*(*"{error:?}"*)*
       - punctuation.brackets.round.rust
       # match *{* ... *}*
@@ -64,6 +71,14 @@ layers:
       - punctuation.brackets.square.rust
       # "question"*.*to_owned(),
       - keyword.operator.access.dot.rust
+
+    access:
+      - function:
+        - intraDocLink
+      # - enum:
+      #   -	library
+      # - enumMember:
+      #   - library
 
   data:
     base:
@@ -93,13 +108,13 @@ layers:
       # pub fn get_token(req: *Request*) -> *Option<String>*
       - meta.function.definition.rust entity.name.type.rust
       # pub collection_uid: *String*,
-      - entity.name.type.rust
+      # - entity.name.type.rust
       # Schema::*Properties*( ... )
-      - enumMember: true
+      # - enumMember: true
       # *HashMap*::from([])
       # - struct: true
       # *Schema*::Properties( ... )
-      - enum: true
+      # - enum: true
       # std::error::*Error*
       # - interface: true
 
@@ -109,7 +124,6 @@ layers:
       - keyword.declaration.type.rust storage.type.rust
       - keyword.declaration.trait.rust storage.type.rust
       # *Self*::AssociatedType
-      - selfTypeKeyword: true
 
     detail:
       # Result*<*Response, Error*>*
@@ -119,11 +133,39 @@ layers:
       # struct *StructName* { ...
       - struct:
           - declaration
+          - public
+      - enum:
+          - declaration
+          - public
+      - enumMember:
+          - declaration
+          - public
+
+    runtime-access:
+      - struct:
+          - library
+      - struct:
+          - public
+      - enum:
+          - library
+      - enum:
+          - public
+      - enumMember:
+          - library
+      - enumMember:
+          - public
 
     interface-declare:
       # trait *TraitName* { ...
       - interface:
           - declaration
+
+    interface-access:
+      # impl *TraitName* for StructName { ...
+      - interface:
+          - library
+      - interface:
+          - public
 
     generic-declare:
       # struct StructName<*Type*> { ...
@@ -131,6 +173,9 @@ layers:
           - declaration
       - typeAlias:
           - associated
+
+    generic-access:
+      - typeParameter: true
 
     access:
       # /// See *[User]* struct ...
@@ -145,6 +190,8 @@ layers:
     base:
       # #[serde(*untagged*)]
       - generic:
+          - attribute
+      - derive:
           - attribute
 
     control:

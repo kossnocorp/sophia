@@ -141,7 +141,11 @@ layers:
     annotation-declare: "#9AFFBC"
     interface-declare: "#85FF85"
     generic-declare: "#A3DE6D"
+    generic-access: "#BFE799"
     access: "#b7d9bc"
+    runtime-access: "#B7FFDF"
+    annotation-access: "#b7d9bc"
+    interface-access: "#C2FCC2"
     property: "#a9d4d0"
     detail: "#445047"
 
