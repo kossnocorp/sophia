@@ -8,6 +8,16 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
+## v0.9.0 - 2026-05-14
+
+### Changed
+
+- Changed the VS Code UI theme colors, adding details and improving the feel of the theme.
+
+- Improved the syntax highlighting, making it more granular and consistent across languages.
+
+- Improved Rust support, adding more details and fixing some inconsistencies.
+
 ## v0.8.0 - 2025-08-19
 
 ### Added

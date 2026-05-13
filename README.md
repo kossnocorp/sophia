@@ -1,12 +1,12 @@
 <div align="center">
-  <img alt="Superstate logo" height="400" src="./preview.png" />
+  <img alt="Superstate logo" src="./preview.png" />
 
   <h1>Sophia Theme</h1>
 
   <h3>Code semantics-focused theme for Visual Studio Code</h3>
 </div>
 
-## Supported languages
+## Supported Languages
 
 I carefully crafted colors for the given languages, considering their semantics and idioms to the best of my ability.
 
@@ -32,13 +32,13 @@ I'm not a polyglot by any means, so if you notice an idiosyncrasy, please [DM me
 - Swift
 - F#
 
-The languages marked with **bold** are the ones I'm the most proficient in and/or have the most detailed support.
+The languages marked with **bold** are the ones I'm the most proficient in and/or have the most detailed support for.
 
-- ¹ Fish works the best when identified as _Shell Script_, so that it uses _Bash_/_Zsh_ parsing rules. I think the future is in [`fish-lsp`](https://github.com/ndonfris/fish-lsp) by [@https://github.com/ndonfris](https://github.com/ndonfris), but currently the tokens it generates are barebone and not enough for semantic highlighting.
+- ¹ Fish works the best when identified as _Shell Script_, so that it uses _Bash_/_Zsh_ parsing rules. I think the future is in [`fish-lsp`](https://github.com/ndonfris/fish-lsp) by [@https://github.com/ndonfris](https://github.com/ndonfris), but currently the tokens it generates are barebones and not enough for semantic highlighting.
 
 Other languages might work well, but I haven't tested them yet.
 
-## Getting started
+## Getting Started
 
 🚧 Work in progress, [follow me for updates](https://twitter.com/kossnocorp).
 
