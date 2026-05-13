@@ -3,6 +3,9 @@
 node = "latest"
 pnpm = "latest"
 
+# Tools
+fnox = "latest"
+
 [settings]
 # Enable extra features
 experimental = true
@@ -16,5 +19,5 @@ run = "node --watch ./build.mjs --watch"
 run = "pnpm exec vsce package"
 
 [tasks.publish]
-run = "pnpm exec vsce publish"
+run = "fnox exec -- pnpm exec vsce publish"
 depends = "build"
