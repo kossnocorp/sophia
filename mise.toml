@@ -1,9 +1,20 @@
 [tools]
-## Stack
-node = { version = "lts", postinstall = "corepack enable" }
+# Stack
+node = "latest"
+pnpm = "latest"
 
 [settings]
 # Enable extra features
 experimental = true
 # Consume Node.js version from .nvmrc, .tool-versions, etc.
 idiomatic_version_file_enable_tools = ["node"]
+
+[tasks.dev]
+run = "node --watch ./build.mjs --watch"
+
+[tasks.build]
+run = "pnpm exec vsce package"
+
+[tasks.publish]
+run = "pnpm exec vsce publish"
+depends = "build"
