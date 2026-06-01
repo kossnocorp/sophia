@@ -8,6 +8,12 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
+## v0.10.1 - 2026-06-02
+
+### Changed
+
+- Rolled back the runtime code that runs the 3rd-party extensions integrations as it causes VS Code to prompt the users with a warning. I plan to rework the approach and reintroduce the integrations in the future.
+
 ## v0.10.0 - 2026-06-01
 
 ### Changed
