@@ -4,3 +4,5 @@ node_modules/
 # VS Code
 *.vsix
 *~lock~*
+# Temp
+tmp/

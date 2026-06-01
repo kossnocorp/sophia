@@ -2,9 +2,8 @@ import watcher from "@parcel/watcher";
 import { readdir, readFile, writeFile } from "fs/promises";
 import { minimatch } from "minimatch";
 import { relative, resolve } from "path";
-import { parse } from "yaml";
+import * as yaml from "yaml";
 
-// const selfPath = relative(process.cwd(), import.meta.filename);
 const paths = ["src/**/*.yaml"];
 
 generate();
@@ -37,9 +36,10 @@ async function generate() {
     readYAMLs(resolve("src", "languages")),
   ]);
 
-  await Promise.all(
-    themes.map((theme) => generateTheme(theme, base, languages))
-  );
+  await Promise.all([
+    ...themes.map((theme) => generateTheme(theme, base, languages)),
+    generateBundle({ themes, base, languages }),
+  ]);
 }
 
 async function generateTheme(theme, base, languages) {
@@ -68,8 +68,8 @@ async function generateTheme(theme, base, languages) {
             if (typeof scope === "object" && language.id)
               return { ...scope, language_: language.id };
             return scope;
-          }) || [])
-        )
+          }) || []),
+        ),
       );
     });
 
@@ -105,8 +105,7 @@ async function generateTheme(theme, base, languages) {
 
           // Language is added to the end: variable.declaration.local:js
           // See: https://github.com/microsoft/vscode/wiki/Semantic-Highlighting-Overview#as-a-theme-author-do-i-need-to-change-my-theme-to-make-it-work-with-semantic-highlighting
-          const add = (lang) =>
-            semantic.push([segments.join(".")].concat(lang || []).join(":"));
+          const add = (lang) => semantic.push([segments.join(".")].concat(lang || []).join(":"));
 
           // Add semantic tokens for all languages
           if (Array.isArray(scope.language_)) scope.language_.forEach(add);
@@ -127,9 +126,7 @@ async function generateTheme(theme, base, languages) {
         });
 
       // Add semantic tokens
-      semantic.forEach(
-        (semantic) => (obj.semanticTokenColors[semantic] = color)
-      );
+      semantic.forEach((semantic) => (obj.semanticTokenColors[semantic] = color));
     });
   });
 
@@ -144,25 +141,25 @@ async function generateTheme(theme, base, languages) {
   });
 
   const content = JSON.stringify(obj, null, 2);
-  await writeFile(
-    resolve("themes", `sophia-${theme.slug}-color-theme.json`),
-    content
-  );
+  await writeFile(resolve("themes", `sophia-${theme.slug}-color-theme.json`), content);
 }
 
 async function readYAML(path) {
   const content = await readFile(path, "utf-8");
-  return parse(content);
+  return yaml.parse(content);
 }
 
 async function readYAMLs(path) {
   const files = await readdir(path);
   const contents = await Promise.all(
-    files.map((file) =>
-      file.endsWith(".yaml") ? readFile(resolve(path, file), "utf-8") : null
-    )
+    files.map((file) => (file.endsWith(".yaml") ? readFile(resolve(path, file), "utf-8") : null)),
   );
-  return contents.filter(Boolean).map(parse);
+  return contents.filter(Boolean).map(yaml.parse);
+}
+
+async function generateBundle(bundle) {
+  const content = `const bundle = ${JSON.stringify(bundle, null, 2)};\n\nmodule.exports = bundle;`;
+  await writeFile(resolve("src", "bundle.js"), content);
 }
 
 function debounce(func, waitFor) {

@@ -2,13 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Extension",
+      "name": "dev",
       "type": "extensionHost",
       "request": "launch",
       "args": [
         "--extensionDevelopmentPath=${workspaceFolder}",
         "${workspaceFolder}/test"
       ]
+    },
+
+    // Launch the extension in the first VS Code launch state
+    {
+      "name": "dev:new",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--transient",
+        "--extensionDevelopmentPath=${workspaceFolder}",
+        "."
+      ],
     }
   ]
 }
