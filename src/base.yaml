@@ -6,16 +6,18 @@ icon.foreground: "#7A7A7A"
 
 #region Title bar --------------------------------------------------------------
 
-titleBar.activeBackground: "#000000"
+titleBar.activeBackground: "#010101"
+titleBar.inactiveBackground: "#010101"
+titleBar.border: "#141414"
 
 #endregion
 
 #region Activity bar -----------------------------------------------------------
 
-activityBar.border: "#303030"
-activityBar.activeBackground: "#000000"
+activityBar.border: "#141414"
+activityBar.activeBackground: "#010101"
 
-activityBar.background: "#000000"
+activityBar.background: "#010101"
 activityBar.foreground: "#bebeb1"
 
 activityBar.activeBorder: "#FFFF00"
@@ -27,17 +29,20 @@ activityBarBadge.foreground: "#160013"
 
 #region Sidebar ---------------------------------------------------------------
 
-sideBar.border: "#303030"
-sideBar.background: "#000000"
+sideBar.border: "#141414"
+sideBar.background: "#010101"
 sideBar.foreground: "#989898"
 
 #endregion
 
 #region Statusbar --------------------------------------------------------------
 
-statusBar.background: "#000000"
-statusBar.border: "#303030"
+statusBar.background: "#010101"
+statusBar.border: "#141414"
 statusBar.foreground: "#818181"
+
+# No folder opened
+statusBar.noFolderBackground: "#010101"
 
 # WSL label remote connection etc.
 statusBarItem.remoteBackground: "#58004C"
@@ -52,7 +57,7 @@ statusBar.debuggingBorder: "#4B00A1"
 
 #region File tree --------------------------------------------------------------
 
-tree.indentGuidesStroke: "#202020"
+tree.indentGuidesStroke: "#141414"
 
 #endregion
 
@@ -62,23 +67,40 @@ menu.background: "#171717"
 
 #endregion
 
+#region Editor pane ------------------------------------------------------------
+
+editorPane.background: "#080808"
+
+#endregion
+
+#region Editor group -----------------------------------------------------------
+
+editorGroup.border: "#141414"
+editorGroupHeader.border: "#141414"
+editorGroupHeader.noTabsBackground: "#010101"
+
+editorGroupHeader.tabsBackground: "#080808"
+editorGroupHeader.tabsBorder: "#141414"
+
+#endregion
+
 #region Tabs -------------------------------------------------------------------
 
 # Base
-tab.border: "#000000"
+tab.border: "#010101"
 
 # Active focused
 tab.activeBackground: "#400037"
 tab.activeForeground: "#ffffff"
-tab.activeBorderTop: "#FF00DD"
+tab.activeBorder: "#FF00DD"
 
 # Active unfocused
 tab.unfocusedActiveBackground: "#1E001A"
 tab.unfocusedActiveForeground: "#bebeb1"
-tab.unfocusedActiveBorderTop: "#57004B"
+tab.unfocusedActiveBorder: "#57004B"
 
 # Inactive
-tab.inactiveBackground: "#000000"
+tab.inactiveBackground: "#080808"
 tab.inactiveForeground: "#bebeb1"
 
 #endregion
@@ -86,25 +108,20 @@ tab.inactiveForeground: "#bebeb1"
 #region Breadcrumbs ------------------------------------------------------------
 
 breadcrumb.foreground: "#7A7A7A"
-# breadcrumb.background: "#000000"
+breadcrumb.border: "#7A7A7A"
+breadcrumb.background: "#010101"
+
+# breadcrumb.background: "#010101"
 # breadcrumb.focusForeground: "#00ff00"
 # breadcrumb.activeSelectionForeground: "#0000ff"
 # breadcrumbPicker.background: "#257CFF"
 
 #endregion
 
-#region Editor group -----------------------------------------------------------
-
-editorGroup.border: "#141414"
-editorGroupHeader.border: "#000000"
-editorGroupHeader.noTabsBackground: "#000000"
-editorGroupHeader.tabsBackground: "#000000"
-
-#endregion
-
 #region Editor -----------------------------------------------------------------
 
-editor.background: "#000000"
+
+editor.background: "#010101"
 editor.foreground: "#7e7e7e"
 
 editorLineNumber.foreground: "#4d4d4d"
@@ -115,7 +132,7 @@ editor.lineHighlightBackground: "#0f0f0f"
 editorIndentGuide.background1: "#101010"
 editorIndentGuide.activeBackground1: "#252525"
 
-editorRuler.foreground: "#101010"
+editorRuler.foreground: "#1F1A00"
 
 # Folds
 editor.foldBackground: "#0f0f0f7b"
@@ -134,20 +151,20 @@ editorInlayHint.foreground: "#565656" # runtime.detail
 editorInlayHint.typeForeground: "#445047" # types.detail
 
 # Cursor
-editorCursor.background: "#000000"
+editorCursor.background: "#010101"
 editorCursor.foreground: "#FFD900"
 
 #endregion
 
 #region Terminal ---------------------------------------------------------------
 
-terminal.background: "#000000"
+terminal.background: "#010101"
 
 terminal.tab.activeBorder: "#8904e8bc"
 
 # Cursor
 terminalCursor.foreground: "#FFD900"
-terminalCursor.background: "#000000"
+terminalCursor.background: "#010101"
 
 #endregion
 
