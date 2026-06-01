@@ -8,6 +8,18 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
+## v0.10.0 - 2026-06-01
+
+### Changed
+
+- Made VS Code UI look more consistent. Adjusted colors and details.
+
+### Added
+
+- Added support for TOML, CSS, and Tailwind CSS.
+
+- Added 3rd-party integrations support, starting with the [Tailwind Rainbow](https://marketplace.visualstudio.com/items?itemName=esdete.tailwind-rainbow) extension by [@esdete2](https://github.com/esdete2).
+
 ## v0.9.0 - 2026-05-14
 
 ### Changed

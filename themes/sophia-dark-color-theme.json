@@ -3,48 +3,55 @@
   "type": "dark",
   "colors": {
     "icon.foreground": "#7A7A7A",
-    "titleBar.activeBackground": "#000000",
-    "activityBar.border": "#303030",
-    "activityBar.activeBackground": "#000000",
-    "activityBar.background": "#000000",
+    "titleBar.activeBackground": "#010101",
+    "titleBar.inactiveBackground": "#010101",
+    "titleBar.border": "#141414",
+    "activityBar.border": "#141414",
+    "activityBar.activeBackground": "#010101",
+    "activityBar.background": "#010101",
     "activityBar.foreground": "#bebeb1",
     "activityBar.activeBorder": "#FFFF00",
     "activityBarBadge.background": "#FF9DF2",
     "activityBarBadge.foreground": "#160013",
-    "sideBar.border": "#303030",
-    "sideBar.background": "#000000",
+    "sideBar.border": "#141414",
+    "sideBar.background": "#010101",
     "sideBar.foreground": "#989898",
-    "statusBar.background": "#000000",
-    "statusBar.border": "#303030",
+    "statusBar.background": "#010101",
+    "statusBar.border": "#141414",
     "statusBar.foreground": "#818181",
+    "statusBar.noFolderBackground": "#010101",
     "statusBarItem.remoteBackground": "#58004C",
     "statusBarItem.remoteForeground": "#FF8CF0",
     "statusBar.debuggingBackground": "#180034",
     "statusBar.debuggingForeground": "#BA91DF",
     "statusBar.debuggingBorder": "#4B00A1",
-    "tree.indentGuidesStroke": "#202020",
+    "tree.indentGuidesStroke": "#141414",
     "menu.background": "#171717",
-    "tab.border": "#000000",
+    "editorPane.background": "#080808",
+    "editorGroup.border": "#141414",
+    "editorGroupHeader.border": "#141414",
+    "editorGroupHeader.noTabsBackground": "#010101",
+    "editorGroupHeader.tabsBackground": "#080808",
+    "editorGroupHeader.tabsBorder": "#141414",
+    "tab.border": "#010101",
     "tab.activeBackground": "#400037",
     "tab.activeForeground": "#ffffff",
-    "tab.activeBorderTop": "#FF00DD",
+    "tab.activeBorder": "#FF00DD",
     "tab.unfocusedActiveBackground": "#1E001A",
     "tab.unfocusedActiveForeground": "#bebeb1",
-    "tab.unfocusedActiveBorderTop": "#57004B",
-    "tab.inactiveBackground": "#000000",
+    "tab.unfocusedActiveBorder": "#57004B",
+    "tab.inactiveBackground": "#080808",
     "tab.inactiveForeground": "#bebeb1",
     "breadcrumb.foreground": "#7A7A7A",
-    "editorGroup.border": "#141414",
-    "editorGroupHeader.border": "#000000",
-    "editorGroupHeader.noTabsBackground": "#000000",
-    "editorGroupHeader.tabsBackground": "#000000",
-    "editor.background": "#000000",
+    "breadcrumb.border": "#7A7A7A",
+    "breadcrumb.background": "#010101",
+    "editor.background": "#010101",
     "editor.foreground": "#7e7e7e",
     "editorLineNumber.foreground": "#4d4d4d",
     "editor.lineHighlightBackground": "#0f0f0f",
     "editorIndentGuide.background1": "#101010",
     "editorIndentGuide.activeBackground1": "#252525",
-    "editorRuler.foreground": "#101010",
+    "editorRuler.foreground": "#1F1A00",
     "editor.foldBackground": "#0f0f0f7b",
     "editorBracketHighlight.foreground1": "#290014",
     "editorBracketHighlight.foreground2": "#002017",
@@ -54,12 +61,12 @@
     "editorBracketHighlight.foreground6": "#00153c",
     "editorInlayHint.foreground": "#565656",
     "editorInlayHint.typeForeground": "#445047",
-    "editorCursor.background": "#000000",
+    "editorCursor.background": "#010101",
     "editorCursor.foreground": "#FFD900",
-    "terminal.background": "#000000",
+    "terminal.background": "#010101",
     "terminal.tab.activeBorder": "#8904e8bc",
     "terminalCursor.foreground": "#FFD900",
-    "terminalCursor.background": "#000000",
+    "terminalCursor.background": "#010101",
     "list.warningForeground": "#FFE137",
     "list.errorForeground": "#FF7B7B",
     "gitDecoration.modifiedResourceForeground": "#91AFFF",
@@ -118,19 +125,31 @@
       }
     },
     {
-      "scope": "punctuation.definition.template-expression.begin, punctuation.definition.template-expression.end, markup.heading, string.other.link.title.markdown, markup.underline.link.image.markdown, punctuation.section.embedded.begin.nix, punctuation.section.embedded.end.nix, string.interpolated.python storage.type, constant.character.format.placeholder.other.python, punctuation.definition.subshell.single.shell, punctuation.definition.variable.shell, entity.other.document.begin.yaml, keyword.control.flow.block-scalar.literal.yaml, punctuation.definition.anchor.yaml, entity.name.type.anchor.yaml, punctuation.definition.alias.yaml, variable.other.alias.yaml",
+      "scope": "keyword.control.at-rule.css, keyword.operator.combinator.css, keyword.control.at-rule.import.css, keyword.control.at-rule.import.css punctuation.definition.keyword.css, punctuation.definition.template-expression.begin, punctuation.definition.template-expression.end, markup.heading, string.other.link.title.markdown, markup.underline.link.image.markdown, punctuation.section.embedded.begin.nix, punctuation.section.embedded.end.nix, string.interpolated.python storage.type, constant.character.format.placeholder.other.python, punctuation.definition.subshell.single.shell, punctuation.definition.variable.shell, keyword.control.at-rule.utility.tailwind, keyword.control.at-rule.layer.tailwind, keyword.control.at-rule.layer.tailwind punctuation.definition.keyword.css, meta.table.toml support.type.property-name.table.toml, entity.other.document.begin.yaml, keyword.control.flow.block-scalar.literal.yaml, punctuation.definition.anchor.yaml, entity.name.type.anchor.yaml, punctuation.definition.alias.yaml, variable.other.alias.yaml",
       "settings": {
         "foreground": "#668aff"
       }
     },
     {
-      "scope": "meta.object-literal.key, variable.other.property.go, entity.other.attribute-name, support.type.property-name.json, entity.other.attribute-name.js.jsx, entity.name.tag.yaml",
+      "scope": "support.function.misc.css, support.function.calc.css, keyword.operator.arithmetic.css, entity.other.attribute-name.pseudo-class.css, keyword.operator.pattern.css, support.function.layer.css, keyword.control.at-rule.apply.tailwind, keyword.control.at-rule.apply.tailwind punctuation.definition.keyword.css, keyword.control.at-rule.theme.tailwind",
+      "settings": {
+        "foreground": "#958BFF"
+      }
+    },
+    {
+      "scope": "meta.selector.css entity.name.tag.css, entity.other.attribute-name.class.css, variable.parameter.utility.tailwind, variable.parameter.layer.tailwind",
+      "settings": {
+        "foreground": "#D9E1FF"
+      }
+    },
+    {
+      "scope": "meta.object-literal.key, variable.css, support.type.property-name.css, variable.other.property.go, entity.other.attribute-name, support.type.property-name.json, entity.other.attribute-name.js.jsx, support.type.property-name.toml, entity.name.tag.yaml",
       "settings": {
         "foreground": "#bfc5e9"
       }
     },
     {
-      "scope": "constant.numeric, constant.language, string, markup.inline.raw.string.markdown",
+      "scope": "constant.numeric, constant.language, string, constant.other.color.rgb-value.hex.css, support.constant.font-name.css, markup.inline.raw.string.markdown, constant.language.boolean.toml",
       "settings": {
         "foreground": "#94c0ef"
       }
