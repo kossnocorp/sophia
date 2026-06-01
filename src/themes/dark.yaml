@@ -97,6 +97,8 @@ layers:
   data:
     base: "#a2acec"
     control: "#668aff"
+    effect: "#958BFF"
+    declare: "#D9E1FF"
     property: "#bfc5e9"
     primitive: "#94c0ef"
     text: "#e8efff"

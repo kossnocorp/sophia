@@ -1,0 +1,17 @@
+# TOML
+
+layers:
+  runtime:
+
+  data:
+    control:
+      # [*hello*]
+      - meta.table.toml support.type.property-name.table.toml
+
+    property:
+      # *hello* = ...
+      - support.type.property-name.toml
+
+    primitive:
+      # hello = *true*
+      - constant.language.boolean.toml

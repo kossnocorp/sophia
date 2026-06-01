@@ -1,0 +1,52 @@
+# CSS
+
+layers:
+  data:
+    base:
+
+    control:
+      # *@reference* "#/styles/global.css";
+      - keyword.control.at-rule.css
+      # .page *>* .header { ... }
+      - keyword.operator.combinator.css
+      # *@import* "global.css";
+      - keyword.control.at-rule.import.css
+      - keyword.control.at-rule.import.css punctuation.definition.keyword.css
+
+    effect:
+      # TODO: It is too broad!
+      # *@apply* text-accent-50;
+      # - meta.property-list.css
+      # *var*(--color-white);
+      - support.function.misc.css
+      # *calc*(100% - 1rem);
+      - support.function.calc.css
+      # calc(100% *-* 1rem);
+      - keyword.operator.arithmetic.css
+      # *:not*(...) { ...}
+      - entity.other.attribute-name.pseudo-class.css
+      # [data-theme*=*"light"]
+      - keyword.operator.pattern.css
+      # ... *layer*(theme);
+      - support.function.layer.css
+
+    declare:
+      # *h1*, *h2*, .headline { ... }
+      - meta.selector.css entity.name.tag.css
+      # h1, h2, .*headline* { ... }
+      - entity.other.attribute-name.class.css
+      # TODO: It is too broad!
+      # *:root* { ... }
+      # - entity.other.attribute-name.pseudo-class.css
+
+    property:
+      # *--color-white*: #f7f7ff;
+      - variable.css
+      # *border-bottom*: none;
+      - support.type.property-name.css
+
+    primitive:
+      # --color-white: *#f7f7ff*;
+      - constant.other.color.rgb-value.hex.css
+      # font-family: "Hubot Sans Variable", *serif*;
+      - support.constant.font-name.css

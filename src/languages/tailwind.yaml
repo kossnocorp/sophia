@@ -1,0 +1,23 @@
+# Tailwind CSS
+
+layers:
+  data:
+    control:
+      # *@utility* text-center { ... }
+      - keyword.control.at-rule.utility.tailwind
+      # *@layer* base, starlight;
+      - keyword.control.at-rule.layer.tailwind
+      - keyword.control.at-rule.layer.tailwind punctuation.definition.keyword.css
+
+    effect:
+      # *@apply* text-center;
+      - keyword.control.at-rule.apply.tailwind
+      - keyword.control.at-rule.apply.tailwind punctuation.definition.keyword.css
+      # *@theme* { ... }
+      - keyword.control.at-rule.theme.tailwind
+
+    declare:
+      # @utility *text-center* { ... }
+      - variable.parameter.utility.tailwind
+      # @layer *base*, *starlight*;
+      - variable.parameter.layer.tailwind
