@@ -1,8 +1,5 @@
 **
 !*.md
 !package.json
-!src/*.js
-!src/integrations/
-!src/data/
 !themes
 !*.png

@@ -15,11 +15,6 @@
   "categories": [
     "Themes"
   ],
-  "main": "./src/extension.js",
-  "activationEvents": [
-    "onStartupFinished",
-    "onExtension:esdete.tailwind-rainbow"
-  ],
   "contributes": {
     "themes": [
       {
