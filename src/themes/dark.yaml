@@ -90,7 +90,10 @@ layers:
     # function, class, etc.
     type: "#a39be3"
     declare: "#f2ebff"
+    magic-declare: "#B08FFF"
     access: "#C5C5C5"
+    namespace-access: "#AAAAF7"
+    magic-access: "#CDB9E0"
     detail: "#575165"
 
   # TODO: Make it more

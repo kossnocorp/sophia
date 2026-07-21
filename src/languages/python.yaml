@@ -5,12 +5,21 @@ id: python
 layers:
   runtime:
     effect:
-      # *print*("Hello, World!")
-      - meta.function-call.python
+      # >>print<<("Hello, World!")
+      - meta.function-call.python meta.function-call.generic.python
+      - support.function.builtin.python
+      # >>cls<<(name="anonymous", identifier=identifier, active=False)
+      - variable.language.special.cls.python
+      # total >>/<< len(numbers)
+      - keyword.operator.arithmetic.python
 
     control:
       # *async* def prompt(...):
       - storage.type.function.async.python
+      # def wrapper(>>*<<args: Any, >>**<<kwargs: Any) -> T:
+      - keyword.operator.unpacking.parameter.python
+      # func(>>*<<args, >>**<<kwargs)
+      - keyword.operator.unpacking.arguments.python
 
     declare:
       # def *interpolate_prompt*(...
@@ -18,10 +27,41 @@ layers:
           - declaration
       # class *CollectionBase*:
       - class:
-          - declaration
+        - declaration
       # def *data*(...):
+      - entity.name.function.python
       - method:
-          - declaration
+        - declaration
+      # def classify(>>value<<: object) -> str:
+      - variable.parameter.function.language.python
+      # >>MAX_RETRIES<<: Final = 3
+      - variable:
+        - definition
+
+    magic-declare:
+      # def display_name(>>self<<) -> str:
+      - variable.parameter.function.language.special.self.python
+      # def anonymous(>>cls<<, identifier: T) -> User[T]:
+      - variable.parameter.function.language.special.cls.python
+
+    access:
+      # print(f"{>>prefix<<}: {>>total<<:,}")
+      # func(>>args<<)
+      - meta.function-call.python meta.function-call.arguments.python
+      # self.>>identifier<<
+      - meta.member.access.python
+      # >>self<<.config['token']
+      - variable.language.special.self.python
+      # >>mapping<<["answer"]
+      - meta.item-access.python
+
+    magic-access:
+      # if >>__name__<< == "__main__":
+      - support.variable.magic.python
+
+    namespace-access:
+      # from >>pathlib<< import Path
+      - namespace: true
 
     detail:
       # class CollectionBase*(*Model*)*:
@@ -55,8 +95,6 @@ layers:
     control:
       # *f*"Bearer {self.config['token']}"
       - string.interpolated.python storage.type
-      # f"Bearer *{*self.config['token']*}*"
-      - constant.character.format.placeholder.other.python
 
     primitive:
       # from *genotype* import Model
@@ -71,6 +109,14 @@ layers:
       - punctuation.definition.dict.end.python
       # { hello*:* "world" }
       - punctuation.separator.dict.python
+
+    property:
+      # field(>>default_factory<<=list)
+      - variable.parameter.function-call.python
+
+    embed:
+      # f"Bearer >>{<<self.config['token']>>}<<"
+      - constant.character.format.placeholder.other.python
 
   types:
     base:
@@ -90,9 +136,35 @@ layers:
       # def interpolate_string(prompt*:* str, ...)
       - punctuation.separator.annotation.python
 
+    runtime-declare:
+      # class >>User<<(Generic[T]):
+      - entity.name.type.class.python
+
+    runtime-access:
+      # from collections.abc import >>AsyncIterator<<
+      # >>range<<(-2, 5)
+      - class: true
+      # async def main() -> >>None<<:
+      - builtinConstant: true
+
+    generic-access:
+      # class User(Generic[>>T<<]):
+      # identifier: >>T<<
+      - typeParameter: true
+
+    annotation-access:
+      # name: >>str<<
+      - support.type.python
+      # def wrapper(*args: >>Any<<, **kwargs: >>Any<<) -> T:
+      - meta.function.parameters.python
+      # except (>>KeyError<<, >>ZeroDivisionError<<) as error:
+      - support.type.exception.python
+
   macro:
     decorate:
+      # @>>dataclass<<
       - entity.name.function.decorator.python
+      - meta.function.decorator.python support.type.python
 
   comments:
     base:
@@ -103,3 +175,9 @@ layers:
       # *"""*Collection payload.*"""*
       - string.quoted.docstring.multi.python punctuation.definition.string.begin.python
       - string.quoted.docstring.multi.python punctuation.definition.string.end.python
+
+    doc-content:
+      # """>>Collection payload.<<"""
+      - string.quoted.docstring.multi.python
+      - string:
+        - documentation

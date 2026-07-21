@@ -1,0 +1,6 @@
+[project]
+name = "sophia-test-python"
+version = "0.0.0"
+description = "Sophia Theme language highlighting test package"
+requires-python = ">=3.13"
+dependencies = []

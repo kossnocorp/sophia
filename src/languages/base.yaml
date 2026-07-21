@@ -4,8 +4,6 @@ layers:
   runtime:
     base:
       - source
-      # Most of the read-write is a variable
-      - variable
       - meta.embedded.line
       - variable.object.property
       # - meta.var.expr
@@ -70,11 +68,6 @@ layers:
       - meta.field.declaration variable.object.property
       - meta.definition.method
       # - meta.method.declaration storage.type
-
-    primitive:
-      #   - string
-      #   - constant
-      #   - meta.objectliteral
 
     access:
       # - variable.other.readwrite

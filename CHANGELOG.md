@@ -14,6 +14,10 @@ This change log follows the format documented in [Keep a CHANGELOG].
 
 - Added Tera template support, including embedded code blocks highlighting.
 
+### Changed
+
+- Improved Python syntax highlighting detailization.
+
 ## v0.10.1 - 2026-06-02
 
 ### Changed
