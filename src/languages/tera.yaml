@@ -1,0 +1,46 @@
+# Tera
+
+layers:
+  runtime:
+    base:
+      # {%>>...<<%}
+      - meta.embedded.block.tera
+
+    control:
+      # {%>>-<< macro remote_url() >>-<<%}
+      - keyword.operator.whitespace.trim.tera
+      # {%- >>macro<< remote_url() -%}
+      - keyword.control.tera
+      # {{ commit.id >>|<< truncate(length=7, end="") }}
+      - punctuation.section.pipe.tera
+      - keyword.operator.tera
+      # {{ user?.profile?.bio >>or<< "No biography" }}
+      - keyword.operator.word.tera
+
+    effect:
+      # {% for key, product in products | >>group_by<<(attribute="category") %}
+      - entity.name.function.tera
+
+    # declare:
+    #   - variable.parameter.tera
+
+    access:
+      # {% macro >>group_section<<(>>label<<, >>commits<<) %}
+      - variable.other.tera
+      # {{ user.>>name<< }}
+      - variable.other.member
+
+  data:
+    embed:
+      # >>{%<< if version >>%}<<
+      - punctuation.section.embedded.begin.tera
+      - punctuation.section.embedded.end.tera
+      - punctuation.section.block.begin.tera
+      - punctuation.section.block.end.tera
+      - punctuation.section.group.begin.tera
+      - punctuation.section.group.end.tera
+      - punctuation.definition.tera
+
+    property:
+      # {% for n in range(>>start<<=1, >>end<<=6, >>step_by<<=2) %}
+      - variable.parameter.tera

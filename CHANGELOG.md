@@ -8,6 +8,12 @@ This change log follows the format documented in [Keep a CHANGELOG].
 [semantic versioning]: http://semver.org/
 [keep a changelog]: http://keepachangelog.com/
 
+## v0.11.0 - 2026-07-21
+
+### Added
+
+- Added Tera template support, including embedded code blocks highlighting.
+
 ## v0.10.1 - 2026-06-02
 
 ### Changed

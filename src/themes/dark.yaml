@@ -103,6 +103,8 @@ layers:
     primitive: "#94c0ef"
     text: "#e8efff"
     detail: "#4b5072"
+    # Data-embedded content, i.e., Tera's embedded code blocks.
+    embed: "#8C5BFF"
 
   # Types layer represents the colors of both runtime types and annotation
   # types.

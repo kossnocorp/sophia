@@ -31,6 +31,7 @@ I'm not a polyglot by any means, so if you notice an idiosyncrasy, please [DM me
 - **Zsh**
 - **Fish**¹
 - **Tailwind**²
+- **Tera**
 - Swift
 - F#
 
@@ -39,6 +40,8 @@ The languages marked with **bold** are the ones I'm the most proficient in and/o
 - ¹ Fish works the best when identified as _Shell Script_, so that it uses _Bash_/_Zsh_ parsing rules. I think the future is in [`fish-lsp`](https://github.com/ndonfris/fish-lsp) by [@https://github.com/ndonfris](https://github.com/ndonfris), but currently the tokens it generates are barebones and not enough for semantic highlighting.
 
 - ² Tailwind class names highlighting can be enabled by installing the [Tailwind Rainbow](https://marketplace.visualstudio.com/items?itemName=esdete.tailwind-rainbow) extension.
+
+- ³ Tera support tested on
 
 Other languages might work well, but I haven't tested them yet.
 

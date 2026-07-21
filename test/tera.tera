@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{# Tera syntax-highlighting fixture: comments, literals, and expressions. #}
+{% set title = "Tera syntax test" %}
+{% set enabled = true %}
+{% set missing = none %}
+{% set numbers = [1, 2, 3.5, -4,] %}
+{% set defaults = {"theme": "dark", "limit": 10,} %}
+{% set options = {...defaults, "limit": 20} %}
+{% set message = `Hello` ~ ", " ~ user.name ~ "!" %}
+{% set_global visited = [] %}
+
+{% block title %}{{ title | upper }}{% endblock title %}
+
+{% block content %}
+<main class="theme-{{ options.theme }}" data-enabled="{{ enabled }}">
+  <h1>{{ message }}</h1>
+
+  <p>{{ user?.profile?.bio or "No biography" }}</p>
+  <p>{{ user?[profile_key]?.name | default(value="Anonymous") }}</p>
+  <p>{{ product['name'] }} / {{ product[dynamic_key] }} / {{ numbers.0 }}</p>
+
+  <p>{{ 1 + 2 * 3 ** 2 // 4 - 5 % 2 }}</p>
+  <p>{{ age >= 18 and enabled or not archived }}</p>
+  <p>{{ "adult" if age >= 18 else "minor" }}</p>
+  <p>{{ "tera" in tags }} / {{ role not in ["guest", "banned"] }}</p>
+
+  <p>{{ numbers[0] }} {{ numbers[-1] }} {{ numbers[1:3] }} {{ numbers[::-1] }}</p>
+  <p>{{ [0, ...numbers, 99] }}</p>
+  <p>{{ [n * 2 for n in numbers if n is number] | join(sep=", ") }}</p>
+
+  {% if user is defined and user.name is starting_with(pat="A") %}
+    <strong>{{ user.name | trim | capitalize }}</strong>
+  {% elif missing is none %}
+    <em>Missing value</em>
+  {% else %}
+    <span>{{ content | replace(from="old", to="new") | safe }}</span>
+  {% endif %}
+
+  <ol>
+  {% for key, product in products | group_by(attribute="category") %}
+    {% set_global visited = [...visited, key] %}
+    {% if loop.index is even %}{% continue %}{% endif %}
+    <li data-index="{{ loop.index0 }}">
+      {{ key }}: {{ product | length }} item{{ product | length | pluralize }}
+    </li>
+    {% if loop.last %}{% break %}{% endif %}
+  {% else %}
+    <li>No products.</li>
+  {% endfor %}
+  </ol>
+
+  {% for n in range(start=1, end=6, step_by=2) %}
+    {{ n }}{% if not loop.last %}, {% endif %}
+  {% endfor %}
+
+  {% set heading | trim | upper %}
+    Featured {{ category }}
+  {% endset %}
+  <h2>{{ heading }}</h2>
+
+  {% filter indent(width=2, first=true) %}
+    Filtered section for {{ user.name }}
+  {% endfilter %}
+
+  {% include "partials/navigation.html" %}
+
+  {{<ui.button label="Buy now" variant="primary" disabled={false} {...button_attrs} />}}
+  {% <ui.panel title> %}
+    <p>{{ body_text | escape_html }}</p>
+  {% </ui.panel> %}
+
+  {% raw %}
+    This stays literal: {{ variable }} {% if condition %}text{% endif %}
+  {% endraw %}
+
+  {#- Whitespace-controlled comment -#}
+  {{- get_page(path="products/index.html") | safe -}}
+</main>
+{% endblock content %}
+
+{% component ui.button(label: string, variant: string = "primary", disabled: bool = false, ...attrs) {"css": "button.css"} %}
+<button class="btn btn-{{ variant }}" {% if disabled %}disabled{% endif %}>
+  {{ label }}
+</button>
+{% endcomponent ui.button %}
+
+{% component ui.panel(title: string) %}
+<section class="panel">
+  <h2>{{ title }}</h2>
+  {{ body }}
+</section>
+{% endcomponent ui.panel %}
