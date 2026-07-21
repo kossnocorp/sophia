@@ -77,19 +77,19 @@
   "semanticHighlighting": true,
   "tokenColors": [
     {
-      "scope": "source, variable, meta.embedded.line, variable.object.property, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.control.import, keyword.control.from, meta.import keyword.control.as, keyword.control.import.swift",
+      "scope": "source, meta.embedded.line, variable.object.property, storage.modifier, keyword.operator.rest, keyword.operator.spread, keyword.operator.expression.typeof, keyword.operator.expression.instanceof, keyword.control.import, keyword.control.from, meta.import keyword.control.as, keyword.control.import.swift, meta.embedded.block.tera",
       "settings": {
         "foreground": "#b8b0cb"
       }
     },
     {
-      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, keyword.control.import, keyword.control.from, keyword.operator.logical, entity.name.section.fsharp keyword.fsharp, keyword.package.go, keyword.const.go, keyword.var.go, keyword.operator.channel.go, keyword.control.default, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, keyword.generator.asterisk, entity.name.function.just, keyword.operator.quiet.just, support.function.system.just, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, keyword.other.inherit.nix, storage.type.function.async.python, keyword.control.flow.rust, keyword.operator.arrow.fat.rust, keyword.operator.question.rust, meta.use.rust keyword.other.rust, meta.use.rust keyword.other.crate.rust, source.rust keyword.other.rust, source.rust keyword.control.rust, meta.function.definition.rust variable.language.self.rust, source.rust storage.type.rust, keyword.operator.subpattern.rust, keyword.operator.logical.rust, keyword.other.inherit.nix, punctuation.separator.statement.background.shell, keyword.control.shell, storage.modifier.export.shell, keyword.operator.pipe.shell, keyword.operator.pattern.case.shell, punctuation.definition.evaluation.backticks.shell, punctuation.separator.statement.and.shell, keyword.operator.redirect.shell, storage.modifier.swift, keyword.other.declaration-specifier.accessibility.swift",
+      "scope": "keyword.control.export, keyword.control.flow, keyword.control.conditional, keyword.operator.ternary, keyword.control.loop, keyword.control.switch, keyword.control.import, keyword.control.from, keyword.operator.logical, entity.name.section.fsharp keyword.fsharp, keyword.package.go, keyword.const.go, keyword.var.go, keyword.operator.channel.go, keyword.control.default, storage.modifier.async, meta.class storage.modifier, keyword.control.trycatch, keyword.generator.asterisk, entity.name.function.just, keyword.operator.quiet.just, support.function.system.just, entity.name.function.target.makefile, keyword.control.@.makefile, constant.character.escape.continuation.makefile, keyword.other.inherit.nix, storage.type.function.async.python, keyword.operator.unpacking.parameter.python, keyword.operator.unpacking.arguments.python, keyword.control.flow.rust, keyword.operator.arrow.fat.rust, keyword.operator.question.rust, meta.use.rust keyword.other.rust, meta.use.rust keyword.other.crate.rust, source.rust keyword.other.rust, source.rust keyword.control.rust, source.rust storage.type.rust, storage.modifier.rust, keyword.operator.subpattern.rust, keyword.operator.logical.rust, keyword.other.inherit.nix, punctuation.separator.statement.background.shell, keyword.control.shell, storage.modifier.export.shell, keyword.operator.pipe.shell, keyword.operator.pattern.case.shell, punctuation.definition.evaluation.backticks.shell, punctuation.separator.statement.and.shell, keyword.operator.redirect.shell, storage.modifier.swift, keyword.other.declaration-specifier.accessibility.swift, keyword.operator.whitespace.trim.tera, keyword.control.tera, punctuation.section.pipe.tera, keyword.operator.tera, keyword.operator.word.tera",
       "settings": {
         "foreground": "#ff8df4"
       }
     },
     {
-      "scope": "keyword.operator.assignment, meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component, keyword.symbol.fsharp, entity.name.function.support.go, entity.name.function.support.builtin.go, keyword.operator.arithmetic.bitwise.go, meta.function-call support.class, meta.function-call variable.language.super, entity.name.function.tagged-template, keyword.operator.spread, meta.scope.prerequisites.makefile, support.function.nix, keyword.operator.nix, keyword.operator.bind.nix, meta.function-call.python, meta.function.call.rust entity.name.function.rust, entity.name.function.call.shell, variable.language.special.wildcard.shell, storage.modifier.declare.shell",
+      "scope": "keyword.operator.assignment, meta.function-call entity.name.function, keyword.operator.expression.delete, keyword.operator.comparison, keyword.operator.expression.extends, keyword.operator.expression.instanceof, keyword.operator.expression.of, keyword.operator.new, support.class.component, keyword.symbol.fsharp, entity.name.function.support.go, entity.name.function.support.builtin.go, keyword.operator.arithmetic.bitwise.go, meta.function-call support.class, meta.function-call variable.language.super, entity.name.function.tagged-template, keyword.operator.spread, meta.scope.prerequisites.makefile, support.function.nix, keyword.operator.nix, keyword.operator.bind.nix, meta.function-call.python meta.function-call.generic.python, support.function.builtin.python, variable.language.special.cls.python, keyword.operator.arithmetic.python, meta.function.call.rust entity.name.function.rust, keyword.operator.math.rust, entity.name.function.call.shell, variable.language.special.wildcard.shell, storage.modifier.declare.shell, entity.name.function.tera",
       "settings": {
         "foreground": "#d4b0ff"
       }
@@ -101,15 +101,27 @@
       }
     },
     {
-      "scope": "variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, meta.field.declaration variable.object.property, meta.definition.method, variable.fsharp, entity.name.section.fsharp, variable.other.constant.go, variable.other.assignment.go, variable.parameter.go, meta.function.definition.rust entity.name.function.rust, meta.use.rust entity.name.type.rust, variable.other.assignment.shell, entity.name.function.shell, variable.other.for.shell, meta.import.swift entity.name.type.swift",
+      "scope": "variable.other.readwrite.alias, meta.definition.function, meta.definition.variable, meta.field.declaration variable.object.property, meta.definition.method, variable.fsharp, entity.name.section.fsharp, variable.other.constant.go, variable.other.assignment.go, variable.parameter.go, entity.name.function.python, variable.parameter.function.language.python, meta.function.definition.rust entity.name.function.rust, meta.use.rust entity.name.type.rust, variable.other.assignment.shell, entity.name.function.shell, variable.other.for.shell, meta.import.swift entity.name.type.swift",
       "settings": {
         "foreground": "#f2ebff"
       }
     },
     {
-      "scope": "support.variable.property, entity.name.tag, variable.other.fish, source.fsharp.fsl, variable.other.go, variable.language.arguments, source.just, source.makefile",
+      "scope": "variable.parameter.function.language.special.self.python, variable.parameter.function.language.special.cls.python, meta.function.definition.rust variable.language.self.rust",
+      "settings": {
+        "foreground": "#B08FFF"
+      }
+    },
+    {
+      "scope": "support.variable.property, entity.name.tag, variable.other.fish, source.fsharp.fsl, variable.other.go, variable.language.arguments, source.just, source.makefile, meta.function-call.python meta.function-call.arguments.python, meta.member.access.python, variable.language.special.self.python, meta.item-access.python, variable.other.rust, variable.other.tera, variable.other.member",
       "settings": {
         "foreground": "#C5C5C5"
+      }
+    },
+    {
+      "scope": "support.variable.magic.python, variable.language.self.rust",
+      "settings": {
+        "foreground": "#CDB9E0"
       }
     },
     {
@@ -125,7 +137,7 @@
       }
     },
     {
-      "scope": "keyword.control.at-rule.css, keyword.operator.combinator.css, keyword.control.at-rule.import.css, keyword.control.at-rule.import.css punctuation.definition.keyword.css, punctuation.definition.template-expression.begin, punctuation.definition.template-expression.end, markup.heading, string.other.link.title.markdown, markup.underline.link.image.markdown, punctuation.section.embedded.begin.nix, punctuation.section.embedded.end.nix, string.interpolated.python storage.type, constant.character.format.placeholder.other.python, punctuation.definition.subshell.single.shell, punctuation.definition.variable.shell, keyword.control.at-rule.utility.tailwind, keyword.control.at-rule.layer.tailwind, keyword.control.at-rule.layer.tailwind punctuation.definition.keyword.css, meta.table.toml support.type.property-name.table.toml, entity.other.document.begin.yaml, keyword.control.flow.block-scalar.literal.yaml, punctuation.definition.anchor.yaml, entity.name.type.anchor.yaml, punctuation.definition.alias.yaml, variable.other.alias.yaml",
+      "scope": "keyword.control.at-rule.css, keyword.operator.combinator.css, keyword.control.at-rule.import.css, keyword.control.at-rule.import.css punctuation.definition.keyword.css, punctuation.definition.template-expression.begin, punctuation.definition.template-expression.end, markup.heading, string.other.link.title.markdown, markup.underline.link.image.markdown, punctuation.section.embedded.begin.nix, punctuation.section.embedded.end.nix, string.interpolated.python storage.type, punctuation.definition.subshell.single.shell, punctuation.definition.variable.shell, keyword.control.at-rule.utility.tailwind, keyword.control.at-rule.layer.tailwind, keyword.control.at-rule.layer.tailwind punctuation.definition.keyword.css, meta.table.toml support.type.property-name.table.toml, entity.other.document.begin.yaml, keyword.control.flow.block-scalar.literal.yaml, punctuation.definition.anchor.yaml, entity.name.type.anchor.yaml, punctuation.definition.alias.yaml, variable.other.alias.yaml",
       "settings": {
         "foreground": "#668aff"
       }
@@ -143,7 +155,7 @@
       }
     },
     {
-      "scope": "meta.object-literal.key, variable.css, support.type.property-name.css, variable.other.property.go, entity.other.attribute-name, support.type.property-name.json, entity.other.attribute-name.js.jsx, support.type.property-name.toml, entity.name.tag.yaml",
+      "scope": "meta.object-literal.key, variable.css, support.type.property-name.css, variable.other.property.go, entity.other.attribute-name, support.type.property-name.json, entity.other.attribute-name.js.jsx, variable.parameter.function-call.python, variable.parameter.tera, support.type.property-name.toml, entity.name.tag.yaml",
       "settings": {
         "foreground": "#bfc5e9"
       }
@@ -164,6 +176,12 @@
       "scope": "punctuation.definition.string.begin, punctuation.definition.string.end, punctuation.definition.tag, punctuation.separator.key-value, punctuation.definition.string.begin.html, punctuation.definition.string.end.html, meta.objectliteral punctuation.definition.block, punctuation.separator.key-value, meta.objectliteral punctuation.separator.comma, meta.array.literal meta.brace.square, meta.array.literal punctuation.separator.comma, punctuation.definition.string.template.begin, punctuation.definition.string.template.end, punctuation.definition.dictionary.begin.json, punctuation.definition.dictionary.end.json, punctuation.support.type.property-name.begin.json, punctuation.support.type.property-name.end.json, punctuation.definition.string.begin.json, punctuation.definition.string.end.json, punctuation.separator.dictionary.key-value.json, punctuation.definition.array.begin.json, punctuation.definition.array.end.json, punctuation.separator.array.json, punctuation.separator.dictionary.pair.json, punctuation.section.embedded.begin.jsx, punctuation.section.embedded.end.jsx, punctuation.section.embedded.begin.tsx, punctuation.section.embedded.end.tsx, meta.tag.attributes.js.jsx keyword.operator.assignment.js.jsx, meta.link.inline.markdown, meta.link.reference.def.markdown, punctuation.definition.raw.markdown, punctuation.definition.bold.markdown, punctuation.definition.italic.markdown, punctuation.definition.markdown, fenced_code.block.language.markdown, punctuation.definition.link.description.begin.markdown, punctuation.definition.link.description.end.markdown, punctuation.definition.metadata.markdown, meta.link.reference.markdown, punctuation.definition.string.double.start.nix, punctuation.definition.string.double.end.nix, punctuation.definition.string.other.start.nix, punctuation.definition.string.other.end.nix, punctuation.definition.list.begin.python, punctuation.definition.list.end.python, punctuation.definition.dict.begin.python, punctuation.definition.dict.end.python, punctuation.separator.dict.python, punctuation.definition.block.sequence.item.yaml, punctuation.separator.key-value.mapping.yaml, punctuation.definition.string.begin.yaml, punctuation.definition.string.end.yaml, punctuation.definition.sequence.begin.yaml, punctuation.definition.sequence.end.yaml, punctuation.separator.sequence.yaml",
       "settings": {
         "foreground": "#4b5072"
+      }
+    },
+    {
+      "scope": "constant.character.format.placeholder.other.python, punctuation.section.embedded.begin.tera, punctuation.section.embedded.end.tera, punctuation.section.block.begin.tera, punctuation.section.block.end.tera, punctuation.section.group.begin.tera, punctuation.section.group.end.tera, punctuation.definition.tera",
+      "settings": {
+        "foreground": "#8C5BFF"
       }
     },
     {
@@ -197,6 +215,12 @@
       }
     },
     {
+      "scope": "entity.name.type.class.python",
+      "settings": {
+        "foreground": "#72FFC0"
+      }
+    },
+    {
       "scope": "entity.name.type.alias, meta.type.infer entity.name.type, meta.interface variable.parameter, meta.interface variable.object.property, meta.interface entity.name.function, entity.name.type.go, entity.name.function.go, support.type.enum.graphql, support.type.graphql, entity.scalar.graphql, entity.name.fragment.graphql, entity.name.function.directive.graphql, entity.name.function.graphql, constant.character.enum.graphql",
       "settings": {
         "foreground": "#9AFFBC"
@@ -204,6 +228,18 @@
     },
     {
       "scope": "meta.interface variable.other.readwrite, meta.interface entity.other.inherited-class, meta.interface variable.other.property, variable.parameter.graphql, variable.fragment.graphql",
+      "settings": {
+        "foreground": "#b7d9bc"
+      }
+    },
+    {
+      "scope": "entity.name.type.rust",
+      "settings": {
+        "foreground": "#B7FFDF"
+      }
+    },
+    {
+      "scope": "support.type.python, meta.function.parameters.python, support.type.exception.python",
       "settings": {
         "foreground": "#b7d9bc"
       }
@@ -245,7 +281,7 @@
       }
     },
     {
-      "scope": "entity.name.function.decorator.python",
+      "scope": "entity.name.function.decorator.python, meta.function.decorator.python support.type.python",
       "settings": {
         "foreground": "#cbc05e"
       }
@@ -272,6 +308,12 @@
       "scope": "variable.other.jsdoc",
       "settings": {
         "foreground": "#f7dcb9"
+      }
+    },
+    {
+      "scope": "string.quoted.docstring.multi.python",
+      "settings": {
+        "foreground": "#FFDEB2"
       }
     },
     {
@@ -302,7 +344,6 @@
   "semanticTokenColors": {
     "keyword.conditional": "#ff8df4",
     "keyword.controlFlow:rust": "#ff8df4",
-    "selfKeyword:rust": "#ff8df4",
     "selfTypeKeyword:rust": "#ff8df4",
     "operator:nix": "#d4b0ff",
     "variable.declaration": "#f2ebff",
@@ -312,13 +353,23 @@
     "function.declaration:python": "#f2ebff",
     "class.declaration:python": "#f2ebff",
     "method.declaration:python": "#f2ebff",
+    "variable.definition:python": "#f2ebff",
+    "variable.declaration:rust": "#f2ebff",
+    "variable.declaration.reference:rust": "#f2ebff",
+    "parameter.declaration:rust": "#f2ebff",
+    "parameter.declaration.reference:rust": "#f2ebff",
+    "selfKeyword:rust": "#B08FFF",
     "function.intraDocLink:rust": "#C5C5C5",
-    "namespace:rust": "#a2acec",
-    "keyword.crateRoot:rust": "#a2acec",
+    "variable.reference:rust": "#C5C5C5",
+    "parameter.reference:rust": "#C5C5C5",
+    "namespace:python": "#AAAAF7",
+    "namespace:rust": "#AAAAF7",
+    "keyword.crateRoot:rust": "#AAAAF7",
     "property.declaration": "#bfc5e9",
     "property.definition:nix": "#bfc5e9",
     "property:rust": "#bfc5e9",
     "module:python": "#94c0ef",
+    "formatSpecifier:rust": "#8C5BFF",
     "class.typeHint:python": "#b5cfb7",
     "variable.typeHint:python": "#b5cfb7",
     "builtinConstant.typeHint:python": "#b5cfb7",
@@ -328,15 +379,18 @@
     "interface:typescriptreact": "#b5cfb7",
     "type:typescript": "#b5cfb7",
     "type:typescriptreact": "#b5cfb7",
-    "struct.declaration.public:rust": "#72FFC0",
-    "enum.declaration.public:rust": "#72FFC0",
-    "enumMember.declaration.public:rust": "#72FFC0",
+    "struct.declaration:rust": "#72FFC0",
+    "enum.declaration:rust": "#72FFC0",
+    "enumMember.declaration:rust": "#72FFC0",
     "interface.declaration:rust": "#85FF85",
     "typeParameter.declaration:rust": "#A3DE6D",
     "typeAlias.associated:rust": "#A3DE6D",
+    "typeParameter:python": "#BFE799",
     "typeParameter:rust": "#BFE799",
     "struct.documentation:rust": "#b7d9bc",
     "interface.documentation:rust": "#b7d9bc",
+    "class:python": "#B7FFDF",
+    "builtinConstant:python": "#B7FFDF",
     "struct.library:rust": "#B7FFDF",
     "struct.public:rust": "#B7FFDF",
     "enum.library:rust": "#B7FFDF",
@@ -353,6 +407,7 @@
     "deriveHelper:rust": "#cbc05e",
     "macro.declaration:rust": "#fff6bd",
     "attributeBracket:rust": "#564e16",
+    "string.documentation:python": "#FFDEB2",
     "comment.documentation:rust": "#FFDEB2"
   }
 }

@@ -12,7 +12,10 @@ const bundle = {
           "primitive": "#8C99B5",
           "type": "#a39be3",
           "declare": "#f2ebff",
+          "magic-declare": "#B08FFF",
           "access": "#C5C5C5",
+          "namespace-access": "#AAAAF7",
+          "magic-access": "#CDB9E0",
           "detail": "#575165"
         },
         "data": {
@@ -23,7 +26,8 @@ const bundle = {
           "property": "#bfc5e9",
           "primitive": "#94c0ef",
           "text": "#e8efff",
-          "detail": "#4b5072"
+          "detail": "#4b5072",
+          "embed": "#8C5BFF"
         },
         "types": {
           "base": "#b5cfb7",
@@ -155,7 +159,6 @@ const bundle = {
         "runtime": {
           "base": [
             "source",
-            "variable",
             "meta.embedded.line",
             "variable.object.property",
             "storage.modifier",
@@ -224,7 +227,6 @@ const bundle = {
             "meta.field.declaration variable.object.property",
             "meta.definition.method"
           ],
-          "primitive": null,
           "access": [
             "support.variable.property",
             "entity.name.tag"
@@ -776,10 +778,15 @@ const bundle = {
       "layers": {
         "runtime": {
           "effect": [
-            "meta.function-call.python"
+            "meta.function-call.python meta.function-call.generic.python",
+            "support.function.builtin.python",
+            "variable.language.special.cls.python",
+            "keyword.operator.arithmetic.python"
           ],
           "control": [
-            "storage.type.function.async.python"
+            "storage.type.function.async.python",
+            "keyword.operator.unpacking.parameter.python",
+            "keyword.operator.unpacking.arguments.python"
           ],
           "declare": [
             {
@@ -792,10 +799,35 @@ const bundle = {
                 "declaration"
               ]
             },
+            "entity.name.function.python",
             {
               "method": [
                 "declaration"
               ]
+            },
+            "variable.parameter.function.language.python",
+            {
+              "variable": [
+                "definition"
+              ]
+            }
+          ],
+          "magic-declare": [
+            "variable.parameter.function.language.special.self.python",
+            "variable.parameter.function.language.special.cls.python"
+          ],
+          "access": [
+            "meta.function-call.python meta.function-call.arguments.python",
+            "meta.member.access.python",
+            "variable.language.special.self.python",
+            "meta.item-access.python"
+          ],
+          "magic-access": [
+            "support.variable.magic.python"
+          ],
+          "namespace-access": [
+            {
+              "namespace": true
             }
           ],
           "detail": [
@@ -818,8 +850,7 @@ const bundle = {
         },
         "data": {
           "control": [
-            "string.interpolated.python storage.type",
-            "constant.character.format.placeholder.other.python"
+            "string.interpolated.python storage.type"
           ],
           "primitive": [
             {
@@ -832,6 +863,12 @@ const bundle = {
             "punctuation.definition.dict.begin.python",
             "punctuation.definition.dict.end.python",
             "punctuation.separator.dict.python"
+          ],
+          "property": [
+            "variable.parameter.function-call.python"
+          ],
+          "embed": [
+            "constant.character.format.placeholder.other.python"
           ]
         },
         "types": {
@@ -855,11 +892,33 @@ const bundle = {
           "detail": [
             "punctuation.separator.annotation.result.python",
             "punctuation.separator.annotation.python"
+          ],
+          "runtime-declare": [
+            "entity.name.type.class.python"
+          ],
+          "runtime-access": [
+            {
+              "class": true
+            },
+            {
+              "builtinConstant": true
+            }
+          ],
+          "generic-access": [
+            {
+              "typeParameter": true
+            }
+          ],
+          "annotation-access": [
+            "support.type.python",
+            "meta.function.parameters.python",
+            "support.type.exception.python"
           ]
         },
         "macro": {
           "decorate": [
-            "entity.name.function.decorator.python"
+            "entity.name.function.decorator.python",
+            "meta.function.decorator.python support.type.python"
           ]
         },
         "comments": {
@@ -869,6 +928,14 @@ const bundle = {
           "detail": [
             "string.quoted.docstring.multi.python punctuation.definition.string.begin.python",
             "string.quoted.docstring.multi.python punctuation.definition.string.end.python"
+          ],
+          "doc-content": [
+            "string.quoted.docstring.multi.python",
+            {
+              "string": [
+                "documentation"
+              ]
+            }
           ]
         }
       }
@@ -891,26 +958,62 @@ const bundle = {
             },
             "source.rust keyword.other.rust",
             "source.rust keyword.control.rust",
-            "meta.function.definition.rust variable.language.self.rust",
             "source.rust storage.type.rust",
+            "storage.modifier.rust",
             "keyword.operator.subpattern.rust",
             "keyword.operator.logical.rust",
-            {
-              "selfKeyword": true
-            },
             {
               "selfTypeKeyword": true
             }
           ],
           "effect": [
-            "meta.function.call.rust entity.name.function.rust"
+            "meta.function.call.rust entity.name.function.rust",
+            "keyword.operator.math.rust"
           ],
           "type": [
             "keyword.other.fn.rust"
           ],
           "declare": [
             "meta.function.definition.rust entity.name.function.rust",
-            "meta.use.rust entity.name.type.rust"
+            "meta.use.rust entity.name.type.rust",
+            {
+              "variable": [
+                "declaration"
+              ]
+            },
+            {
+              "variable": [
+                "declaration",
+                "reference"
+              ]
+            },
+            {
+              "parameter": [
+                "declaration"
+              ]
+            },
+            {
+              "parameter": [
+                "declaration",
+                "reference"
+              ]
+            }
+          ],
+          "magic-declare": [
+            "meta.function.definition.rust variable.language.self.rust",
+            {
+              "selfKeyword": true
+            }
+          ],
+          "namespace-access": [
+            {
+              "namespace": true
+            },
+            {
+              "keyword": [
+                "crateRoot"
+              ]
+            }
           ],
           "detail": [
             "punctuation.brackets.round.rust",
@@ -927,23 +1030,32 @@ const bundle = {
               "function": [
                 "intraDocLink"
               ]
-            }
+            },
+            {
+              "variable": [
+                "reference"
+              ]
+            },
+            {
+              "parameter": [
+                "reference"
+              ]
+            },
+            "variable.other.rust"
+          ],
+          "magic-access": [
+            "variable.language.self.rust"
           ]
         },
         "data": {
-          "base": [
-            {
-              "namespace": true
-            },
-            {
-              "keyword": [
-                "crateRoot"
-              ]
-            }
-          ],
           "property": [
             {
               "property": true
+            }
+          ],
+          "embed": [
+            {
+              "formatSpecifier": true
             }
           ]
         },
@@ -972,20 +1084,17 @@ const bundle = {
           "runtime-declare": [
             {
               "struct": [
-                "declaration",
-                "public"
+                "declaration"
               ]
             },
             {
               "enum": [
-                "declaration",
-                "public"
+                "declaration"
               ]
             },
             {
               "enumMember": [
-                "declaration",
-                "public"
+                "declaration"
               ]
             }
           ],
@@ -1019,7 +1128,8 @@ const bundle = {
               "enumMember": [
                 "public"
               ]
-            }
+            },
+            "entity.name.type.rust"
           ],
           "interface-declare": [
             {
@@ -1057,6 +1167,7 @@ const bundle = {
               "typeParameter": true
             }
           ],
+          "annotation-access": null,
           "access": [
             {
               "struct": [
@@ -1218,6 +1329,43 @@ const bundle = {
           "declare": [
             "variable.parameter.utility.tailwind",
             "variable.parameter.layer.tailwind"
+          ]
+        }
+      }
+    },
+    {
+      "layers": {
+        "runtime": {
+          "base": [
+            "meta.embedded.block.tera"
+          ],
+          "control": [
+            "keyword.operator.whitespace.trim.tera",
+            "keyword.control.tera",
+            "punctuation.section.pipe.tera",
+            "keyword.operator.tera",
+            "keyword.operator.word.tera"
+          ],
+          "effect": [
+            "entity.name.function.tera"
+          ],
+          "access": [
+            "variable.other.tera",
+            "variable.other.member"
+          ]
+        },
+        "data": {
+          "embed": [
+            "punctuation.section.embedded.begin.tera",
+            "punctuation.section.embedded.end.tera",
+            "punctuation.section.block.begin.tera",
+            "punctuation.section.block.end.tera",
+            "punctuation.section.group.begin.tera",
+            "punctuation.section.group.end.tera",
+            "punctuation.definition.tera"
+          ],
+          "property": [
+            "variable.parameter.tera"
           ]
         }
       }
