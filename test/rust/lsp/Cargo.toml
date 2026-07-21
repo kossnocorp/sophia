@@ -1,0 +1,8 @@
+[package]
+name = "sophia_test_rust"
+version = "0.0.0"
+edition = "2024"
+description = "Sophia Theme language highlighting test crate"
+authors = ["Sasha Koss <koss@nocorp.me>"]
+license = "MIT"
+repository = "https://github.com/kossnocorp/sophia"

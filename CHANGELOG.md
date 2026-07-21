@@ -18,6 +18,8 @@ This change log follows the format documented in [Keep a CHANGELOG].
 
 - Improved Python syntax highlighting detailization.
 
+- Improved Rust syntax highlighting detailization.
+
 ## v0.10.1 - 2026-06-02
 
 ### Changed

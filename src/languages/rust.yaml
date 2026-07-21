@@ -23,21 +23,23 @@ layers:
         - controlFlow
       - source.rust keyword.other.rust
       - source.rust keyword.control.rust
-      # hello(&mut *self*)
-      - meta.function.definition.rust variable.language.self.rust
       - source.rust storage.type.rust
+      # >>static<< APPLICATION: &str = "sophia";
+      - storage.modifier.rust
       # state *@* ModuleState::ConvertError(_) =>
       - keyword.operator.subpattern.rust
 
       # Self::ConvertError(_) *|* Self::Converted(_) *|* Self::ResolveError(_) => None,
       # .map(*|*reference*|* reference.definition_id)
       - keyword.operator.logical.rust
-      - selfKeyword: true
+
       - selfTypeKeyword: true
 
     effect:
       # Box::*new*(...)
       - meta.function.call.rust entity.name.function.rust
+      # sign >>*<< value
+      - keyword.operator.math.rust
 
     type:
       # Rust syntax doesn't have designated tokens for impl
@@ -50,6 +52,29 @@ layers:
       - meta.function.definition.rust entity.name.function.rust
       # use worker::*Request*;
       - meta.use.rust entity.name.type.rust
+      # for (>>index<<, (>>name<<, >>score<<)) in ...
+      - variable:
+        - declaration
+      - variable:
+        - declaration
+        - reference
+      # fn describe(>>status<<: &Status)
+      - parameter:
+        - declaration
+      - parameter:
+        - declaration
+        - reference
+
+    magic-declare:
+      # hello(&mut *self*)
+      - meta.function.definition.rust variable.language.self.rust
+      - selfKeyword: true
+
+    namespace-access:
+      # use >>std<<::rc::Rc;
+      - namespace: true
+      - keyword:
+          - crateRoot
 
     detail:
       # [NOTE] Reset predefined keyword.operator.logical as Rust
@@ -75,20 +100,29 @@ layers:
     access:
       - function:
         - intraDocLink
+      # >>trimmed<<.parse::<u64>()
+      - variable:
+        - reference
+      - parameter:
+        - reference
+      - variable.other.rust
       # - enum:
       #   -	library
       # - enumMember:
       #   - library
 
-  data:
-    base:
-      - namespace: true
-      - keyword:
-          - crateRoot
+    magic-access:
+      # >>self<<.status
+      - variable.language.self.rust
 
+  data:
     property:
       # *var1*: VarV1
       - property: true
+
+    embed:
+      # println!("reference = >>{<<reference>>}<<");
+      - formatSpecifier: true
 
   memory:
     effect:
@@ -132,14 +166,11 @@ layers:
     runtime-declare:
       # struct *StructName* { ...
       - struct:
-          - declaration
-          - public
+        - declaration
       - enum:
-          - declaration
-          - public
+        - declaration
       - enumMember:
-          - declaration
-          - public
+        - declaration
 
     runtime-access:
       - struct:
@@ -154,6 +185,8 @@ layers:
           - library
       - enumMember:
           - public
+      # >>HashMap<<::from(...)
+      - entity.name.type.rust
 
     interface-declare:
       # trait *TraitName* { ...
@@ -176,6 +209,10 @@ layers:
 
     generic-access:
       - typeParameter: true
+
+    annotation-access:
+      # let ordered: >>BTreeMap<<<_, _>
+      # - entity.name.type.rust
 
     access:
       # /// See *[User]* struct ...
