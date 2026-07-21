@@ -5,6 +5,7 @@ pnpm = "latest"
 
 # Tools
 fnox = "latest"
+jaq = "latest"
 
 [settings]
 # Enable extra features
@@ -16,8 +17,7 @@ idiomatic_version_file_enable_tools = ["node"]
 run = "node --watch ./build.mjs --watch"
 
 [tasks.build]
-run = "pnpm exec vsce package"
+run = "node ./build.mjs"
 
-[tasks.publish]
-run = "fnox exec -- pnpm exec vsce publish"
-depends = "build"
+[tasks."publish"]
+run = "./scripts/publish.sh"
