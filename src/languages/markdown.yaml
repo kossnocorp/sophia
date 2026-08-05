@@ -39,9 +39,9 @@ layers:
       - punctuation.definition.raw.markdown
       - punctuation.definition.bold.markdown
       - punctuation.definition.italic.markdown
-      # *```*ts
+      # >>```<<ts
       - punctuation.definition.markdown
-      # ```*ts*
+      # ```>>ts<<
       - fenced_code.block.language.markdown
       # *![]*(...)
       - punctuation.definition.link.description.begin.markdown

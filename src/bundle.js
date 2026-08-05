@@ -734,6 +734,51 @@ const bundle = {
       }
     },
     {
+      "layers": {
+        "data": {
+          "base": [
+            "string.other.number.mdx",
+            "variable.ordered.list.mdx",
+            "variable.unordered.list.mdx",
+            "meta.separator.mdx"
+          ],
+          "control": [
+            "string.other.link.destination.mdx"
+          ],
+          "primitive": [
+            "markup.inline.raw.code.mdx"
+          ],
+          "text": [
+            "meta.paragraph.mdx"
+          ],
+          "detail": [
+            "string.other.strong.asterisk.mdx",
+            "string.other.emphasis.underscore.mdx",
+            "string.other.begin.code.mdx",
+            "string.other.end.code.mdx",
+            "string.other.begin.link.mdx",
+            "string.other.begin.mdx",
+            "string.other.end.mdx",
+            "string.other.begin.image.mdx",
+            "string.other.end.image.mdx",
+            "string.other.begin.code.fenced.mdx",
+            "string.other.end.code.fenced.mdx"
+          ],
+          "embed": [
+            "string.other.begin.expression.mdx.js"
+          ]
+        }
+      },
+      "styles": {
+        "bold": [
+          "string.other.strong.asterisk.mdx"
+        ],
+        "underline": [
+          "entity.name.identifier.mdx"
+        ]
+      }
+    },
+    {
       "id": "nix",
       "layers": {
         "runtime": {

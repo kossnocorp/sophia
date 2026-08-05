@@ -1,0 +1,56 @@
+# MDX
+
+layers:
+  data:
+    base:
+      # >>1<<. First
+      - string.other.number.mdx
+      # 1>>.<< First
+      - variable.ordered.list.mdx
+      # >>-<< Second
+      - variable.unordered.list.mdx
+      # >>*****<<
+      - meta.separator.mdx
+
+    control:
+      # [Hello World][>>https://example.com<<]
+        - string.other.link.destination.mdx
+
+    primitive:
+      # `>>console.log("Hello World")<<`
+      - markup.inline.raw.code.mdx
+
+    text:
+      # *Lorem ipsum*
+      - meta.paragraph.mdx
+
+    detail:
+      # >>**<<Hello World>>**<<
+      - string.other.strong.asterisk.mdx
+      # >>_<<Hello World>>_<<
+      - string.other.emphasis.underscore.mdx
+      # >>`<<console.log("Hello World")>>`<<
+      - string.other.begin.code.mdx
+      - string.other.end.code.mdx
+      # >>[<<Hello World>>]<<(https://example.com)
+      # [Hello World]>>[<<https://example.com>>]<<
+      - string.other.begin.link.mdx
+      - string.other.begin.mdx
+      - string.other.end.mdx
+      # !>>[<<Hello World>>]<<(https://example.com/image.png)
+      - string.other.begin.image.mdx
+      - string.other.end.image.mdx
+      # >>```<<ts
+      - string.other.begin.code.fenced.mdx
+      - string.other.end.code.fenced.mdx
+
+    embed:
+      # >>{<</* Comment */>>}<<
+      - string.other.begin.expression.mdx.js
+
+styles:
+  bold:
+    - string.other.strong.asterisk.mdx
+
+  underline:
+    - entity.name.identifier.mdx

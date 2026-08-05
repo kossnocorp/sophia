@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Superstate logo" src="./preview.png" />
+  <img alt="Sophia Theme preview" src="./preview.png" />
 
   <h1>Sophia Theme</h1>
 
@@ -18,6 +18,7 @@ I'm not a polyglot by any means, so if you notice an idiosyncrasy, please [DM me
 - **Python**
 - **JSX**
 - **Markdown**
+- **MDX**
 - **JSON**
 - **YAML**
 - **TOML**
